@@ -7,6 +7,7 @@ on:
   push:
     branches:
       - master
+      - tkp/universal2
     tags:
       - v*
     paths-ignore:
@@ -143,7 +144,6 @@ jobs:
           SKIP_PYTHON: ${{ contains(github.event.pull_request.title, '[ci-skip-python]') || contains(env.COMMIT_MSG, '[ci-skip-python]') }}
           INCLUDE_WINDOWS: ${{ contains(github.event.pull_request.title, '[ci-include-windows]') || contains(env.COMMIT_MSG, '[ci-include-windows]') }}
         if: ${{ github.event_name == 'pull_request' }}
-
 
       - name: Display and Setup Build Args (Manual)
         id: setupmanual
@@ -769,8 +769,9 @@ jobs:
           - is-full-run: false
             os: macos-10.15
 
-          - is-full-run: false
-            os: macos-11
+          # TODO remove when done
+          # - is-full-run: false
+          #   os: macos-11
 
           # Exclude Python 3.7 and 3.8 builds
           - is-full-run: false
@@ -883,7 +884,6 @@ jobs:
       with:
         python-version: ${{ matrix.python-version }}
         cache: 'pip'
-      if: ${{ runner.os != 'Linux' }}  # skip on manylinux2014
 
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v3
@@ -910,8 +910,7 @@ jobs:
     ################
     # Python
     - name: Install python dependencies
-      run: python -m pip install --upgrade pip wheel setuptools "jupyterlab>=3.2" numpy "pyarrow>=5" "tornado==6.1"
-      if: ${{ runner.os != 'Linux' }}  # skip on manylinux2014
+      run: python -m pip install --upgrade pip wheel setuptools "jupyterlab>=3.2" numpy "pyarrow>=5" "tornado==6.1" cibuildwheel
 
     ################
     # Linux
@@ -960,7 +959,6 @@ jobs:
       env:
         PYTHON_VERSION: ${{ matrix.python-version }}
         MANYLINUX: ${{ matrix.container }}
-        PSP_DOCKER: 1
       if: ${{ matrix.os == 'ubuntu-20.04' }}
 
     ########
@@ -1242,14 +1240,15 @@ jobs:
           - is-full-run: false
             os: windows-2019
 
-          # Exclude Macos 10.15 bulds
+          # Exclude Macos
           - is-full-run: false
             os: macos-10.15
 
-          # Exclude Python 3.7 and 3.8 builds
-          - is-full-run: false
-            os: macos-11
+          # TODO remove when done
+          # - is-full-run: false
+          #   os: macos-11
 
+          # Exclude Python 3.7 and 3.8 builds
           - is-full-run: false
             python-version: 3.7
 
