@@ -65,12 +65,12 @@ class ARROW_EXPORT TableReader {
                                                    const ReadOptions&,
                                                    const ParseOptions&,
                                                    const ConvertOptions&);
-  // ARROW_DEPRECATED(
-  //     "Deprecated in 4.0.0. "
-  //     "Use MemoryPool-less variant (the IOContext holds a pool already)")
-  // static Result<std::shared_ptr<TableReader>> Make(
-  //     MemoryPool* pool, io::IOContext io_context, std::shared_ptr<io::InputStream> input,
-  //     const ReadOptions&, const ParseOptions&, const ConvertOptions&);
+  ARROW_DEPRECATED(
+      "Deprecated in 4.0.0. "
+      "Use MemoryPool-less variant (the IOContext holds a pool already)")
+  static Result<std::shared_ptr<TableReader>> Make(
+      MemoryPool* pool, io::IOContext io_context, std::shared_ptr<io::InputStream> input,
+      const ReadOptions&, const ParseOptions&, const ConvertOptions&);
 };
 
 }  // namespace csv

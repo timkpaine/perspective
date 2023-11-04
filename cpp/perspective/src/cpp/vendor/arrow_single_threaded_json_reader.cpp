@@ -259,10 +259,12 @@ class TableReaderImpl : public TableReader,
         task_group_(std::move(task_group)) {}
 
   Status Init(std::shared_ptr<io::InputStream> input) {
-    ARROW_ASSIGN_OR_RAISE(auto it,
-                          io::MakeInputStreamIterator(input, read_options_.block_size));
-    return MakeReadaheadIterator(std::move(it), task_group_->parallelism())
-        .Value(&buffer_iterator_);
+    // Since we're converting serially, no need to readahead more than one block
+    // ARROW_ASSIGN_OR_RAISE(auto it,
+    //                       io::MakeInputStreamIterator(input, read_options_.block_size));
+    // return MakeReadaheadIterator(std::move(it), task_group_->parallelism())
+    //     .Value(&buffer_iterator_);
+    return Status::OK();
   }
 
   Result<std::shared_ptr<Table>> Read() override {

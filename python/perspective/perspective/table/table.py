@@ -58,14 +58,13 @@ class Table(object):
                 writing at row 0.
         """
         self._is_arrow = isinstance(data, (bytes, bytearray))
-        # String buffer, either CSV or JSON
-        self._is_csv_or_json = isinstance(data, str)
+        self._is_csv = isinstance(data, str)
 
-        if self._is_csv_or_json:
-            # CSV/JSON are loaded using the Arrow interface, so is_arrow is always true
+        if self._is_csv:
+            # CSVs are loaded using the Arrow interface, so is_arrow is
+            # always true if we are loading a CSV
             self._is_arrow = True
 
-            # Fix CSV with empty first column
             if len(data) > 0 and data[0] == ",":
                 data = "_" + data
 
@@ -88,7 +87,7 @@ class Table(object):
             self._index or "",
             t_op.OP_INSERT,
             self._is_arrow,
-            self._is_csv_or_json,
+            self._is_csv,
             0,
         )
 
@@ -299,16 +298,14 @@ class Table(object):
         if not port_id:
             port_id = 0
 
-        # Binary arrow buffer
         _is_arrow = isinstance(data, (bytes, bytearray))
-        # String buffer, either CSV or JSON
-        _is_csv_or_json = isinstance(data, str)
+        _is_csv = isinstance(data, str)
 
-        if _is_csv_or_json:
-            # CSV/JSON are loaded using the Arrow interface, so is_arrow is always true
+        if _is_csv:
+            # CSVs are loaded using the Arrow interface, so is_arrow is
+            # always true if we are loading a CSV
             _is_arrow = True
 
-            # Fix CSV with empty first column
             if len(data) > 0 and data[0] == ",":
                 data = "_" + data
 
@@ -321,7 +318,7 @@ class Table(object):
                 self._index or "",
                 t_op.OP_INSERT,
                 _is_arrow,
-                _is_csv_or_json,
+                _is_csv,
                 port_id,
             )
             self._state_manager.set_process(self._table.get_pool(), self._table.get_id())

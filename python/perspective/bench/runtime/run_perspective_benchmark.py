@@ -18,13 +18,15 @@ import logging
 if __name__ == "__main__":
     """Benchmark the `perspective-python` runtime locally."""
     VERSIONS = [
-        "master",
-        "2.4.0",
-        "2.3.2",
-        "2.3.1",
-        # "2.3.0",
-        "2.2.1",
-        "2.2.0",
+        "tkp/json",
+        # "master",
+        # "2.5.1",
+        # "2.4.0",
+        # "2.3.2",
+        # "2.3.1",
+        # # "2.3.0",
+        # "2.2.1",
+        # "2.2.0",
     ]
 
     # Access the benchmark virtualenv

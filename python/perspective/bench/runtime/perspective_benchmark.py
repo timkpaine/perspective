@@ -11,11 +11,14 @@
 #  ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 
 import os
-from functools import partial
-from bench import Benchmark, Suite, Runner
-from perspective import Table
-import perspective
 import logging
+import perspective
+from bench import Benchmark, Suite, Runner
+from functools import partial
+from json import dumps
+from perspective import Table
+from perspective.manager.manager_internal import DateTimeEncoder
+
 
 SUPERSTORE_ARROW = os.path.join(
     os.path.dirname(__file__),
@@ -106,8 +109,42 @@ class PerspectiveBenchmark(Suite):
         """Benchmark table from json separately as it requires opening the
         Arrow file from the filesystem."""
         json = self._view.to_json()
+
+        # FIXME implement a better to_json
+
+        # CASE 1
+        # full json as array of objects
+        # json = dumps(json, cls=DateTimeEncoder)
+
+        # CASE 2/3
+        # json as jsonl
+        json = "\n".join(dumps(_, cls=DateTimeEncoder) for _ in json)
+
+        # CASE 3
+        # json as pyarrow
+        import pyarrow as pa
+        import pyarrow.json
+        from io import BytesIO
+        def json_to_pyarrow(json):
+            logging.info(len(json))
+            b = BytesIO()
+            b.write(json.encode())
+            b.seek(0)
+            table = pyarrow.json.read_json(b)
+            stream = pa.BufferOutputStream()
+            writer = pa.RecordBatchStreamWriter(stream, table.schema, use_legacy_format=False)
+            writer.write_table(table)
+            writer.close()
+            return stream.getvalue().to_pybytes()
+
         test_meta = make_meta("table", "json")
-        func = Benchmark(lambda: Table(json), meta=test_meta)
+
+        # CASE 1/2
+        # func = Benchmark(lambda: Table(json), meta=test_meta)
+
+        # CASE 3
+        func = Benchmark(lambda: Table(json_to_pyarrow(json)), meta=test_meta)
+
         setattr(self, "table_json", func)
 
     def benchmark_view_zero(self):
