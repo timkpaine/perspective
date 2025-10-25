@@ -1,5 +1,5 @@
 {
-    "name": "@finos/perspective-workspace",
+    "name": "@perspective-dev/perspective-workspace",
     "version": "3.8.0",
     "description": "Perspective Workspace",
     "files": [
@@ -32,8 +32,8 @@
     "author": "",
     "license": "Apache-2.0",
     "dependencies": {
-        "@finos/perspective": "workspace:",
-        "@finos/perspective-viewer": "workspace:",
+        "@perspective-dev/perspective": "workspace:",
+        "@perspective-dev/perspective-viewer": "workspace:",
         "@lumino/algorithm": ">=2 <3",
         "@lumino/commands": ">=2 <3",
         "@lumino/domutils": ">=2 <3",
@@ -46,8 +46,8 @@
     },
     "devDependencies": {
         "@prospective.co/procss": "catalog:",
-        "@finos/perspective-esbuild-plugin": "workspace:",
-        "@finos/perspective-test": "workspace:",
+        "@perspective-dev/perspective-esbuild-plugin": "workspace:",
+        "@perspective-dev/perspective-test": "workspace:",
         "@types/lodash": "catalog:",
         "typescript": "catalog:",
         "zx": "catalog:"

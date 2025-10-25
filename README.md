@@ -8,7 +8,7 @@
 <br/><br/>
 
 [![Build Status](https://img.shields.io/github/actions/workflow/status/finos/perspective/build.yaml?event=push&style=for-the-badge)](https://github.com/finos/perspective/actions/workflows/build.yaml)
-[![npm](https://img.shields.io/npm/v/@finos/perspective.svg?style=for-the-badge)](https://www.npmjs.com/package/@finos/perspective)
+[![npm](https://img.shields.io/npm/v/@perspective-dev/perspective.svg?style=for-the-badge)](https://www.npmjs.com/package/@perspective-dev/perspective)
 [![PyPI](https://img.shields.io/pypi/v/perspective-python.svg?style=for-the-badge)](https://pypi.python.org/pypi/perspective-python)
 [![crates.io](https://img.shields.io/crates/v/perspective?style=for-the-badge)](https://crates.io/crates/perspective)
 
@@ -21,44 +21,43 @@ applications.
 
 ### Features
 
--   A fast, memory efficient streaming query engine, written in C++ and compiled
-    for [WebAssembly](https://webassembly.org/),
-    [Python](https://www.python.org/) and [Rust](https://www.rust-lang.org/),
-    with read/write/streaming for [Apache Arrow](https://arrow.apache.org/), and
-    a high-performance columnar expression language based on
-    [ExprTK](https://github.com/ArashPartow/exprtk).
+- A fast, memory efficient streaming query engine, written in C++ and compiled
+  for [WebAssembly](https://webassembly.org/), [Python](https://www.python.org/)
+  and [Rust](https://www.rust-lang.org/), with read/write/streaming for
+  [Apache Arrow](https://arrow.apache.org/), and a high-performance columnar
+  expression language based on [ExprTK](https://github.com/ArashPartow/exprtk).
 
--   A framework-agnostic User Interface packaged as a
-    [Custom Element](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements),
-    powered either in-browser via WebAssembly or virtually via WebSocket server
-    (Python/Node/Rust).
+- A framework-agnostic User Interface packaged as a
+  [Custom Element](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements),
+  powered either in-browser via WebAssembly or virtually via WebSocket server
+  (Python/Node/Rust).
 
--   A [JupyterLab](https://jupyter.org/) widget and Python client library, for
-    interactive data analysis in a notebook, as well as _scalable_ production
-    applications.
+- A [JupyterLab](https://jupyter.org/) widget and Python client library, for
+  interactive data analysis in a notebook, as well as _scalable_ production
+  applications.
 
 ### Documentation
 
--   [Project Site](https://perspective.finos.org/)
--   [User Guide](https://perspective.finos.org/guide/)
--   Python API
-    -   [`perspective`](https://perspective.finos.org/python/index.html)
-    -   [`perspective.widget`](https://perspective.finos.org/python/perspective/widget.html)
-    -   [`perspective.handlers.aiohttp`](https://perspective.finos.org/python/perspective/handlers/aiohttp.htm)
-    -   [`perspective.handlers.starlette`](https://perspective.finos.org/python/perspective/handlers/starlett.htm)
-    -   [`perspective.handlers.tornado`](https://perspective.finos.org/python/perspective/handlers/tornado.htm)
--   JavaScript API
-    -   [`@finos/perspective` Browser](https://perspective.finos.org/browser/modules/src_ts_perspective.browser.ts.html)
-    -   [`@finos/perspective` Node.js](https://perspective.finos.org/node/modules/src_ts_perspective.node.ts.html)
-    -   [`@finos/perspective-viewer`](https://perspective.finos.org/viewer/modules/perspective-viewer.html)
-    -   [`@finos/perspective-react`](https://perspective.finos.org/react/index.html)
--   Rust API
-    -   [`perspective`](https://docs.rs/perspective/latest/perspective/)
-    -   [`perspective-client`](https://docs.rs/perspective-client/latest/perspective_client/)
-    -   [`perspective-server`](https://docs.rs/perspective-server/latest/perspective_server/)
-    -   [`perspective-python`](https://docs.rs/perspective-python/latest/perspective_python/)
-    -   [`perspective-js`](https://docs.rs/perspective-js/latest/perspective_js/)
-    -   [`perspective-viewer`](https://docs.rs/perspective-viewer/latest/perspective_viewer/)
+- [Project Site](https://perspective.finos.org/)
+- [User Guide](https://perspective.finos.org/guide/)
+- Python API
+    - [`perspective`](https://perspective.finos.org/python/index.html)
+    - [`perspective.widget`](https://perspective.finos.org/python/perspective/widget.html)
+    - [`perspective.handlers.aiohttp`](https://perspective.finos.org/python/perspective/handlers/aiohttp.htm)
+    - [`perspective.handlers.starlette`](https://perspective.finos.org/python/perspective/handlers/starlett.htm)
+    - [`perspective.handlers.tornado`](https://perspective.finos.org/python/perspective/handlers/tornado.htm)
+- JavaScript API
+    - [`@perspective-dev/perspective` Browser](https://perspective.finos.org/browser/modules/src_ts_perspective.browser.ts.html)
+    - [`@perspective-dev/perspective` Node.js](https://perspective.finos.org/node/modules/src_ts_perspective.node.ts.html)
+    - [`@perspective-dev/perspective-viewer`](https://perspective.finos.org/viewer/modules/perspective-viewer.html)
+    - [`@perspective-dev/perspective-react`](https://perspective.finos.org/react/index.html)
+- Rust API
+    - [`perspective`](https://docs.rs/perspective/latest/perspective/)
+    - [`perspective-client`](https://docs.rs/perspective-client/latest/perspective_client/)
+    - [`perspective-server`](https://docs.rs/perspective-server/latest/perspective_server/)
+    - [`perspective-python`](https://docs.rs/perspective-python/latest/perspective_python/)
+    - [`perspective-js`](https://docs.rs/perspective-js/latest/perspective_js/)
+    - [`perspective-viewer`](https://docs.rs/perspective-viewer/latest/perspective_viewer/)
 
 ### Examples
 

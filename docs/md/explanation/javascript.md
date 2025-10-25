@@ -4,7 +4,7 @@ which loads an [Apache Arrow](https://arrow.apache.org/) and computes a "Group
 By" operation, returning a new Arrow:
 
 ```javascript
-import perspective from "@finos/perspective";
+import perspective from "@perspective-dev/perspective";
 
 const table = await perspective.table(apache_arrow_data);
 const view = await table.view({ group_by: ["CounterParty", "Security"] });

@@ -20,8 +20,8 @@ if (window.require) {
     window.require.config({
         map: {
             "*": {
-                "@finos/perspective-jupyterlab":
-                    "nbextensions/@finos/perspective-jupyterlab/index",
+                "@perspective-dev/perspective-jupyterlab":
+                    "nbextensions/@perspective-dev/perspective-jupyterlab/index",
             },
         },
     });

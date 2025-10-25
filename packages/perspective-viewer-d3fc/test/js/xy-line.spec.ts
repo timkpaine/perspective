@@ -10,11 +10,11 @@
 // ┃ of the [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0). ┃
 // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 
-import { test } from "@finos/perspective-test";
+import { test } from "@perspective-dev/perspective-test";
 import {
     getSvgContentString,
     run_standard_tests,
-} from "@finos/perspective-test";
+} from "@perspective-dev/perspective-test";
 
 test.describe("X/Y Line Tests", () => {
     test.beforeEach(async ({ page }) => {

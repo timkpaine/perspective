@@ -27,7 +27,7 @@ import * as perspective_bench from "./src/js/benchmark.mjs";
 const __dirname = url.fileURLToPath(new URL(".", import.meta.url)).slice(0, -1);
 
 const CLIENT_VERSION = {
-    master: "@finos/perspective",
+    master: "@perspective-dev/perspective",
     "3.6.0": "perspective-3-6-0",
     "3.5.0": "perspective-3-5-0",
     "3.4.0": "perspective-3-4-0",
@@ -58,7 +58,7 @@ perspective_bench.suite(
         const { default: perspective } = await import(CLIENT_VERSION[version]);
         const client = await perspective.websocket(
             "ws://127.0.0.1:8082/websocket",
-            { maxPayload: 1024 * 1024 * 1024 }
+            { maxPayload: 1024 * 1024 * 1024 },
         );
 
         const metadata = { version, version_idx };
@@ -68,5 +68,5 @@ perspective_bench.suite(
         await all_benchmarks.to_data_suite(client, metadata);
     },
     python.start,
-    python.stop
+    python.stop,
 );

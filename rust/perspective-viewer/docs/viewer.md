@@ -17,9 +17,9 @@ application - these modules export nothing, but rather register the components
 for use within your site's regular HTML:
 
 ```javascript
-import "@finos/perspective-viewer";
-import "@finos/perspective-viewer-datagrid";
-import "@finos/perspective-viewer-d3fc";
+import "@perspective-dev/perspective-viewer";
+import "@perspective-dev/perspective-viewer-datagrid";
+import "@perspective-dev/perspective-viewer-d3fc";
 ```
 
 Once imported, the `<perspective-viewer>` Web Component will be available in any
@@ -44,31 +44,31 @@ themed accordingly:
 
 ```javascript
 // Themes based on Thought Merchants's Prospective design
-import "@finos/perspective-viewer/dist/css/pro.css";
-import "@finos/perspective-viewer/dist/css/pro-dark.css";
+import "@perspective-dev/perspective-viewer/dist/css/pro.css";
+import "@perspective-dev/perspective-viewer/dist/css/pro-dark.css";
 
 // Other themes
-import "@finos/perspective-viewer/dist/css/solarized.css";
-import "@finos/perspective-viewer/dist/css/solarized-dark.css";
-import "@finos/perspective-viewer/dist/css/monokai.css";
-import "@finos/perspective-viewer/dist/css/vaporwave.css";
+import "@perspective-dev/perspective-viewer/dist/css/solarized.css";
+import "@perspective-dev/perspective-viewer/dist/css/solarized-dark.css";
+import "@perspective-dev/perspective-viewer/dist/css/monokai.css";
+import "@perspective-dev/perspective-viewer/dist/css/vaporwave.css";
 ```
 
 Alternatively, you may use `themes.css`, which bundles all default themes
 
 ```javascript
-import "@finos/perspective-viewer/dist/css/themes.css";
+import "@perspective-dev/perspective-viewer/dist/css/themes.css";
 ```
 
 If you choose not to bundle the themes yourself, they are available through
-[CDN](https://cdn.jsdelivr.net/npm/@finos/perspective-viewer/dist/css/). These
-can be directly linked in your HTML file:
+[CDN](https://cdn.jsdelivr.net/npm/@perspective-dev/perspective-viewer/dist/css/).
+These can be directly linked in your HTML file:
 
 ```html
 <link
     rel="stylesheet"
     crossorigin="anonymous"
-    href="https://cdn.jsdelivr.net/npm/@finos/perspective-viewer/dist/css/pro.css"
+    href="https://cdn.jsdelivr.net/npm/@perspective-dev/perspective-viewer/dist/css/pro.css"
 />
 ```
 

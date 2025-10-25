@@ -1,5 +1,5 @@
 {
-    "name": "@finos/perspective-bench",
+    "name": "@perspective-dev/perspective-bench",
     "version": "2.0.1",
     "description": "Benchmark utility based on perspective",
     "private": true,
@@ -20,12 +20,13 @@
     "author": "",
     "license": "Apache-2.0",
     "devDependencies": {
-        "@finos/perspective": "workspace:",
+        "@perspective-dev/perspective": "workspace:",
         "microtime": "catalog:",
         "superstore-arrow": "catalog:",
         "zx": "catalog:"
     },
     "dependencies": {
+        "perspective-3-8-0": "npm:@finos/perspective@3.8.0",
         "perspective-3-7-0": "npm:@finos/perspective@3.7.0",
         "perspective-3-6-0": "npm:@finos/perspective@3.6.0",
         "perspective-3-5-0": "npm:@finos/perspective@3.5.0",

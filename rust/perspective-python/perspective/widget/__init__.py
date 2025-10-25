@@ -125,10 +125,10 @@ class PerspectiveWidget(DOMWidget, PerspectiveViewer):
 
     # Required by ipywidgets for proper registration of the backend
     _model_name = Unicode("PerspectiveModel").tag(sync=True)
-    _model_module = Unicode("@finos/perspective-jupyterlab").tag(sync=True)
+    _model_module = Unicode("@perspective-dev/perspective-jupyterlab").tag(sync=True)
     _model_module_version = Unicode("~{}".format(__version__)).tag(sync=True)
     _view_name = Unicode("PerspectiveView").tag(sync=True)
-    _view_module = Unicode("@finos/perspective-jupyterlab").tag(sync=True)
+    _view_module = Unicode("@perspective-dev/perspective-jupyterlab").tag(sync=True)
     _view_module_version = Unicode("~{}".format(__version__)).tag(sync=True)
 
     def __init__(
@@ -316,8 +316,8 @@ class PerspectiveWidget(DOMWidget, PerspectiveViewer):
                 path = f"cdn/{module}.js"
 
             # perspective developer affordance: works with your local `pnpm run start blocks`
-            # return f"http://localhost:8080/node_modules/@finos/{module}/dist/{path}"
-            return f"https://cdn.jsdelivr.net/npm/@finos/{module}@{__version__}/dist/{path}"
+            # return f"http://localhost:8080/node_modules/@perspective-dev/{module}/dist/{path}"
+            return f"https://cdn.jsdelivr.net/npm/@perspective-dev/{module}@{__version__}/dist/{path}"
 
         return super(DOMWidget, self)._repr_mimebundle_(**kwargs) | {
             "text/html": template.substitute(

@@ -12,8 +12,8 @@
 
 import { execFileSync } from "node:child_process";
 import fs from "node:fs";
-import { getPyodideDistDir } from "@finos/perspective-scripts/pyodide.mjs";
-import { getEmscriptenWheelPath } from "@finos/perspective-scripts/workspace.mjs";
+import { getPyodideDistDir } from "@perspective-dev/perspective-scripts/pyodide.mjs";
+import { getEmscriptenWheelPath } from "@perspective-dev/perspective-scripts/workspace.mjs";
 
 // avoid executing this script directly, instead run `pnpm run test` from the workspace root
 // to pass extra arguments to pytest, run (with perspective-python focused):
@@ -24,14 +24,14 @@ if (process.env.PSP_PYODIDE) {
     const pyodideDistDir = getPyodideDistDir();
     if (!fs.existsSync(pyodideDistDir)) {
         console.error(
-            `Error: Pyodide distribution not found at ${pyodideDistDir}\n\nRun: pnpm -w run install_pyodide\n\n`
+            `Error: Pyodide distribution not found at ${pyodideDistDir}\n\nRun: pnpm -w run install_pyodide\n\n`,
         );
         process.exit(1);
     }
     const emscriptenWheel = getEmscriptenWheelPath();
     if (!fs.existsSync(emscriptenWheel)) {
         console.error(
-            `Error: Emscripten wheel not found at ${emscriptenWheel}\n\nRun: pnpm run build\n\n`
+            `Error: Emscripten wheel not found at ${emscriptenWheel}\n\nRun: pnpm run build\n\n`,
         );
         process.exit(1);
     }
@@ -50,7 +50,7 @@ if (process.env.PSP_PYODIDE) {
             "--timeout_method=thread",
             // ...process.argv.slice(2),
         ],
-        execOpts
+        execOpts,
     );
 } else {
     execFileSync(
@@ -61,6 +61,6 @@ if (process.env.PSP_PYODIDE) {
             "--timeout=300",
             // ...process.argv.slice(2),
         ],
-        execOpts
+        execOpts,
     );
 }

@@ -11,7 +11,7 @@
 // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 
 import { test, expect } from "@playwright/test";
-import { PageView } from "@finos/perspective-test";
+import { PageView } from "@perspective-dev/perspective-test";
 
 test.beforeEach(async ({ page }) => {
     await page.goto("/tools/perspective-test/src/html/basic-test.html");

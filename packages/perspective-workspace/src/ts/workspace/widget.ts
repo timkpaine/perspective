@@ -13,8 +13,8 @@
 import { Widget } from "@lumino/widgets";
 import { Message } from "@lumino/messaging";
 
-import type * as psp_viewer from "@finos/perspective-viewer";
-import type * as psp from "@finos/perspective";
+import type * as psp_viewer from "@perspective-dev/perspective-viewer";
+import type * as psp from "@perspective-dev/perspective";
 
 interface IPerspectiveViewerWidgetOptions {
     node: HTMLElement;

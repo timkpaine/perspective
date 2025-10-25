@@ -29,9 +29,9 @@ function HomepageHeader() {
     useEffect(() => {
         Promise.all([
             import("@site/src/data/worker.js"),
-            import("@finos/perspective-viewer"),
-            import("@finos/perspective-viewer-datagrid"),
-            import("@finos/perspective-viewer-d3fc"),
+            import("@perspective-dev/perspective-viewer"),
+            import("@perspective-dev/perspective-viewer-datagrid"),
+            import("@perspective-dev/perspective-viewer-d3fc"),
         ]).then(setPerspective);
     }, []);
 

@@ -1,5 +1,5 @@
 {
-    "name": "@finos/perspective-jupyterlab",
+    "name": "@perspective-dev/perspective-jupyterlab",
     "version": "3.8.0",
     "description": "A Jupyterlab extension for the Perspective library, designed to be used with perspective-python.",
     "files": [
@@ -23,19 +23,19 @@
         "test:jupyter:build": "node ./build.mjs --test"
     },
     "dependencies": {
-        "@finos/perspective-viewer-d3fc": "workspace:",
-        "@finos/perspective-viewer-datagrid": "workspace:",
-        "@finos/perspective-viewer-openlayers": "workspace:",
-        "@finos/perspective-viewer": "workspace:",
-        "@finos/perspective": "workspace:",
+        "@perspective-dev/perspective-viewer-d3fc": "workspace:",
+        "@perspective-dev/perspective-viewer-datagrid": "workspace:",
+        "@perspective-dev/perspective-viewer-openlayers": "workspace:",
+        "@perspective-dev/perspective-viewer": "workspace:",
+        "@perspective-dev/perspective": "workspace:",
         "@jupyter-widgets/base": ">2 <5",
         "@jupyterlab/application": ">2 <5",
         "@lumino/application": "<3",
         "@lumino/widgets": "<3"
     },
     "devDependencies": {
-        "@finos/perspective-esbuild-plugin": "workspace:",
-        "@finos/perspective-test": "workspace:",
+        "@perspective-dev/perspective-esbuild-plugin": "workspace:",
+        "@perspective-dev/perspective-test": "workspace:",
         "@jupyterlab/builder": "^4",
         "@prospective.co/procss": "^0.1.16",
         "copy-webpack-plugin": "~12",

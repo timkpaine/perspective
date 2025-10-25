@@ -10,17 +10,17 @@
 // ┃ of the [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0). ┃
 // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 
-import { test } from "@finos/perspective-test";
+import { test } from "@perspective-dev/perspective-test";
 import {
     run_standard_tests,
     getSvgContentString,
-} from "@finos/perspective-test";
+} from "@perspective-dev/perspective-test";
 
 test.describe("Bar Tests", () => {
     test.describe("Y Bar", () => {
         test.beforeEach(async ({ page }) => {
             await page.goto(
-                "/node_modules/@finos/perspective-test/src/html/basic-test.html",
+                "/node_modules/@perspective-dev/perspective-test/src/html/basic-test.html",
             );
             await page.evaluate(async () => {
                 while (!window["__TEST_PERSPECTIVE_READY__"]) {
@@ -47,7 +47,7 @@ test.describe("Bar Tests", () => {
     test.describe("X Bar", () => {
         test.beforeEach(async ({ page }) => {
             await page.goto(
-                "/node_modules/@finos/perspective-test/src/html/basic-test.html",
+                "/node_modules/@perspective-dev/perspective-test/src/html/basic-test.html",
             );
             await page.evaluate(async () => {
                 while (!window["__TEST_PERSPECTIVE_READY__"]) {
@@ -73,7 +73,7 @@ test.describe("Bar Tests", () => {
     test.describe("Y Bar (Themed)", () => {
         test.beforeEach(async ({ page }) => {
             await page.goto(
-                "/node_modules/@finos/perspective-test/src/html/themed-test.html",
+                "/node_modules/@perspective-dev/perspective-test/src/html/themed-test.html",
             );
             await page.evaluate(async () => {
                 while (!window["__TEST_PERSPECTIVE_READY__"]) {

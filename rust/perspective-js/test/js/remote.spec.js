@@ -10,8 +10,8 @@
 // ┃ of the [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0). ┃
 // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 
-import { test, expect } from "@finos/perspective-test";
-import perspective from "@finos/perspective";
+import { test, expect } from "@perspective-dev/perspective-test";
+import perspective from "@perspective-dev/perspective";
 
 let server;
 let port;

@@ -10,8 +10,8 @@
 // ┃ of the [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0). ┃
 // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 
-import { PageView as PspViewer } from "@finos/perspective-test";
-import { expect, test } from "@finos/perspective-test";
+import { PageView as PspViewer } from "@perspective-dev/perspective-test";
+import { expect, test } from "@perspective-dev/perspective-test";
 import fs from "node:fs";
 import { fileURLToPath } from "url";
 import path from "path";

@@ -1,5 +1,5 @@
 {
-    "name": "@finos/perspective",
+    "name": "@perspective-dev/perspective",
     "version": "3.8.0",
     "description": "",
     "repository": {
@@ -48,10 +48,10 @@
         "ws": "catalog:"
     },
     "devDependencies": {
-        "@finos/perspective-esbuild-plugin": "workspace:",
-        "@finos/perspective-metadata": "workspace:",
-        "@finos/perspective-server": "workspace:",
-        "@finos/perspective-test": "workspace:",
+        "@perspective-dev/perspective-esbuild-plugin": "workspace:",
+        "@perspective-dev/perspective-metadata": "workspace:",
+        "@perspective-dev/perspective-server": "workspace:",
+        "@perspective-dev/perspective-test": "workspace:",
         "@playwright/experimental-ct-react": "catalog:",
         "@playwright/test": "catalog:",
         "@types/node": "catalog:",

@@ -10,11 +10,11 @@
 // ┃ of the [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0). ┃
 // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 
-import perspective from "@finos/perspective";
-import perspective_viewer from "@finos/perspective-viewer";
+import perspective from "@perspective-dev/perspective";
+import perspective_viewer from "@perspective-dev/perspective-viewer";
 
-import server_wasm from "@finos/perspective/dist/wasm/perspective-server.wasm";
-import client_wasm from "@finos/perspective-viewer/dist/wasm/perspective-viewer.wasm";
+import server_wasm from "@perspective-dev/perspective/dist/wasm/perspective-server.wasm";
+import client_wasm from "@perspective-dev/perspective-viewer/dist/wasm/perspective-viewer.wasm";
 
 await Promise.all([
     perspective_viewer.init_client(client_wasm),
@@ -26,9 +26,9 @@ export * from "./version";
 export * from "./view";
 export * from "./widget";
 
-import "@finos/perspective-viewer-datagrid";
-import "@finos/perspective-viewer-d3fc";
-import "@finos/perspective-viewer-openlayers";
+import "@perspective-dev/perspective-viewer-datagrid";
+import "@perspective-dev/perspective-viewer-d3fc";
+import "@perspective-dev/perspective-viewer-openlayers";
 
 // NOTE: only expose the widget here
 import { PerspectiveJupyterPlugin } from "./plugin";

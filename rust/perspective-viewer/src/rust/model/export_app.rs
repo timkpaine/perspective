@@ -16,7 +16,7 @@ static VERSION: &str = env!("CARGO_PKG_VERSION");
 
 fn render_plugin(tag_name: impl AsRef<str>) -> String {
     format!(
-        "import \"https://cdn.jsdelivr.net/npm/@finos/{0}@{1}/dist/cdn/{0}.js\";\n",
+        "import \"https://cdn.jsdelivr.net/npm/@perspective-dev/{0}@{1}/dist/cdn/{0}.js\";\n",
         tag_name.as_ref(),
         VERSION
     )
@@ -31,10 +31,10 @@ pub fn render(data: &str, layout: &str, plugins: &[String]) -> String {
 <html lang=\"en\">
 <head>
 <meta name=\"viewport\" content=\"width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no\"/>
-<link rel=\"stylesheet\" crossorigin=\"anonymous\" href=\"https://cdn.jsdelivr.net/npm/@finos/perspective-viewer@{VERSION}/dist/css/themes.css\"/>
+<link rel=\"stylesheet\" crossorigin=\"anonymous\" href=\"https://cdn.jsdelivr.net/npm/@perspective-dev/perspective-viewer@{VERSION}/dist/css/themes.css\"/>
 <script type=\"module\">
-import perspective from \"https://cdn.jsdelivr.net/npm/@finos/perspective@{VERSION}/dist/cdn/perspective.js\";
-import \"https://cdn.jsdelivr.net/npm/@finos/perspective-viewer@{VERSION}/dist/cdn/perspective-viewer.js\";
+import perspective from \"https://cdn.jsdelivr.net/npm/@perspective-dev/perspective@{VERSION}/dist/cdn/perspective.js\";
+import \"https://cdn.jsdelivr.net/npm/@perspective-dev/perspective-viewer@{VERSION}/dist/cdn/perspective-viewer.js\";
 {imports}
 const worker = await perspective.worker();
 const binary_string = window.atob(window.data.textContent);

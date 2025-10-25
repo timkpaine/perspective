@@ -389,4 +389,4 @@ def _jupyter_labextension_paths():
     Read by `jupyter labextension develop`
     @private
     """
-    return [{"src": "labextension", "dest": "@finos/perspective-jupyterlab"}]
+    return [{"src": "labextension", "dest": "@perspective-dev/perspective-jupyterlab"}]

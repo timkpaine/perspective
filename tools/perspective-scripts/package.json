@@ -1,5 +1,5 @@
 {
-    "name": "@finos/perspective-scripts",
+    "name": "@perspective-dev/perspective-scripts",
     "version": "3.8.0",
     "description": "Build scripts based on perspective",
     "private": true,

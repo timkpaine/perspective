@@ -28,19 +28,22 @@ const _require = createRequire(import.meta.url);
  * candidates in one place.
  */
 const VERSIONS = Object.keys(
-    JSON.parse(fs.readFileSync(_require.resolve(`./package.json`))).dependencies
+    JSON.parse(fs.readFileSync(_require.resolve(`./package.json`)))
+        .dependencies,
 );
 
 fs.mkdirSync(path.join(__dirname, "./dist"), { recursive: true });
 perspective_bench.suite(
     // "ws://localhost:8082/websocket",
-    ["@finos/perspective", ...VERSIONS],
+    ["@perspective-dev/perspective", ...VERSIONS],
     path.join(__dirname, "dist/benchmark-js.arrow"),
     async function (path, version_idx) {
         let client, metadata;
         if (path.startsWith("ws://")) {
             console.log(path);
-            const { default: perspective } = await import("@finos/perspective");
+            const { default: perspective } = await import(
+                "@perspective-dev/perspective"
+            );
             client = await perspective.websocket(path);
             metadata = {
                 version: "3.8.0",
@@ -49,12 +52,12 @@ perspective_bench.suite(
         } else {
             const perspective = await import(path);
             const pkg_json = JSON.parse(
-                fs.readFileSync(_require.resolve(`${path}/package.json`))
+                fs.readFileSync(_require.resolve(`${path}/package.json`)),
             );
 
             let version = pkg_json.version;
             console.log(`${path} (${pkg_json.name}@${version})`);
-            if (version === "@finos/perspective") {
+            if (version === "@perspective-dev/perspective") {
                 version = `${version} (master)`;
             }
 
@@ -67,5 +70,5 @@ perspective_bench.suite(
         await all_benchmarks.table_suite(client, metadata);
         await all_benchmarks.view_suite(client, metadata);
         await all_benchmarks.to_data_suite(client, metadata);
-    }
+    },
 );

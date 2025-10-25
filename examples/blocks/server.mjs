@@ -11,7 +11,7 @@
 // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 
 import fs from "fs";
-import { WebSocketServer } from "@finos/perspective";
+import { WebSocketServer } from "@perspective-dev/perspective";
 import { dist_examples } from "./index.mjs";
 
 import { fileURLToPath } from "url";

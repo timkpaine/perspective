@@ -14,8 +14,8 @@ import "./polyfills/index";
 import charts from "../charts/charts";
 import { initialiseStyles } from "../series/colorStyles";
 import style from "../../../dist/css/perspective-viewer-d3fc.css";
-import { HTMLPerspectiveViewerElement } from "@finos/perspective-viewer";
-import type * as psp_types from "@finos/perspective-viewer";
+import { HTMLPerspectiveViewerElement } from "@perspective-dev/perspective-viewer";
+import type * as psp_types from "@perspective-dev/perspective-viewer";
 
 import * as d3 from "d3";
 

@@ -11,12 +11,12 @@
     "keywords": [],
     "license": "Apache-2.0",
     "dependencies": {
-        "@finos/perspective": "workspace:",
-        "@finos/perspective-viewer": "workspace:",
-        "@finos/perspective-viewer-d3fc": "workspace:",
-        "@finos/perspective-viewer-datagrid": "workspace:",
-        "@finos/perspective-viewer-openlayers": "workspace:",
-        "@finos/perspective-workspace": "workspace:",
+        "@perspective-dev/perspective": "workspace:",
+        "@perspective-dev/perspective-viewer": "workspace:",
+        "@perspective-dev/perspective-viewer-d3fc": "workspace:",
+        "@perspective-dev/perspective-viewer-datagrid": "workspace:",
+        "@perspective-dev/perspective-viewer-openlayers": "workspace:",
+        "@perspective-dev/perspective-workspace": "workspace:",
         "superstore-arrow": "catalog:"
     },
     "devDependencies": {

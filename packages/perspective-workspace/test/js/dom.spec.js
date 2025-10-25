@@ -10,11 +10,11 @@
 // ┃ of the [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0). ┃
 // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 
-import { test } from "@finos/perspective-test";
+import { test } from "@perspective-dev/perspective-test";
 import {
     compareLightDOMContents,
     compareShadowDOMContents,
-} from "@finos/perspective-test";
+} from "@perspective-dev/perspective-test";
 
 async function setupTestWorkspace(page) {
     await page.goto("/tools/perspective-test/src/html/workspace-test.html");

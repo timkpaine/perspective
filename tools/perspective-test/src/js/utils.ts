@@ -10,7 +10,7 @@
 // ┃ of the [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0). ┃
 // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 
-import type { ViewerConfigUpdate } from "@finos/perspective-viewer";
+import type { ViewerConfigUpdate } from "@perspective-dev/perspective-viewer";
 import { expect, Locator, Page } from "@playwright/test";
 import * as fs from "node:fs";
 import path from "node:path";
@@ -21,7 +21,7 @@ const __filename = url.fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 export const API_VERSION = JSON.parse(
-    fs.readFileSync(__dirname + "/../../package.json").toString()
+    fs.readFileSync(__dirname + "/../../package.json").toString(),
 )["version"];
 
 export const DEFAULT_CONFIG: ViewerConfigUpdate = {
@@ -109,7 +109,7 @@ export const getSvgContentString = (selector: string) => async (page: Page) => {
                 case "text":
                     if (
                         ["label", "segment"].some((c) =>
-                            node.classList.contains(c)
+                            node.classList.contains(c),
                         )
                     ) {
                         node.textContent = node.textContent?.slice(0, 2) as
@@ -157,7 +157,7 @@ export const getSvgContentString = (selector: string) => async (page: Page) => {
  */
 export async function compareContentsToSnapshot(
     contents: string,
-    snapshotPath: string[]
+    snapshotPath: string[],
 ): Promise<void> {
     const cleanedContents = contents
         .replace(/style=""/g, "")
@@ -173,7 +173,7 @@ export async function compareContentsToSnapshot(
 export async function compareSVGContentsToSnapshot(
     page: Page,
     selector: string,
-    snapshotPath: string[]
+    snapshotPath: string[],
 ): Promise<void> {
     const svgContent = await getSvgContentString(selector)(page);
     await compareContentsToSnapshot(svgContent, snapshotPath);
@@ -181,7 +181,7 @@ export async function compareSVGContentsToSnapshot(
 
 export function getWorkspaceLightDOMContents(page: Page): Promise<string> {
     return page.evaluate(
-        async () => document.querySelector("perspective-workspace")!.outerHTML
+        async () => document.querySelector("perspective-workspace")!.outerHTML,
     );
 }
 
@@ -234,7 +234,7 @@ export async function shadow_click(page, ...path): Promise<void> {
             triggerMouseEvent(elem, "mouseup");
             triggerMouseEvent(elem, "click");
         },
-        { path }
+        { path },
     );
 }
 
@@ -325,7 +325,7 @@ export async function shadow_type(
             // @ts-ignore
             document.activeElement.blur();
         },
-        { content, path, is_incremental }
+        { content, path, is_incremental },
     );
 }
 
@@ -361,6 +361,6 @@ export async function compareNodes(left: Locator, right: Locator, page: Page) {
         {
             leftEl,
             rightEl,
-        }
+        },
     );
 }

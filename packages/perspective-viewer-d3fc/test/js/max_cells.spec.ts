@@ -10,10 +10,13 @@
 // ┃ of the [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0). ┃
 // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 
-import { compareContentsToSnapshot, test } from "@finos/perspective-test";
-import { getSvgContentString } from "@finos/perspective-test";
+import {
+    compareContentsToSnapshot,
+    test,
+} from "@perspective-dev/perspective-test";
+import { getSvgContentString } from "@perspective-dev/perspective-test";
 
-import type from "@finos/perspective-viewer-d3fc";
+import type from "@perspective-dev/perspective-viewer-d3fc";
 
 test.describe("max_cells", () => {
     test("max_cells can be statically configured", async ({ page }) => {

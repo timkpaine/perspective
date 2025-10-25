@@ -53,7 +53,7 @@ function stddev(array, key) {
     return Math.sqrt(
         array
             .map((x) => Math.pow(x[key] / 1000 - mean, 2))
-            .reduce((a, b) => a + b) / n
+            .reduce((a, b) => a + b) / n,
     );
 }
 
@@ -80,7 +80,7 @@ function markOutliers(someArray) {
 }
 
 /**
- * Convert a list to arrow and write it to disk. `@finos/perspective` is
+ * Convert a list to arrow and write it to disk. `@perspective-dev/perspective` is
  * imported in this scope to prevent interpreter-wide side effects of the
  * library from impacting forked processes, based on an observation that some
  * runs inline had anomalies across many observations that couldn't be explained
@@ -241,7 +241,7 @@ export async function benchmark({
                 metadata,
                 after,
                 i,
-            })
+            }),
         );
     }
 
@@ -263,7 +263,6 @@ export async function benchmark({
         non_outliers: i - n_outliers,
     };
 
-
     await after_all?.(...args);
     globalThis.__SEND__({ obs_records, stats });
 }
@@ -272,8 +271,8 @@ function buffer_to_arraybuffer(buffer) {
     return new Int8Array(
         buffer.buffer.slice(
             buffer.byteOffset,
-            buffer.byteOffset + buffer.length
-        )
+            buffer.byteOffset + buffer.length,
+        ),
     );
 }
 
@@ -282,8 +281,12 @@ function buffer_to_arraybuffer(buffer) {
  * @param {*} param0
  * @returns
  */
-async function start_server({ cwd_static_file_handler, make_session, WebSocketServer }) {
-    return new WebSocketServer({assets: ["src/html/", "../.."], port: 8081})
+async function start_server({
+    cwd_static_file_handler,
+    make_session,
+    WebSocketServer,
+}) {
+    return new WebSocketServer({ assets: ["src/html/", "../.."], port: 8081 });
 }
 
 /**
@@ -297,7 +300,7 @@ export async function suite(
     out_path,
     run_version_callback,
     start_server_callback,
-    stop_server_callback
+    stop_server_callback,
 ) {
     if (!!process.env.BENCH_FLAG) {
         const { default: process } = await import("node:process");
@@ -306,7 +309,7 @@ export async function suite(
             process.send({ finished: true });
         });
     } else {
-        const psp = await import("@finos/perspective");
+        const psp = await import("@perspective-dev/perspective");
         const benchmarks_table = await psp.default.table(
             {
                 version: "string",
@@ -318,7 +321,7 @@ export async function suite(
                 benchmark: "string",
                 outlier: "boolean",
             },
-            { name: "benchmarks" }
+            { name: "benchmarks" },
         );
 
         const app = await start_server(psp);
@@ -332,7 +335,7 @@ export async function suite(
             await Promise.all([
                 benchmark_node_version(
                     { path: versions[i], i },
-                    benchmarks_table
+                    benchmarks_table,
                 ),
                 // benchmark_puppeteer_version(
                 //     { path: versions[i], i },

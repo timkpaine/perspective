@@ -11,7 +11,7 @@
 // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 
 import { exec } from "child_process";
-import { table } from "@finos/perspective";
+import { table } from "@perspective-dev/perspective";
 
 const OPEN = (port) => `
 if which xdg-open > /dev/null

@@ -13,7 +13,7 @@
 import {
     IPerspectiveViewerPlugin,
     ColumnConfigValues,
-} from "@finos/perspective-viewer";
+} from "@perspective-dev/perspective-viewer";
 
 export interface Element {
     msMatchesSelector(selectors: string): boolean;

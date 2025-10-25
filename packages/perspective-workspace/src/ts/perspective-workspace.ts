@@ -12,8 +12,8 @@
 
 import { MessageLoop } from "@lumino/messaging";
 import { Widget } from "@lumino/widgets";
-import { HTMLPerspectiveViewerElement } from "@finos/perspective-viewer";
-import type * as psp from "@finos/perspective";
+import { HTMLPerspectiveViewerElement } from "@perspective-dev/perspective-viewer";
+import type * as psp from "@perspective-dev/perspective";
 
 export { PerspectiveWorkspace } from "./workspace";
 export { PerspectiveViewerWidget } from "./workspace/widget";

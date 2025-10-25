@@ -10,15 +10,15 @@
 // ┃ of the [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0). ┃
 // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 
-import { test, expect } from "@finos/perspective-test";
-import { compareSVGContentsToSnapshot } from "@finos/perspective-test";
+import { test, expect } from "@perspective-dev/perspective-test";
+import { compareSVGContentsToSnapshot } from "@perspective-dev/perspective-test";
 
 test.describe("Events test", () => {
     test("perspective-config-update event is fired when series axis is changed", async ({
         page,
     }) => {
         await page.goto(
-            "/node_modules/@finos/perspective-test/src/html/basic-test.html",
+            "/node_modules/@perspective-dev/perspective-test/src/html/basic-test.html",
         );
         await page.evaluate(async () => {
             while (!window["__TEST_PERSPECTIVE_READY__"]) {
@@ -83,7 +83,7 @@ test.describe("Events test", () => {
         page,
     }) => {
         await page.goto(
-            "/node_modules/@finos/perspective-test/src/html/basic-test.html",
+            "/node_modules/@perspective-dev/perspective-test/src/html/basic-test.html",
         );
         await page.evaluate(async () => {
             while (!window["__TEST_PERSPECTIVE_READY__"]) {

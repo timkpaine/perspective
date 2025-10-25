@@ -27,7 +27,7 @@ const __dirname = url.fileURLToPath(new URL(".", import.meta.url)).slice(0, -1);
  * candidates in one place.
  */
 const VERSIONS = [
-    "@finos/perspective",
+    "@perspective-dev/perspective",
     "perspective-3-0-0",
     "perspective-2-10-0",
 ];
@@ -69,7 +69,7 @@ perspective_bench.suite(
                     await benchmarks[suite](client, metadata);
                     return total;
                 },
-                [path, suite, version_idx]
+                [path, suite, version_idx],
             );
 
             for (const { obs_records, stats } of items) {
@@ -80,5 +80,5 @@ perspective_bench.suite(
         await test_suite("table_suite");
         await test_suite("view_suite");
         await test_suite("to_data_suite");
-    }
+    },
 );

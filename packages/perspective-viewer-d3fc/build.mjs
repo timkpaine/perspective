@@ -10,8 +10,8 @@
 // ┃ of the [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0). ┃
 // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 
-import { NodeModulesExternal } from "@finos/perspective-esbuild-plugin/external.js";
-import { build } from "@finos/perspective-esbuild-plugin/build.js";
+import { NodeModulesExternal } from "@perspective-dev/perspective-esbuild-plugin/external.js";
+import { build } from "@perspective-dev/perspective-esbuild-plugin/build.js";
 import { BuildCss } from "@prospective.co/procss/target/cjs/procss.js";
 import { promisify } from "node:util";
 import { execSync } from "node:child_process";

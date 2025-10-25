@@ -10,10 +10,10 @@
 // ┃ of the [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0). ┃
 // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 
-import { Type } from "@finos/perspective";
-import { PageView } from "@finos/perspective-test";
-import { ColumnSelector } from "@finos/perspective-test/src/js/models/settings_panel";
-import { test, expect } from "@finos/perspective-test";
+import { Type } from "@perspective-dev/perspective";
+import { PageView } from "@perspective-dev/perspective-test";
+import { ColumnSelector } from "@perspective-dev/perspective-test/src/js/models/settings_panel";
+import { test, expect } from "@perspective-dev/perspective-test";
 
 test.describe.configure({ mode: "parallel" });
 

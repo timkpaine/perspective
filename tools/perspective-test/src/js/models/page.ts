@@ -17,7 +17,7 @@ import { DataGridPlugin } from "./plugins";
 import type {
     IPerspectiveViewerElement,
     ViewerConfigUpdate,
-} from "@finos/perspective-viewer";
+} from "@perspective-dev/perspective-viewer";
 
 /**
  * This class is the primary interface between Playwright tests and the items on the Perspective Viewer.
@@ -40,7 +40,7 @@ export class PageView {
         this.page = page;
         this.container = page.locator("perspective-viewer");
         this.settingsCloseButton = this.container.locator(
-            "#settings_close_button"
+            "#settings_close_button",
         );
         this.settingsButton = this.container.locator("#settings_button");
         this.columnSettingsSidebar = new ColumnSettingsSidebar(this);
@@ -110,11 +110,11 @@ export class PageView {
 
     async assureColumnSettingsOpen(column: ColumnSelector) {
         let isEditing = await column.editBtn.evaluate((btn) =>
-            btn.className.includes("is-editing")
+            btn.className.includes("is-editing"),
         );
         if (!isEditing) {
             await this.container.evaluate((_) =>
-                console.log("COLUMN SETTINGS CLOSED")
+                console.log("COLUMN SETTINGS CLOSED"),
             );
             await column.editBtn.click({ force: true });
         }
@@ -148,7 +148,7 @@ export class PageView {
                     console.log(event);
                 });
             },
-            { eventName, key }
+            { eventName, key },
         );
         return async () => {
             return await this.page.evaluate(
@@ -161,7 +161,7 @@ export class PageView {
                     }
                     return true;
                 },
-                { options, key }
+                { options, key },
             );
         };
     }

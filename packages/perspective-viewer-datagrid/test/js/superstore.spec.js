@@ -10,12 +10,12 @@
 // ┃ of the [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0). ┃
 // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 
-import { shadow_type, test } from "@finos/perspective-test";
+import { shadow_type, test } from "@perspective-dev/perspective-test";
 import {
     compareContentsToSnapshot,
     run_standard_tests,
     runPerspectiveEventClickTest,
-} from "@finos/perspective-test";
+} from "@perspective-dev/perspective-test";
 import * as prettier from "prettier";
 
 async function getDatagridContents(page) {

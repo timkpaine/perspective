@@ -10,24 +10,24 @@
 // ┃ of the [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0). ┃
 // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 
-import perspective from "@finos/perspective";
-import perspective_viewer from "@finos/perspective-viewer";
-import "@finos/perspective-viewer-datagrid";
-import "@finos/perspective-viewer-d3fc";
+import perspective from "@perspective-dev/perspective";
+import perspective_viewer from "@perspective-dev/perspective-viewer";
+import "@perspective-dev/perspective-viewer-datagrid";
+import "@perspective-dev/perspective-viewer-d3fc";
 
 // @ts-ignore
-import SERVER_WASM from "@finos/perspective/dist/wasm/perspective-server.wasm?url";
+import SERVER_WASM from "@perspective-dev/perspective/dist/wasm/perspective-server.wasm?url";
 
 // @ts-ignore
-import CLIENT_WASM from "@finos/perspective-viewer/dist/wasm/perspective-viewer.wasm?url";
+import CLIENT_WASM from "@perspective-dev/perspective-viewer/dist/wasm/perspective-viewer.wasm?url";
 
 await Promise.all([
     perspective.init_server(fetch(SERVER_WASM)),
     perspective_viewer.init_client(fetch(CLIENT_WASM)),
 ]);
 
-import type * as psp from "@finos/perspective";
-import type * as pspViewer from "@finos/perspective-viewer";
+import type * as psp from "@perspective-dev/perspective";
+import type * as pspViewer from "@perspective-dev/perspective-viewer";
 
 // @ts-ignore
 import SUPERSTORE_ARROW from "superstore-arrow/superstore.lz4.arrow?url";
@@ -46,9 +46,9 @@ const CONFIG: pspViewer.ViewerConfigUpdate = {
 };
 
 import * as React from "react";
-import { PerspectiveViewer } from "@finos/perspective-react";
+import { PerspectiveViewer } from "@perspective-dev/perspective-react";
 
-import "@finos/perspective-viewer/dist/css/themes.css";
+import "@perspective-dev/perspective-viewer/dist/css/themes.css";
 import "./index.css";
 
 interface ToolbarState {

@@ -10,7 +10,7 @@
 // ┃ of the [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0). ┃
 // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 
-import perspective from "@finos/perspective";
+import perspective from "@perspective-dev/perspective";
 
 // Cache updates for faster update rates (but less data diversity)>
 const CACHE_INPUT = false;
@@ -143,7 +143,7 @@ export const getTable = (
         update_size: UPDATE_SIZE,
         table_size: TABLE_SIZE,
         cache_entries: CACHE_ENTRIES,
-    }
+    },
 ) => {
     if (config.cached) {
         return init_cached(config);

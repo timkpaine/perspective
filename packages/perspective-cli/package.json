@@ -1,5 +1,5 @@
 {
-    "name": "@finos/perspective-cli",
+    "name": "@perspective-dev/perspective-cli",
     "version": "3.8.0",
     "description": "Perspective.js CLI",
     "main": "src/js/index.js",
@@ -22,16 +22,16 @@
         "perspective": "perspective"
     },
     "dependencies": {
-        "@finos/perspective": "workspace:",
-        "@finos/perspective-viewer": "workspace:",
-        "@finos/perspective-viewer-d3fc": "workspace:",
-        "@finos/perspective-viewer-datagrid": "workspace:",
-        "@finos/perspective-viewer-openlayers": "workspace:",
-        "@finos/perspective-workspace": "workspace:",
+        "@perspective-dev/perspective": "workspace:",
+        "@perspective-dev/perspective-viewer": "workspace:",
+        "@perspective-dev/perspective-viewer-d3fc": "workspace:",
+        "@perspective-dev/perspective-viewer-datagrid": "workspace:",
+        "@perspective-dev/perspective-viewer-openlayers": "workspace:",
+        "@perspective-dev/perspective-workspace": "workspace:",
         "commander": "catalog:",
         "puppeteer": "catalog:"
     },
     "devDependencies": {
-        "@finos/perspective-test": "workspace:"
+        "@perspective-dev/perspective-test": "workspace:"
     }
 }

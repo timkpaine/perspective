@@ -10,7 +10,7 @@
 // ┃ of the [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0). ┃
 // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 
-import "@finos/perspective-viewer";
+import "@perspective-dev/perspective-viewer";
 import { Widget } from "@lumino/widgets";
 import { MIME_TYPE, PSP_CLASS, PSP_CONTAINER_CLASS } from "./utils";
 

@@ -10,7 +10,7 @@
 // ┃ of the [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0). ┃
 // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 
-import { test, expect } from "@finos/perspective-test";
+import { test, expect } from "@perspective-dev/perspective-test";
 import perspective from "./perspective_client";
 
 ((perspective) => {
@@ -19,7 +19,7 @@ import perspective from "./perspective_client";
             await page.goto("/rust/perspective-js/test/html/test.html");
             const [json0, json1] = await page.evaluate(async () => {
                 let perspective = await import(
-                    "http://localhost:6598/node_modules/@finos/perspective/dist/esm/perspective.inline.js"
+                    "http://localhost:6598/node_modules/@perspective-dev/perspective/dist/esm/perspective.inline.js"
                 );
 
                 const worker0 = await perspective.worker();
@@ -42,7 +42,7 @@ import perspective from "./perspective_client";
             await page.goto("/rust/perspective-js/test/html/test.html");
             const [json0, json1] = await page.evaluate(async () => {
                 let perspective = await import(
-                    "http://localhost:6598/node_modules/@finos/perspective/dist/esm/perspective.inline.js"
+                    "http://localhost:6598/node_modules/@perspective-dev/perspective/dist/esm/perspective.inline.js"
                 );
 
                 const worker0 = await perspective.worker();

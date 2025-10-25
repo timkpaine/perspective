@@ -10,8 +10,8 @@
 // ┃ of the [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0). ┃
 // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 
-import { test, expect } from "@finos/perspective-test";
-import { compareContentsToSnapshot } from "@finos/perspective-test";
+import { test, expect } from "@perspective-dev/perspective-test";
+import { compareContentsToSnapshot } from "@perspective-dev/perspective-test";
 
 async function test_column(page, selector, selector2) {
     const { x, y } = await page.evaluate(async (selector) => {

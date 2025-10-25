@@ -10,7 +10,7 @@
 // ┃ of the [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0). ┃
 // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 
-import type { IPerspectiveViewerPlugin } from "@finos/perspective-viewer";
+import type { IPerspectiveViewerPlugin } from "@perspective-dev/perspective-viewer";
 
 declare global {
     interface CustomElementRegistry {

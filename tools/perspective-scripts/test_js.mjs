@@ -109,7 +109,7 @@ if (process.env.PACKAGE) {
     ) {
         // Support `pnpm test -- --my_cool --test_arguments`
         const args = process.argv.slice(2);
-        sh`pnpm run --recursive --filter @finos/perspective-python test ${args}`.runSync();
+        sh`pnpm run --recursive --filter @perspective-dev/perspective-python test ${args}`.runSync();
     }
 
     if (IS_RUST) {

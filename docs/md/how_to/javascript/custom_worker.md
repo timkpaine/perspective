@@ -4,7 +4,7 @@ The `Client.worker` constructor by default creates a dedicated `Worker` bound to
 the page context. Alternatively, `Client.worker` can take a `Worker`,
 `SharedWorker` or `ServiceWorker` instance as a first argument, which load the
 worker script disted at
-`"@finos/perspective/dist/cdn/perspective-server.worker.js"`.
+`"@perspective-dev/perspective/dist/cdn/perspective-server.worker.js"`.
 
 <span class="warning">`SharedWorker` and `ServiceWorker` have more complicated
 behavior compared to a dedicated `Worker`, and will need special consideration

@@ -1,5 +1,5 @@
 {
-    "name": "@finos/perspective-python",
+    "name": "@perspective-dev/perspective-python",
     "version": "3.8.0",
     "description": "",
     "private": true,
@@ -16,12 +16,12 @@
         "docs": "pdoc perspective/__init__.py perspective/handlers/aiohttp.py, perspective/handlers/starlette.py perspective/handlers/tornado.py perspective/widget/__init__.py -o ../../docs/static/python && node docs.mjs"
     },
     "devDependencies": {
-        "@finos/perspective-scripts": "workspace:*",
+        "@perspective-dev/perspective-scripts": "workspace:*",
         "@iarna/toml": "catalog:",
         "tar": "catalog:",
         "zx": "catalog:"
     },
     "dependencies": {
-        "@finos/perspective-jupyterlab": "workspace:*"
+        "@perspective-dev/perspective-jupyterlab": "workspace:*"
     }
 }

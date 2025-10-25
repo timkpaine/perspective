@@ -22,7 +22,7 @@ const examples = fs.readdirSync("static/blocks").map((ex) => {
             (x) =>
                 !x.startsWith(".") &&
                 !x.endsWith(".png") &&
-                !x.endsWith(".arrow")
+                !x.endsWith(".arrow"),
         )
         .map((x) => {
             return {
@@ -157,29 +157,29 @@ const config = {
                             {
                                 type: "html",
                                 value: link(
-                                    "<code>@finos/perspective</code> Browser",
-                                    "/browser/modules/src_ts_perspective.browser.ts.html"
+                                    "<code>@perspective-dev/perspective</code> Browser",
+                                    "/browser/modules/src_ts_perspective.browser.ts.html",
                                 ),
                             },
                             {
                                 type: "html",
                                 value: link(
-                                    "<code>@finos/perspective</code> Node.js",
-                                    "/node/modules/src_ts_perspective.node.ts.html"
+                                    "<code>@perspective-dev/perspective</code> Node.js",
+                                    "/node/modules/src_ts_perspective.node.ts.html",
                                 ),
                             },
                             {
                                 type: "html",
                                 value: link(
-                                    "<code>@finos/perspective-viewer</code>",
-                                    "/viewer/modules/perspective-viewer.html"
+                                    "<code>@perspective-dev/perspective-viewer</code>",
+                                    "/viewer/modules/perspective-viewer.html",
                                 ),
                             },
                             {
                                 type: "html",
                                 value: link(
-                                    "<code>@finos/perspective-react</code>",
-                                    "/react/index.html"
+                                    "<code>@perspective-dev/perspective-react</code>",
+                                    "/react/index.html",
                                 ),
                             },
                             {

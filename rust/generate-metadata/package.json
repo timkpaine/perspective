@@ -1,5 +1,5 @@
 {
-    "name": "@finos/perspective-metadata",
+    "name": "@perspective-dev/perspective-metadata",
     "version": "2.0.1",
     "description": "Benchmark utility based on perspective",
     "private": true,

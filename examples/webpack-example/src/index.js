@@ -13,17 +13,17 @@
 import "./index.css";
 import superstore from "superstore-arrow/superstore.lz4.arrow";
 
-import "@finos/perspective-viewer/dist/css/themes.css";
+import "@perspective-dev/perspective-viewer/dist/css/themes.css";
 
-import "@finos/perspective-viewer-datagrid";
-import "@finos/perspective-viewer-d3fc/bar";
-import perspective from "@finos/perspective";
-import perspective_viewer from "@finos/perspective-viewer";
+import "@perspective-dev/perspective-viewer-datagrid";
+import "@perspective-dev/perspective-viewer-d3fc/bar";
+import perspective from "@perspective-dev/perspective";
+import perspective_viewer from "@perspective-dev/perspective-viewer";
 
 // Depending on the phase of the moon (and to a lesser extend, your `webpack`
 // version), this may or may not have a default export.
-import SERVER_WASM from "@finos/perspective/dist/wasm/perspective-server.wasm";
-import CLIENT_WASM from "@finos/perspective-viewer/dist/wasm/perspective-viewer.wasm";
+import SERVER_WASM from "@perspective-dev/perspective/dist/wasm/perspective-server.wasm";
+import CLIENT_WASM from "@perspective-dev/perspective-viewer/dist/wasm/perspective-viewer.wasm";
 
 console.log(CLIENT_WASM);
 await Promise.all([

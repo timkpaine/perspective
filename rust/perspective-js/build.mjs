@@ -11,9 +11,9 @@
 // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 
 import { execSync } from "child_process";
-import { build } from "@finos/perspective-esbuild-plugin/build.js";
-import { PerspectiveEsbuildPlugin } from "@finos/perspective-esbuild-plugin";
-import { NodeModulesExternal } from "@finos/perspective-esbuild-plugin/external.js";
+import { build } from "@perspective-dev/perspective-esbuild-plugin/build.js";
+import { PerspectiveEsbuildPlugin } from "@perspective-dev/perspective-esbuild-plugin";
+import { NodeModulesExternal } from "@perspective-dev/perspective-esbuild-plugin/external.js";
 
 import "zx/globals";
 import { compress } from "pro_self_extracting_wasm";

@@ -49,7 +49,7 @@ let PACKAGE: string[] = [];
 if (package_venn.include.length === 0) {
     PACKAGE = JSON.parse(execSync(`pnpm m ls --json --depth=-1`).toString())
         .filter((x) => x.name !== undefined)
-        .map((x) => x.name.replace("@finos/", ""))
+        .map((x) => x.name.replace("@perspective-dev/", ""))
         .filter((x) => package_venn.exclude.indexOf(`!${x}`) === -1);
 } else {
     PACKAGE = package_venn.include.filter(
@@ -194,11 +194,11 @@ let PROJECTS = (() => {
 const __require = createRequire(import.meta.url);
 
 const GLOBAL_SETUP_PATH = __require.resolve(
-    "@finos/perspective-jupyterlab/test/config/jupyter/globalSetup.ts",
+    "@perspective-dev/perspective-jupyterlab/test/config/jupyter/globalSetup.ts",
 );
 
 const GLOBAL_TEARDOWN_PATH = __require.resolve(
-    "@finos/perspective-jupyterlab/test/config/jupyter/globalTeardown.ts",
+    "@perspective-dev/perspective-jupyterlab/test/config/jupyter/globalTeardown.ts",
 );
 
 // See https://playwright.dev/docs/test-configuration.

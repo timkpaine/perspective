@@ -11,9 +11,9 @@
 // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 
 /**
- * @param {import("@finos/perspective").Type} type
+ * @param {import("@perspective-dev/perspective").Type} type
  * @param {string} _group
- * @returns {import("@finos/perspective-viewer").PerspectiveColumnConfigValue}
+ * @returns {import("@perspective-dev/perspective-viewer").PerspectiveColumnConfigValue}
  */
 export default function column_style_opts(type, _group) {
     if (type === "integer" || type === "float")

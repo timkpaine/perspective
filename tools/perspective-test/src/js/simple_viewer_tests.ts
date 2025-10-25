@@ -16,7 +16,7 @@ import {
     shadow_click,
 } from "./utils.ts";
 import { test, expect } from "./index.js";
-import type { PerspectiveViewerConfig } from "@finos/perspective-viewer";
+import type { PerspectiveViewerConfig } from "@perspective-dev/perspective-viewer";
 
 export type ContentExtractor = (page: any) => Promise<string>;
 
@@ -30,7 +30,7 @@ async function restoreViewer(page, viewerConfig: PerspectiveViewerConfig) {
 function runSimpleCompareTest(
     viewerConfig: PerspectiveViewerConfig,
     extractContent: ContentExtractor,
-    snapshotPath: string[]
+    snapshotPath: string[],
 ) {
     return async ({ page }) => {
         await restoreViewer(page, viewerConfig);
@@ -53,14 +53,14 @@ export function runPerspectiveEventClickTest() {
                     element.addEventListener("perspective-click", (event) => {
                         // extract the detail
                         resolve(event.detail);
-                    })
-                )
+                    }),
+                ),
         );
 
         await shadow_click(
             page,
             "perspective-viewer-datagrid",
-            "regular-table > table > tbody > tr:nth-child(1) > td:nth-child(2)"
+            "regular-table > table > tbody > tr:nth-child(1) > td:nth-child(2)",
         );
 
         const detail = await perspectiveClick;
@@ -72,7 +72,7 @@ export function runPerspectiveEventClickTest() {
 
 export function run_standard_tests(
     context: string,
-    extractContent: ContentExtractor
+    extractContent: ContentExtractor,
 ) {
     test("Show grid no settings", async ({ page }) => {
         await page.evaluate(async () => {
@@ -109,8 +109,8 @@ export function run_standard_tests(
                     settings: true,
                 },
                 extractContent,
-                [context, `pivot-by-row.txt`]
-            )
+                [context, `pivot-by-row.txt`],
+            ),
         );
 
         test(
@@ -121,8 +121,8 @@ export function run_standard_tests(
                     settings: true,
                 },
                 extractContent,
-                [context, `pivot-by-two-rows.txt`]
-            )
+                [context, `pivot-by-two-rows.txt`],
+            ),
         );
 
         test(
@@ -133,8 +133,8 @@ export function run_standard_tests(
                     settings: true,
                 },
                 extractContent,
-                [context, `pivot-by-column.txt`]
-            )
+                [context, `pivot-by-column.txt`],
+            ),
         );
 
         test(
@@ -146,8 +146,8 @@ export function run_standard_tests(
                     settings: true,
                 },
                 extractContent,
-                [context, `pivot-by-row-and-column.txt`]
-            )
+                [context, `pivot-by-row-and-column.txt`],
+            ),
         );
 
         test(
@@ -159,8 +159,8 @@ export function run_standard_tests(
                     settings: true,
                 },
                 extractContent,
-                [context, `pivot-by-two-rows-and-two-columns.txt`]
-            )
+                [context, `pivot-by-two-rows-and-two-columns.txt`],
+            ),
         );
     });
 
@@ -174,8 +174,8 @@ export function run_standard_tests(
                     settings: true,
                 },
                 extractContent,
-                [context, `sort-by-hidden-column.txt`]
-            )
+                [context, `sort-by-hidden-column.txt`],
+            ),
         );
 
         test(
@@ -187,8 +187,8 @@ export function run_standard_tests(
                     settings: true,
                 },
                 extractContent,
-                [context, `sort-by-numeric-column.txt`]
-            )
+                [context, `sort-by-numeric-column.txt`],
+            ),
         );
 
         test(
@@ -200,8 +200,8 @@ export function run_standard_tests(
                     settings: true,
                 },
                 extractContent,
-                [context, `sort-by-alpha-column.txt`]
-            )
+                [context, `sort-by-alpha-column.txt`],
+            ),
         );
     });
 
@@ -215,8 +215,8 @@ export function run_standard_tests(
                     settings: true,
                 },
                 extractContent,
-                [context, `filter-by-numeric-column.txt`]
-            )
+                [context, `filter-by-numeric-column.txt`],
+            ),
         );
 
         test(
@@ -228,8 +228,8 @@ export function run_standard_tests(
                     settings: true,
                 },
                 extractContent,
-                [context, `filter-by-alpha-column.txt`]
-            )
+                [context, `filter-by-alpha-column.txt`],
+            ),
         );
 
         test(
@@ -241,8 +241,8 @@ export function run_standard_tests(
                     settings: true,
                 },
                 extractContent,
-                [context, `filter-with-in-comparator.txt`]
-            )
+                [context, `filter-with-in-comparator.txt`],
+            ),
         );
     });
 }

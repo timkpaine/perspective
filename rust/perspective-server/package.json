@@ -1,5 +1,5 @@
 {
-    "name": "@finos/perspective-server",
+    "name": "@perspective-dev/perspective-server",
     "private": true,
     "author": "The Perspective Authors",
     "license": "Apache-2.0",

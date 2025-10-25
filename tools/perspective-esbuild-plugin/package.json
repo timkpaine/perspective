@@ -1,5 +1,5 @@
 {
-    "name": "@finos/perspective-esbuild-plugin",
+    "name": "@perspective-dev/perspective-esbuild-plugin",
     "version": "3.8.0",
     "description": "esbuild plugin for Perspective",
     "author": "",

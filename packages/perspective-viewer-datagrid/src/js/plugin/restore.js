@@ -23,7 +23,7 @@ import { make_color_record } from "../color_utils.js";
  * Restore this plugin's state from a previously saved `token`.
  *
  * @param {*} token A token returned from `save()`.
- * @param {import("@finos/perspective-viewer").PerspectiveColumnConfig} columns Viewer column settings
+ * @param {import("@perspective-dev/perspective-viewer").PerspectiveColumnConfig} columns Viewer column settings
  */
 export function restore(token, columns) {
     token = JSON.parse(JSON.stringify(token));

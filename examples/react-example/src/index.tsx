@@ -18,13 +18,13 @@
 // to treat these files as a "file" and returns a path as the default export.
 // Use ./build.js as an example. The type stubs are in ./globals.d.ts
 
-import perspective from "@finos/perspective";
-import perspective_viewer from "@finos/perspective-viewer";
-import "@finos/perspective-viewer-datagrid";
-import "@finos/perspective-viewer-d3fc";
+import perspective from "@perspective-dev/perspective";
+import perspective_viewer from "@perspective-dev/perspective-viewer";
+import "@perspective-dev/perspective-viewer-datagrid";
+import "@perspective-dev/perspective-viewer-d3fc";
 
-import SERVER_WASM from "@finos/perspective/dist/wasm/perspective-server.wasm";
-import CLIENT_WASM from "@finos/perspective-viewer/dist/wasm/perspective-viewer.wasm";
+import SERVER_WASM from "@perspective-dev/perspective/dist/wasm/perspective-server.wasm";
+import CLIENT_WASM from "@perspective-dev/perspective-viewer/dist/wasm/perspective-viewer.wasm";
 
 await Promise.all([
     perspective.init_server(fetch(SERVER_WASM)),
@@ -37,8 +37,8 @@ await Promise.all([
 // table creation function which both downloads data and loads it into the
 // engine.
 
-import type * as psp from "@finos/perspective";
-import type * as pspViewer from "@finos/perspective-viewer";
+import type * as psp from "@perspective-dev/perspective";
+import type * as pspViewer from "@perspective-dev/perspective-viewer";
 
 import SUPERSTORE_ARROW from "superstore-arrow/superstore.lz4.arrow";
 
@@ -62,9 +62,9 @@ const CONFIG: pspViewer.ViewerConfigUpdate = {
 
 import * as React from "react";
 import { createRoot } from "react-dom/client";
-import { PerspectiveViewer } from "@finos/perspective-react";
+import { PerspectiveViewer } from "@perspective-dev/perspective-react";
 
-import "@finos/perspective-viewer/dist/css/themes.css";
+import "@perspective-dev/perspective-viewer/dist/css/themes.css";
 import "./index.css";
 
 interface ToolbarState {

@@ -36,7 +36,7 @@ if (JS_PKGS.length > 0 || RUST_PKGS.length > 0) {
     const flags = JS_PKGS.concat(RUST_PKGS)
         .map(
             (x) =>
-                `--filter @finos/${x} --if-present --filter ${x} --if-present`,
+                `--filter @perspective-dev/${x} --if-present --filter ${x} --if-present`,
         )
         .join(" ");
 

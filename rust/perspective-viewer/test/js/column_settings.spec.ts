@@ -10,9 +10,9 @@
 // ┃ of the [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0). ┃
 // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 
-import { test, expect } from "@finos/perspective-test";
-import { PageView } from "@finos/perspective-test";
-import { ColumnSettingsSidebar } from "@finos/perspective-test/src/js/models/column_settings";
+import { test, expect } from "@perspective-dev/perspective-test";
+import { PageView } from "@perspective-dev/perspective-test";
+import { ColumnSettingsSidebar } from "@perspective-dev/perspective-test/src/js/models/column_settings";
 
 test.beforeEach(async ({ page }) => {
     await page.goto("/tools/perspective-test/src/html/basic-test.html");

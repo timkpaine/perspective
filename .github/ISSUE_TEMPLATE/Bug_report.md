@@ -23,13 +23,12 @@ repros:
     including and dependencies you needed to install and hwo you installed them.
 
 3.  If you are reporting a _anything else_, including but not limited to:
-
-    -   Build issues which require _any_ metadata files e.g. a `package.json`,
-        `Cargo.toml`, etc
-    -   Bundler or packaging errors with JavaScript
-    -   Library functions which return the wrong results or error
-    -   CPU or memory usage performance regressions, or regressions in thread
-        utilization
+    - Build issues which require _any_ metadata files e.g. a `package.json`,
+      `Cargo.toml`, etc
+    - Bundler or packaging errors with JavaScript
+    - Library functions which return the wrong results or error
+    - CPU or memory usage performance regressions, or regressions in thread
+      utilization
 
     In this case, we require a _complete reproduction_ of the issue in the form
     of a repository. Quoting this exceptional definition from
@@ -57,14 +56,13 @@ repros:
 
     Some examples which _do not_ qualify as _complete_ and are mostly useless to
     us for debugging:
-
-    -   Instructions which ask us to visit a website or download an application,
-        even if it is _completely_ open source (and expecially if it is not)
-    -   Instructions which just describe how to create a project, e.g. with a
-        specific build tool or template
-    -   Screenshots of exceptions
-    -   Screenshots of code
-    -   Code snippets copied from a larger application context
+    - Instructions which ask us to visit a website or download an application,
+      even if it is _completely_ open source (and expecially if it is not)
+    - Instructions which just describe how to create a project, e.g. with a
+      specific build tool or template
+    - Screenshots of exceptions
+    - Screenshots of code
+    - Code snippets copied from a larger application context
 
 ### Expected Result:
 
@@ -76,50 +74,50 @@ include screenshots with annotations.
 Describe what actually happened, with special attention to the errant behavior.
 Always include:
 
--   OS and version
--   Platform/language + version
+- OS and version
+- Platform/language + version
 
 If you are reporting a UX/UI error:
 
--   (if websocket) Platform/language + version of remote perspective server.
--   Full exception/error message if applicable.
--   Any potentially relevent JavaScript developer console error logs.
--   Screenshots of the UI in an obviously broken state. (but please try to avoid
-    screenshots of your code, see below)
+- (if websocket) Platform/language + version of remote perspective server.
+- Full exception/error message if applicable.
+- Any potentially relevent JavaScript developer console error logs.
+- Screenshots of the UI in an obviously broken state. (but please try to avoid
+  screenshots of your code, see below)
 
 If you are reporting a library error:
 
--   (if websocket) Platform/language + version of remote perspective server.
--   Full exception error capture (please include the entire stack trace,
-    including "caused by" entries), log entries, etc. where appropriate. Please
-    avoid posting screenshots of code (which we may need to debug).
+- (if websocket) Platform/language + version of remote perspective server.
+- Full exception error capture (please include the entire stack trace, including
+  "caused by" entries), log entries, etc. where appropriate. Please avoid
+  posting screenshots of code (which we may need to debug).
 
 If you are reporting a build or install error:
 
--   Full error output from running your repro, formatted as a code block (please
-    _do not_ include screenshots of build logs).
+- Full error output from running your repro, formatted as a code block (please
+  _do not_ include screenshots of build logs).
 
 ### Environment:
 
 For JavaScript (browser):
 
--   `@finos/perspective` version
--   Browser and version
--   OS
--   (if websocket) Language/version/OS of perspective server
+- `@perspective-dev/perspective` version
+- Browser and version
+- OS
+- (if websocket) Language/version/OS of perspective server
 
 For Node.js:
 
--   `node` version
--   OS
+- `node` version
+- OS
 
 For Python
 
--   `python` interpreter version (Only CPython).
--   package manager and version (conda/pip/\*)
-    -   Are you compiling from an sdist of wheel?
--   Platform and version (Jupyter/tornado/lib/\*)
--   OS
+- `python` interpreter version (Only CPython).
+- package manager and version (conda/pip/\*)
+    - Are you compiling from an sdist of wheel?
+- Platform and version (Jupyter/tornado/lib/\*)
+- OS
 
 ### Additional Context:
 

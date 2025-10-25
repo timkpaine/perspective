@@ -118,7 +118,7 @@ if (build_sdist) {
     const data_dir = `perspective_python-${version}.data`;
     const testfile = path.join(
         data_dir,
-        "data/share/jupyter/labextensions/@finos/perspective-jupyterlab/package.json",
+        "data/share/jupyter/labextensions/@perspective-dev/perspective-jupyterlab/package.json",
     );
     if (!fs.existsSync(testfile)) {
         throw new Error(

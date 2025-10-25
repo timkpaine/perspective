@@ -10,9 +10,9 @@
 // ┃ of the [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0). ┃
 // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 
-import "@finos/perspective-viewer-datagrid";
-import "@finos/perspective-viewer-d3fc";
-import "@finos/perspective-viewer-openlayers";
+import "@perspective-dev/perspective-viewer-datagrid";
+import "@perspective-dev/perspective-viewer-d3fc";
+import "@perspective-dev/perspective-viewer-openlayers";
 
 import { load_css } from "./css";
 import { PerspectiveView } from "../view";

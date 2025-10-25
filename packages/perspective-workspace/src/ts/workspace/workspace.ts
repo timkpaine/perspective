@@ -19,8 +19,8 @@ import debounce from "lodash/debounce";
 import type {
     HTMLPerspectiveViewerElement,
     ViewerConfigUpdate,
-} from "@finos/perspective-viewer";
-import type * as psp from "@finos/perspective";
+} from "@perspective-dev/perspective-viewer";
+import type * as psp from "@perspective-dev/perspective";
 import injectedStyles from "../../../build/css/injected.css";
 import { PerspectiveDockPanel } from "./dockpanel";
 import { WorkspaceMenu } from "./menu";

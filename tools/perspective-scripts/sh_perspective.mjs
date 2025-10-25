@@ -103,7 +103,7 @@ export function get_scope() {
     if (package_venn.include.length === 0) {
         packages = JSON.parse($.sync`pnpm m ls --json --depth=-1`.toString())
             .filter((x) => x.name !== undefined)
-            .map((x) => x.name.replace("@finos/", ""))
+            .map((x) => x.name.replace("@perspective-dev/", ""))
             .filter((x) => package_venn.exclude.indexOf(`!${x}`) === -1);
     } else {
         packages = package_venn.include.filter(

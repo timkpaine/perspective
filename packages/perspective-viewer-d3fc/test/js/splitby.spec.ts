@@ -10,7 +10,7 @@
 // ┃ of the [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0). ┃
 // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 
-import { expect, test } from "@finos/perspective-test";
+import { expect, test } from "@perspective-dev/perspective-test";
 
 test.describe("Tooltip data values with various 'Split By' configurations", () => {
     test("Show valid tooltip data with no 'Split By' configuration", async ({

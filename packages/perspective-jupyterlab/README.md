@@ -11,7 +11,7 @@ notebooks.
 
 ```bash
 jupyter labextension install @jupyter-widgets/jupyterlab-manager
-jupyter labextension install @finos/perspective-jupyterlab
+jupyter labextension install @perspective-dev/perspective-jupyterlab
 ```
 
 ### PIP

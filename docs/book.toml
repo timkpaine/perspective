@@ -32,7 +32,7 @@ git-repository-icon = "fa-github"
 site-url = "https://perspective.finos.org/guide/"
 additional-css = [
     "md/perspective.css",
-    "node_modules/@finos/perspective-viewer/dist/css/themes.css",
+    "node_modules/@perspective-dev/perspective-viewer/dist/css/themes.css",
 ]
 # additional-js = []
 # no-section-label = false

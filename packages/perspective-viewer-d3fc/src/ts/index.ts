@@ -10,7 +10,7 @@
 // ┃ of the [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0). ┃
 // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 
-import type { IPerspectiveViewerPlugin } from "@finos/perspective-viewer";
+import type { IPerspectiveViewerPlugin } from "@perspective-dev/perspective-viewer";
 import { register } from "./plugin/plugin";
 
 await register();

@@ -10,11 +10,11 @@
 // ┃ of the [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0). ┃
 // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 
-import { NodeModulesExternal } from "@finos/perspective-esbuild-plugin/external.js";
-import { WasmPlugin } from "@finos/perspective-esbuild-plugin/wasm.js";
-import { WorkerPlugin } from "@finos/perspective-esbuild-plugin/worker.js";
-import { ResolvePlugin } from "@finos/perspective-esbuild-plugin/resolve.js";
-import { build } from "@finos/perspective-esbuild-plugin/build.js";
+import { NodeModulesExternal } from "@perspective-dev/perspective-esbuild-plugin/external.js";
+import { WasmPlugin } from "@perspective-dev/perspective-esbuild-plugin/wasm.js";
+import { WorkerPlugin } from "@perspective-dev/perspective-esbuild-plugin/worker.js";
+import { ResolvePlugin } from "@perspective-dev/perspective-esbuild-plugin/resolve.js";
+import { build } from "@perspective-dev/perspective-esbuild-plugin/build.js";
 import { BuildCss } from "@prospective.co/procss/target/cjs/procss.js";
 import * as fs from "node:fs";
 import { createRequire } from "node:module";
@@ -48,10 +48,10 @@ const BUILD = [
         },
         plugins: [
             ResolvePlugin({
-                "@finos/perspective":
-                    "@finos/perspective/dist/esm/perspective.js",
-                "@finos/perspective-viewer":
-                    "@finos/perspective-viewer/dist/esm/perspective-viewer.js",
+                "@perspective-dev/perspective":
+                    "@perspective-dev/perspective/dist/esm/perspective.js",
+                "@perspective-dev/perspective-viewer":
+                    "@perspective-dev/perspective-viewer/dist/esm/perspective-viewer.js",
             }),
             WasmPlugin(false),
             WorkerPlugin({ inline: false }),
@@ -111,9 +111,21 @@ async function build_all() {
     );
 
     const pro = new BuildCss("./src/themes");
-    add(pro, "icons.less", "@finos/perspective-viewer/src/themes/icons.less");
-    add(pro, "intl.less", "@finos/perspective-viewer/src/themes/intl.less");
-    add(pro, "pro.less", "@finos/perspective-viewer/src/themes/pro.less");
+    add(
+        pro,
+        "icons.less",
+        "@perspective-dev/perspective-viewer/src/themes/icons.less",
+    );
+    add(
+        pro,
+        "intl.less",
+        "@perspective-dev/perspective-viewer/src/themes/intl.less",
+    );
+    add(
+        pro,
+        "pro.less",
+        "@perspective-dev/perspective-viewer/src/themes/pro.less",
+    );
     add(pro, "output.scss", "./src/themes/pro.less");
     fs.writeFileSync("dist/css/pro.css", pro.compile().get("output.css"));
 
@@ -121,22 +133,26 @@ async function build_all() {
     add(
         pro_dark,
         "icons.less",
-        "@finos/perspective-viewer/src/themes/icons.less",
+        "@perspective-dev/perspective-viewer/src/themes/icons.less",
     );
     add(
         pro_dark,
         "intl.less",
-        "@finos/perspective-viewer/src/themes/intl.less",
+        "@perspective-dev/perspective-viewer/src/themes/intl.less",
     );
-    add(pro_dark, "pro.less", "@finos/perspective-viewer/src/themes/pro.less");
+    add(
+        pro_dark,
+        "pro.less",
+        "@perspective-dev/perspective-viewer/src/themes/pro.less",
+    );
     add(
         pro_dark,
         "pro-dark.less",
-        "@finos/perspective-viewer/src/themes/pro-dark.less",
+        "@perspective-dev/perspective-viewer/src/themes/pro-dark.less",
     );
-    // add(builder2, "@finos/perspective-viewer/src/themes/pro-dark.less");
+    // add(builder2, "@perspective-dev/perspective-viewer/src/themes/pro-dark.less");
     // add(builder2, "pro-workspace.less", "./src/themes/pro.less");
-    // add(builder2, "@finos/perspective-viewer/src/themes/variables.less");
+    // add(builder2, "@perspective-dev/perspective-viewer/src/themes/variables.less");
     add(pro_dark, "output.scss", "./src/themes/pro-dark.less");
     fs.writeFileSync(
         "dist/css/pro-dark.css",

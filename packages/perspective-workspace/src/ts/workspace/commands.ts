@@ -17,7 +17,7 @@ import { Signal } from "@lumino/signaling";
 import type {
     HTMLPerspectiveViewerCopyMenu,
     HTMLPerspectiveViewerExportMenu,
-} from "@finos/perspective-viewer";
+} from "@perspective-dev/perspective-viewer";
 
 import type { PerspectiveWorkspace } from "./workspace";
 import { WorkspaceMenu } from "./menu";

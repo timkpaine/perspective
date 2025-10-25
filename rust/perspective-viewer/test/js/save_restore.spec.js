@@ -10,11 +10,15 @@
 // ┃ of the [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0). ┃
 // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 
-import { test, expect, DEFAULT_CONFIG } from "@finos/perspective-test";
+import {
+    test,
+    expect,
+    DEFAULT_CONFIG,
+} from "@perspective-dev/perspective-test";
 import {
     compareContentsToSnapshot,
     API_VERSION,
-} from "@finos/perspective-test";
+} from "@perspective-dev/perspective-test";
 import * as prettier from "prettier";
 
 async function get_contents(page) {

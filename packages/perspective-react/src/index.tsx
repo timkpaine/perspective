@@ -21,13 +21,13 @@
  */
 
 import * as React from "react";
-import type * as psp from "@finos/perspective";
-import type * as pspViewer from "@finos/perspective-viewer";
+import type * as psp from "@perspective-dev/perspective";
+import type * as pspViewer from "@perspective-dev/perspective-viewer";
 
 function usePspListener<A>(
     viewer: HTMLElement | null,
     name: string,
-    f?: (x: A) => void
+    f?: (x: A) => void,
 ) {
     React.useEffect(() => {
         if (!f) return;
@@ -102,5 +102,5 @@ function PerspectiveViewerImpl(props: PerspectiveViewerProps) {
  * A React wrapper component for `<perspective-viewer>` Custom Element.
  */
 export const PerspectiveViewer: React.FC<PerspectiveViewerProps> = React.memo(
-    PerspectiveViewerImpl
+    PerspectiveViewerImpl,
 );

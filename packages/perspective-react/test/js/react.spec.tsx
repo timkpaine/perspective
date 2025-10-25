@@ -11,7 +11,7 @@
 // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 
 import { test, expect } from "@playwright/experimental-ct-react";
-import { PerspectiveViewer } from "@finos/perspective-react";
+import { PerspectiveViewer } from "@perspective-dev/perspective-react";
 import React from "react";
 
 import { App } from "./basic.story";

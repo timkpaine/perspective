@@ -781,7 +781,7 @@ jobs:
               shell: bash
               run: |
                   jupyter labextension list --debug
-                  jupyter labextension list 2>&1 | grep '@finos/perspective-jupyterlab'
+                  jupyter labextension list 2>&1 | grep '@perspective-dev/perspective-jupyterlab'
 
             - name: Run import test
               run: python -c 'import perspective'

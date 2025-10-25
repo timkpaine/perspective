@@ -1,5 +1,5 @@
 {
-    "name": "@finos/perspective-react",
+    "name": "@perspective-dev/perspective-react",
     "version": "3.8.0",
     "description": "",
     "main": "index.js",
@@ -19,14 +19,14 @@
         "access": "public"
     },
     "dependencies": {
-        "@finos/perspective": "workspace:",
-        "@finos/perspective-viewer": "workspace:",
+        "@perspective-dev/perspective": "workspace:",
+        "@perspective-dev/perspective-viewer": "workspace:",
         "@types/react": "catalog:",
         "react": "catalog:",
         "react-dom": "catalog:"
     },
     "devDependencies": {
-        "@finos/perspective-esbuild-plugin": "workspace:",
+        "@perspective-dev/perspective-esbuild-plugin": "workspace:",
         "superstore-arrow": "catalog:",
         "typescript": "catalog:",
         "typedoc": "catalog:",

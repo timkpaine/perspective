@@ -22,13 +22,13 @@ module.exports = function (context, options) {
 
             config.experiments = config.experiments || {
                 asyncWebAssembly: false,
-                syncWebAssembly: false
+                syncWebAssembly: false,
             };
 
             config.experiments.topLevelAwait = true;
             config.module.rules.map((x) => {
                 if (x.test.toString() === "/\\.css$/i") {
-                    x.exclude = [/\.module\.css$/i, /@finos/i];
+                    x.exclude = [/\.module\.css$/i, /@perspective-dev/i];
                 }
             });
 
@@ -39,7 +39,7 @@ module.exports = function (context, options) {
 
             config.module.rules.push({
                 test: /\.wasm$/,
-                type: "asset/resource"
+                type: "asset/resource",
             });
 
             return {
@@ -48,11 +48,11 @@ module.exports = function (context, options) {
                 },
                 plugins: isServer
                     ? [
-                        new webpack.NormalModuleReplacementPlugin(
-                            /@finos\/perspective/,
-                            "@finos/perspective/dist/esm/perspective.js"
-                        ),
-                    ]
+                          new webpack.NormalModuleReplacementPlugin(
+                              /@perspective-dev\/perspective/,
+                              "@perspective-dev/perspective/dist/esm/perspective.js",
+                          ),
+                      ]
                     : [],
             };
         },

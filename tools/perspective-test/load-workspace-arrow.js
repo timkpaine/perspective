@@ -10,12 +10,12 @@
 // ┃ of the [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0). ┃
 // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 
-import "/node_modules/@finos/perspective-viewer/dist/cdn/perspective-viewer.js";
-import perspective from "/node_modules/@finos/perspective/dist/cdn/perspective.js";
+import "/node_modules/@perspective-dev/perspective-viewer/dist/cdn/perspective-viewer.js";
+import perspective from "/node_modules/@perspective-dev/perspective/dist/cdn/perspective.js";
 
 async function load() {
     let resp = await fetch(
-        "/node_modules/@finos/perspective-test/node_modules/superstore-arrow/superstore.lz4.arrow",
+        "/node_modules/@perspective-dev/perspective-test/node_modules/superstore-arrow/superstore.lz4.arrow",
     );
 
     let arrow = await resp.arrayBuffer();

@@ -1,11 +1,11 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
 
-        <script type="module" src="http://localhost:8080/node_modules/@finos/perspective-viewer-datagrid/dist/cdn/perspective-viewer-datagrid.js"></script>
-        <script type="module" src="http://localhost:8080/node_modules/@finos/perspective-viewer-d3fc/dist/cdn/perspective-viewer-d3fc.js"></script>
-        <link rel="stylesheet" crossorigin="anonymous" href="/node_modules/@finos/perspective-viewer/dist/css/themes.css" />
+        <script type="module" src="http://localhost:8080/node_modules/@perspective-dev/perspective-viewer-datagrid/dist/cdn/perspective-viewer-datagrid.js"></script>
+        <script type="module" src="http://localhost:8080/node_modules/@perspective-dev/perspective-viewer-d3fc/dist/cdn/perspective-viewer-d3fc.js"></script>
+        <link rel="stylesheet" crossorigin="anonymous" href="/node_modules/@perspective-dev/perspective-viewer/dist/css/themes.css" />
         <style>
             perspective-viewer {
                 position: absolute;
@@ -28,8 +28,8 @@
         <perspective-viewer id="viewer" editable></perspective-viewer>
 
         <script type="module">
-            import "/node_modules/@finos/perspective-viewer/dist/cdn/perspective-viewer.js";
-            import perspective from "/node_modules/@finos/perspective/dist/cdn/perspective.js";
+            import "/node_modules/@perspective-dev/perspective-viewer/dist/cdn/perspective-viewer.js";
+            import perspective from "/node_modules/@perspective-dev/perspective/dist/cdn/perspective.js";
 
             /**
              * This example sets up Perspective in "distributed mode", but manually
@@ -80,7 +80,7 @@
                         });
                     }
                 },
-                { mode: "row" }
+                { mode: "row" },
             );
 
             // If the server updates, and the edit is not coming from the
@@ -92,7 +92,7 @@
                         client_table.update(updated.delta);
                     }
                 },
-                { mode: "row" }
+                { mode: "row" },
             );
         </script>
     </body>

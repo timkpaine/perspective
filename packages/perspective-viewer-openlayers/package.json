@@ -1,5 +1,5 @@
 {
-    "name": "@finos/perspective-viewer-openlayers",
+    "name": "@perspective-dev/perspective-viewer-openlayers",
     "version": "3.8.0",
     "unpkg": "dist/cdn/perspective-viewer-openlayers.js",
     "jsdelivr": "dist/cdn/perspective-viewer-openlayers.js",
@@ -24,8 +24,8 @@
         "clean": "node ./clean.mjs"
     },
     "dependencies": {
-        "@finos/perspective": "workspace:",
-        "@finos/perspective-viewer": "workspace:",
+        "@perspective-dev/perspective": "workspace:",
+        "@perspective-dev/perspective-viewer": "workspace:",
         "d3": "catalog:",
         "d3-color": "catalog:",
         "gradient-parser": "catalog:",
@@ -33,8 +33,8 @@
         "ol": "catalog:"
     },
     "devDependencies": {
-        "@finos/perspective-esbuild-plugin": "workspace:",
-        "@finos/perspective-test": "workspace:",
+        "@perspective-dev/perspective-esbuild-plugin": "workspace:",
+        "@perspective-dev/perspective-test": "workspace:",
         "@prospective.co/procss": "catalog:"
     }
 }

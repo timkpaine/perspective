@@ -10,7 +10,8 @@
 // ┃ of the [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0). ┃
 // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 
-//! The API for the [`@finos/perspective-viewer`]() JavaScript library.
+//! The API for the [`@perspective-dev/perspective-viewer`]() JavaScript
+//! library.
 
 // Required by yew's `html` macro.
 #![recursion_limit = "1024"]
@@ -61,7 +62,7 @@ import type {
     DeleteOptions,
     ViewConfigUpdate,
     SystemInfo,
-} from "@finos/perspective";
+} from "@perspective-dev/perspective";
 "#;
 
 /// Register a plugin globally.

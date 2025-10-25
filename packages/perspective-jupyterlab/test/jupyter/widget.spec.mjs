@@ -10,7 +10,7 @@
 // ┃ of the [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0). ┃
 // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 
-import { API_VERSION, expect } from "@finos/perspective-test";
+import { API_VERSION, expect } from "@perspective-dev/perspective-test";
 import path from "path";
 import {
     default_body,

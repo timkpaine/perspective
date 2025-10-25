@@ -11,7 +11,7 @@
 // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 
 import { execSync } from "child_process";
-import perspective from "@finos/perspective";
+import perspective from "@perspective-dev/perspective";
 import {
     Uint8ArrayReader,
     ZipReader,
@@ -34,11 +34,11 @@ async function main() {
 
     execSync(
         `cd ${__dirname} && kaggle datasets download -d heesoo37/120-years-of-olympic-history-athletes-and-results`,
-        { stdio: "inherit" }
+        { stdio: "inherit" },
     );
 
     const zip = fs.readFileSync(
-        `${__dirname}/120-years-of-olympic-history-athletes-and-results.zip`
+        `${__dirname}/120-years-of-olympic-history-athletes-and-results.zip`,
     );
 
     const textReader = new TextReader(zip);
@@ -55,7 +55,7 @@ async function main() {
     const arrow = await view.to_arrow();
     fs.writeFileSync(`${__dirname}/olympics.arrow`, Buffer.from(arrow));
     fs.unlinkSync(
-        `${__dirname}/120-years-of-olympic-history-athletes-and-results.zip`
+        `${__dirname}/120-years-of-olympic-history-athletes-and-results.zip`,
     );
     await view.delete();
 }

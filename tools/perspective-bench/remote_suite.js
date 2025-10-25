@@ -20,17 +20,17 @@ import * as perspective_bench from "./src/js/benchmark.mjs";
  * candidates in one place.
  */
 const VERSIONS = Object.keys(
-    JSON.parse(fs.readFileSync(require.resolve(`./package.json`))).dependencies
+    JSON.parse(fs.readFileSync(require.resolve(`./package.json`))).dependencies,
 );
 
 perspective_bench.suite(
-    // ["@finos/perspective", ...VERSIONS],
+    // ["@perspective-dev/perspective", ...VERSIONS],
     [...VERSIONS],
     async function (path, version_idx) {
         let perspective = await import(path);
         perspective = perspective.default || perspective;
         const pkg_json = JSON.parse(
-            fs.readFileSync(require.resolve(`${path}/package.json`))
+            fs.readFileSync(require.resolve(`${path}/package.json`)),
         );
 
         let version = pkg_json.version;
@@ -56,18 +56,18 @@ perspective_bench.suite(
             return new Int8Array(
                 buffer.buffer.slice(
                     buffer.byteOffset,
-                    buffer.byteOffset + buffer.length
-                )
+                    buffer.byteOffset + buffer.length,
+                ),
             );
         }
 
         const table = await psp.table(
             buffer_to_arraybuffer(
                 fs.readFileSync(
-                    "../../node_modules/superstore-arrow/superstore.arrow"
-                )
+                    "../../node_modules/superstore-arrow/superstore.arrow",
+                ),
             ).buffer,
-            { name: "superstore" }
+            { name: "superstore" },
         );
 
         // // Legacy compat
@@ -76,5 +76,5 @@ perspective_bench.suite(
         }
 
         return server;
-    }
+    },
 );

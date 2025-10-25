@@ -11,7 +11,7 @@
 // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 
 import * as arrow from "apache-arrow";
-import { test, expect } from "@finos/perspective-test";
+import { test, expect } from "@perspective-dev/perspective-test";
 import perspective from "../perspective_client";
 
 test.describe("Arrow", function () {

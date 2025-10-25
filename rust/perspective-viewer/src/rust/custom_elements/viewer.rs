@@ -143,13 +143,13 @@ impl PerspectiveViewerElement {
     /// itself.
     ///
     /// A [`Table`] can be created using the
-    /// [`@finos/perspective`](https://www.npmjs.com/package/@finos/perspective)
+    /// [`@perspective-dev/perspective`](https://www.npmjs.com/package/@perspective-dev/perspective)
     /// library from NPM (see [`perspective_js`] documentation for details).
     ///
     /// # JavaScript Examples
     ///
     /// ```javascript
-    /// import perspective from "@finos/perspective";
+    /// import perspective from "@perspective-dev/perspective";
     ///
     /// const worker = await perspective.worker();
     /// viewer.load(worker.table("x,y\n1,2"));

@@ -12,7 +12,7 @@
 
 import { Locator, expect } from "@playwright/test";
 import { PageView } from "./page";
-import { Type } from "@finos/perspective";
+import { Type } from "@perspective-dev/perspective";
 
 export class ColumnSettingsSidebar {
     view: PageView;
@@ -34,10 +34,10 @@ export class ColumnSettingsSidebar {
         this.styleTab = new StyleTab(this.container);
         this.closeBtn = viewer.locator("#column_settings_close_button");
         this.tabTitle = view.container.locator(
-            ".tab:not(.tab-padding) .tab-title"
+            ".tab:not(.tab-padding) .tab-title",
         );
         this.nameInputWrapper = view.container.locator(
-            ".sidebar_header_contents"
+            ".sidebar_header_contents",
         );
         this.nameInput = view.container.locator("input.sidebar_header_title");
         this.selectedTab = view.container.locator(".tab.selected");
@@ -62,7 +62,7 @@ export class ColumnSettingsSidebar {
 
     async getType(): Promise<Type | "expression"> {
         const classList = await this.typeIcon.evaluate((icon) =>
-            Array.from(icon.classList)
+            Array.from(icon.classList),
         );
         for (const ty of [
             "string",
@@ -94,13 +94,13 @@ export class AttributesTab {
         this.container = parent.locator("#attributes-tab");
         this.expressionEditor = new ExpressionEditor(this.container);
         this.saveBtn = this.container.locator(
-            "#psp-expression-editor-button-save"
+            "#psp-expression-editor-button-save",
         );
         this.resetBtn = this.container.locator(
-            "#psp-expression-editor-button-reset"
+            "#psp-expression-editor-button-reset",
         );
         this.deleteBtn = this.container.locator(
-            "#psp-expression-editor-button-delete"
+            "#psp-expression-editor-button-delete",
         );
     }
 }

@@ -97,21 +97,21 @@ impl ProxySession {
 /// [`Client`] instance connected for it:
 ///
 /// ```javascript
-/// import perspective from "@finos/perspective";
+/// import perspective from "@perspective-dev/perspective";
 /// const client = await perspective.worker();
 /// ```
 ///
 /// Create a WebSocket connection to a remote `perspective_server::Server`:
 ///
 /// ```javascript
-/// import perspective from "@finos/perspective";
+/// import perspective from "@perspective-dev/perspective";
 /// const client = await perspective.websocket("ws://locahost:8080/ws");
 /// ```
 ///
 /// Access the synchronous client in node.js:
 ///
 /// ```javascript
-/// import { default as client } from "@finos/perspective";
+/// import { default as client } from "@perspective-dev/perspective";
 /// ```
 #[wasm_bindgen]
 #[derive(TryFromJsValue, Clone)]

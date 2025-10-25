@@ -10,7 +10,7 @@
 // ┃ of the [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0). ┃
 // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 
-import { WebSocketServer, table } from "@finos/perspective";
+import { WebSocketServer, table } from "@perspective-dev/perspective";
 import { read_stdin, open_browser } from "./utils.js";
 import * as fs from "node:fs";
 import * as path from "node:path";

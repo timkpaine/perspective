@@ -14,7 +14,7 @@ import { test, expect } from "@playwright/test";
 import {
     compareLightDOMContents,
     compareShadowDOMContents,
-} from "@finos/perspective-test";
+} from "@perspective-dev/perspective-test";
 
 test.beforeEach(async ({ page }) => {
     await page.goto("/tools/perspective-test/src/html/workspace-test.html");

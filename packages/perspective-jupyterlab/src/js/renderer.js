@@ -22,7 +22,7 @@ import {
 import { ABCWidgetFactory, DocumentWidget } from "@jupyterlab/docregistry";
 import { PerspectiveWidget } from "./psp_widget";
 
-import perspective from "@finos/perspective";
+import perspective from "@perspective-dev/perspective";
 
 /**
  * The name of the factories that creates widgets.
@@ -367,7 +367,7 @@ function activate(app, restorer, themeManager) {
  */
 export const PerspectiveRenderers = {
     activate: activate,
-    id: "@finos/perspective-jupyterlab-renderers",
+    id: "@perspective-dev/perspective-jupyterlab-renderers",
     requires: [],
     optional: [ILayoutRestorer, IThemeManager],
     autoStart: true,

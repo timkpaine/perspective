@@ -10,12 +10,12 @@
 // ┃ of the [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0). ┃
 // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 
-import { test } from "@finos/perspective-test";
-import { compareContentsToSnapshot } from "@finos/perspective-test";
+import { test } from "@perspective-dev/perspective-test";
+import { compareContentsToSnapshot } from "@perspective-dev/perspective-test";
 
 test.beforeEach(async ({ page }) => {
     await page.goto(
-        "/node_modules/@finos/perspective-jupyterlab/test/html/resize.html"
+        "/node_modules/@perspective-dev/perspective-jupyterlab/test/html/resize.html",
     );
     await page.evaluate(async () => {
         while (!window["__TEST_PERSPECTIVE_READY__"]) {
@@ -34,7 +34,7 @@ test.describe("JupyterLab resize", () => {
             // Linux returns ever-so-slightly different auto width
             // column values so we need to strip these.
             for (const elem of document.querySelectorAll(
-                "perspective-viewer *"
+                "perspective-viewer *",
             )) {
                 elem.removeAttribute("style");
             }
@@ -60,7 +60,7 @@ test.describe("JupyterLab resize", () => {
                 .querySelector(".PSPContainer")
                 .setAttribute(
                     "style",
-                    "position:absolute;top:0;left:0;width:300px;height:300px"
+                    "position:absolute;top:0;left:0;width:300px;height:300px",
                 );
 
             await document.querySelector("perspective-viewer").resize();
@@ -73,7 +73,7 @@ test.describe("JupyterLab resize", () => {
             await document.querySelector("perspective-viewer").resize();
 
             for (const elem of document.querySelectorAll(
-                "perspective-viewer *"
+                "perspective-viewer *",
             )) {
                 elem.removeAttribute("style");
             }
@@ -97,12 +97,12 @@ test.describe("JupyterLab resize", () => {
         const contents = await page.evaluate(async () => {
             await window.__WIDGET__.restore({ group_by: ["State"] });
             for (const elem of document.querySelectorAll(
-                "perspective-viewer *"
+                "perspective-viewer *",
             )) {
                 elem.removeAttribute("style");
             }
             const datagrid = window.__WIDGET__.viewer.querySelector(
-                "perspective-viewer-datagrid"
+                "perspective-viewer-datagrid",
             );
             return datagrid.shadowRoot.innerHTML;
         });

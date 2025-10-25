@@ -1,5 +1,5 @@
 {
-    "name": "@finos/perspective-test",
+    "name": "@perspective-dev/perspective-test",
     "version": "3.8.0",
     "description": "Test utility based on perspective",
     "private": true,

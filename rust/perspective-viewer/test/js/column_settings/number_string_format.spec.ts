@@ -10,9 +10,12 @@
 // ┃ of the [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0). ┃
 // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 
-import { PageView, compareContentsToSnapshot } from "@finos/perspective-test";
-import { test, expect } from "@finos/perspective-test";
-import { DataGrid } from "@finos/perspective-test/src/js/models/plugins/datagrid.ts";
+import {
+    PageView,
+    compareContentsToSnapshot,
+} from "@perspective-dev/perspective-test";
+import { test, expect } from "@perspective-dev/perspective-test";
+import { DataGrid } from "@perspective-dev/perspective-test/src/js/models/plugins/datagrid.ts";
 
 test.beforeEach(async ({ page }) => {
     await page.goto("/tools/perspective-test/src/html/basic-test.html");
