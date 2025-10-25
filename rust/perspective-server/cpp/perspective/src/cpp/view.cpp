@@ -1448,12 +1448,18 @@ View<t_ctx0>::expand(std::int32_t ridx, std::int32_t row_pivot_length) {
 template <>
 t_index
 View<t_ctx1>::expand(std::int32_t ridx, std::int32_t row_pivot_length) {
+#ifdef PSP_PARALLEL_FOR
+    PSP_WRITE_LOCK(*get_lock())
+#endif
     return m_ctx->open(ridx);
 }
 
 template <>
 t_index
 View<t_ctx2>::expand(std::int32_t ridx, std::int32_t row_pivot_length) {
+#ifdef PSP_PARALLEL_FOR
+    PSP_WRITE_LOCK(*get_lock())
+#endif
     if (m_ctx->unity_get_row_depth(ridx) < t_uindex(row_pivot_length)) {
         return m_ctx->open(t_header::HEADER_ROW, ridx);
     }
@@ -1475,12 +1481,18 @@ View<t_ctx0>::collapse(std::int32_t ridx) {
 template <>
 t_index
 View<t_ctx1>::collapse(std::int32_t ridx) {
+#ifdef PSP_PARALLEL_FOR
+    PSP_WRITE_LOCK(*get_lock())
+#endif
     return m_ctx->close(ridx);
 }
 
 template <>
 t_index
 View<t_ctx2>::collapse(std::int32_t ridx) {
+#ifdef PSP_PARALLEL_FOR
+    PSP_WRITE_LOCK(*get_lock())
+#endif
     return m_ctx->close(t_header::HEADER_ROW, ridx);
 }
 

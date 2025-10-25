@@ -130,18 +130,18 @@ make_context(
 
     auto pool = table->get_pool();
     auto gnode = table->get_gnode();
+    if (row_pivot_depth > -1) {
+        ctx1->set_depth(row_pivot_depth - 1);
+    } else {
+        ctx1->set_depth(row_pivots.size());
+    }
+
     pool->register_context(
         gnode->get_id(),
         name,
         ONE_SIDED_CONTEXT,
         reinterpret_cast<std::uintptr_t>(ctx1.get())
     );
-
-    if (row_pivot_depth > -1) {
-        ctx1->set_depth(row_pivot_depth - 1);
-    } else {
-        ctx1->set_depth(row_pivots.size());
-    }
 
     return ctx1;
 }
@@ -193,13 +193,6 @@ make_context(
         ctx2->column_sort_by(col_sortspec);
     }
 
-    pool->register_context(
-        gnode->get_id(),
-        name,
-        TWO_SIDED_CONTEXT,
-        reinterpret_cast<std::uintptr_t>(ctx2.get())
-    );
-
     if (row_pivot_depth > -1) {
         ctx2->set_depth(t_header::HEADER_ROW, row_pivot_depth - 1);
     } else {
@@ -211,6 +204,13 @@ make_context(
     } else {
         ctx2->set_depth(t_header::HEADER_COLUMN, column_pivots.size());
     }
+
+    pool->register_context(
+        gnode->get_id(),
+        name,
+        TWO_SIDED_CONTEXT,
+        reinterpret_cast<std::uintptr_t>(ctx2.get())
+    );
 
     return ctx2;
 }
