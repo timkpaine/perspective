@@ -38,5 +38,5 @@ where possible.
 
 ## Node.js
 
-There is a Node.js build as well for `@perspective-dev/perspective` data engine,
+There is a Node.js build as well for `@perspective-dev/client` data engine,
 which shouldn't require any special instructions to use.

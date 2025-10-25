@@ -10,7 +10,7 @@
 // ┃ of the [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0). ┃
 // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 
-import type * as perspective_server from "../../../dist/wasm/perspective-server.js";
+import type * as perspective_server from "@perspective-dev/server/dist/wasm/perspective-server.js";
 
 type PspPtr = bigint | number;
 type EmscriptenServer = number;

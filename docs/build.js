@@ -18,7 +18,7 @@ const mkdirp = require("mkdirp");
 const EXAMPLES = require("./src/components/ExampleGallery/features.js").default;
 
 const perspective = import(
-    "@perspective-dev/perspective/dist/esm/perspective.node.js"
+    "@perspective-dev/client/dist/esm/perspective.node.js"
 );
 
 const DEFAULT_VIEWPORT = {

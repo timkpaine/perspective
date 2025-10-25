@@ -10,13 +10,13 @@
 // ┃ of the [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0). ┃
 // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 
-import "/node_modules/@perspective-dev/perspective-viewer/dist/cdn/perspective-viewer.js";
-import "/node_modules/@perspective-dev/perspective-workspace/dist/cdn/perspective-workspace.js";
-import "/node_modules/@perspective-dev/perspective-viewer-datagrid/dist/cdn/perspective-viewer-datagrid.js";
-import "/node_modules/@perspective-dev/perspective-viewer-d3fc/dist/cdn/perspective-viewer-d3fc.js";
-import "/node_modules/@perspective-dev/perspective-viewer-openlayers/dist/cdn/perspective-viewer-openlayers.js";
+import "/node_modules/@perspective-dev/viewer/dist/cdn/perspective-viewer.js";
+import "/node_modules/@perspective-dev/workspace/dist/cdn/perspective-workspace.js";
+import "/node_modules/@perspective-dev/viewer-datagrid/dist/cdn/perspective-viewer-datagrid.js";
+import "/node_modules/@perspective-dev/viewer-d3fc/dist/cdn/perspective-viewer-d3fc.js";
+import "/node_modules/@perspective-dev/viewer-openlayers/dist/cdn/perspective-viewer-openlayers.js";
 
-import perspective from "/node_modules/@perspective-dev/perspective/dist/cdn/perspective.js";
+import perspective from "/node_modules/@perspective-dev/client/dist/cdn/perspective.js";
 
 let DATA_URL = "nypdccrb.arrow";
 
@@ -62,11 +62,11 @@ async function fetch_progress(url) {
 }
 
 DARK_THEME = await fetch(
-    "/node_modules/@perspective-dev/perspective-workspace/dist/css/pro-dark.css",
+    "/node_modules/@perspective-dev/workspace/dist/css/pro-dark.css",
 ).then((x) => x.text());
 
 LIGHT_THEME = await fetch(
-    "/node_modules/@perspective-dev/perspective-workspace/dist/css/pro.css",
+    "/node_modules/@perspective-dev/workspace/dist/css/pro.css",
 ).then((x) => x.text());
 
 document.body.innerHTML = `
@@ -83,7 +83,7 @@ document.body.innerHTML = `
             <button id="copy" style="float: right">Debug to Clipboard</button>
             <button id="reset" style="float: right">Reset LocalStorage</button>
             <a href="https://github.com/texodus/nypd-ccrb">NYCLU/CCRB Data</a>
-            <a href="https://github.com/finos/perspective">Built With Perspective</a>
+            <a href="https://github.com/perspective-dev/perspective">Built With Perspective</a>
         </div>
         <perspective-workspace id='workspace'></perspective-workspace>
     `.trim();

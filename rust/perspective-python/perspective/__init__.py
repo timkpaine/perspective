@@ -27,7 +27,7 @@ __all__ = [
 ]
 
 __doc__ = """
-The Python language bindings for [Perspective](https://perspective.finos.org), a
+The Python language bindings for [Perspective](https://perspective-dev.github.io), a
 high performance data-visualization and analytics component for the web browser.
 
 A simple example which loads an [Apache Arrow](https://arrow.apache.org/) and
@@ -89,7 +89,7 @@ This user's guide provides an overview of the most common ways to use
 Perspective in Python: the `Table` API, the JupyterLab widget, and the Tornado
 handler.
 
-[More Examples](https://github.com/finos/perspective/tree/master/examples) are
+[More Examples](https://github.com/perspective-dev/perspective/tree/master/examples) are
 available on GitHub.
 
 ## Installation
@@ -172,7 +172,7 @@ _local time_ according to the Python runtime.
 
 This behavior is consistent with Perspective's behavior in JavaScript. For more
 details, see this in-depth
-[explanation](https://github.com/finos/perspective/pull/867) of
+[explanation](https://github.com/perspective-dev/perspective/pull/867) of
 `perspective-python` semantics around time zone handling.
 
 #### Callbacks and Events
@@ -244,7 +244,7 @@ Using Tornado and
 `Perspective`'s JavaScript library, we can set up "distributed" Perspective
 instances that allows multiple browser `perspective-viewer` clients to read from
 a common `perspective-python` server, as in the
-[Tornado Example Project](https://github.com/finos/perspective/tree/master/examples/python-tornado).
+[Tornado Example Project](https://github.com/perspective-dev/perspective/tree/master/examples/python-tornado).
 
 This architecture works by maintaining two `Tables`—one on the server, and one
 on the client that mirrors the server's `Table` automatically using `on_update`.
@@ -311,12 +311,12 @@ _*index.html*_
 
 For a more complex example that offers distributed editing of the server
 dataset, see
-[client_server_editing.html](https://github.com/finos/perspective/blob/master/examples/python-tornado/client_server_editing.html).
+[client_server_editing.html](https://github.com/perspective-dev/perspective/blob/master/examples/python-tornado/client_server_editing.html).
 
 We also provide examples for Starlette/FastAPI and AIOHTTP:
 
--   [Starlette Example Project](https://github.com/finos/perspective/tree/master/examples/python-starlette).
--   [AIOHTTP Example Project](https://github.com/finos/perspective/tree/master/examples/python-aiohttp).
+-   [Starlette Example Project](https://github.com/perspective-dev/perspective/tree/master/examples/python-starlette).
+-   [AIOHTTP Example Project](https://github.com/perspective-dev/perspective/tree/master/examples/python-aiohttp).
 
 ### Server-only Mode
 
@@ -389,4 +389,4 @@ def _jupyter_labextension_paths():
     Read by `jupyter labextension develop`
     @private
     """
-    return [{"src": "labextension", "dest": "@perspective-dev/perspective-jupyterlab"}]
+    return [{"src": "labextension", "dest": "@perspective-dev/jupyterlab"}]

@@ -50,7 +50,7 @@ module.exports = function (context, options) {
                     ? [
                           new webpack.NormalModuleReplacementPlugin(
                               /@perspective-dev\/perspective/,
-                              "@perspective-dev/perspective/dist/esm/perspective.js",
+                              "@perspective-dev/client/dist/esm/perspective.js",
                           ),
                       ]
                     : [],

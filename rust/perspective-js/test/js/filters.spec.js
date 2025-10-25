@@ -10,7 +10,7 @@
 // ┃ of the [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0). ┃
 // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 
-import { test, expect } from "@perspective-dev/perspective-test";
+import { test, expect } from "@perspective-dev/test";
 import perspective from "./perspective_client";
 import * as arrows from "./test_arrows.js";
 
@@ -473,7 +473,7 @@ const datetime_data_local = [
         });
 
         test.describe("Arrow types", function () {
-            // https://github.com/finos/perspective/issues/2881
+            // https://github.com/perspective-dev/perspective/issues/2881
             test("Arrow float32 filters", async function () {
                 const table = await perspective.table(
                     arrows.float32_arrow.slice(),

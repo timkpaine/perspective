@@ -10,7 +10,7 @@
 // ┃ of the [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0). ┃
 // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 
-//! The API for the [`@perspective-dev/perspective-viewer`]() JavaScript
+//! The API for the [`@perspective-dev/viewer`]() JavaScript
 //! library.
 
 // Required by yew's `html` macro.
@@ -62,7 +62,7 @@ import type {
     DeleteOptions,
     ViewConfigUpdate,
     SystemInfo,
-} from "@perspective-dev/perspective";
+} from "@perspective-dev/client";
 "#;
 
 /// Register a plugin globally.

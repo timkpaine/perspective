@@ -1,11 +1,11 @@
 {
-    "name": "@perspective-dev/perspective-python",
+    "name": "@perspective-dev/python",
     "version": "3.8.0",
     "description": "",
     "private": true,
     "repository": {
         "type": "git",
-        "url": "https://github.com/finos/perspective"
+        "url": "https://github.com/perspective-dev/perspective"
     },
     "type": "module",
     "license": "Apache-2.0",
@@ -16,12 +16,12 @@
         "docs": "pdoc perspective/__init__.py perspective/handlers/aiohttp.py, perspective/handlers/starlette.py perspective/handlers/tornado.py perspective/widget/__init__.py -o ../../docs/static/python && node docs.mjs"
     },
     "devDependencies": {
-        "@perspective-dev/perspective-scripts": "workspace:*",
+        "@perspective-dev/scripts": "workspace:*",
         "@iarna/toml": "catalog:",
         "tar": "catalog:",
         "zx": "catalog:"
     },
     "dependencies": {
-        "@perspective-dev/perspective-jupyterlab": "workspace:*"
+        "@perspective-dev/jupyterlab": "workspace:*"
     }
 }

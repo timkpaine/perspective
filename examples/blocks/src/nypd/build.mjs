@@ -12,7 +12,7 @@
 
 // Gets the updated data from the NYCLU and prepare it for Perspective.
 
-import perspective from "@perspective-dev/perspective";
+import perspective from "@perspective-dev/client";
 import { Uint8ArrayReader, ZipReader, TextWriter } from "@zip.js/zip.js";
 
 import * as fs from "node:fs/promises";

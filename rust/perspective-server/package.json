@@ -1,13 +1,11 @@
 {
-    "name": "@perspective-dev/perspective-server",
-    "private": true,
+    "name": "@perspective-dev/server",
     "author": "The Perspective Authors",
     "license": "Apache-2.0",
     "version": "3.8.0",
-    "main": "./dist/esm/perspective.cpp.js",
+    "main": "./dist/wasm/perspective-server.js",
     "files": [
-        "dist/esm/**/*",
-        "dist/cjs/**/*"
+        "dist/wasm/**/*"
     ],
     "scripts": {
         "build": "node ./build.mjs",

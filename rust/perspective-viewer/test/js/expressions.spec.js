@@ -10,13 +10,13 @@
 // ┃ of the [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0). ┃
 // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 
-import { test, expect } from "@perspective-dev/perspective-test";
+import { test, expect } from "@perspective-dev/test";
 import {
     PageView,
     compareContentsToSnapshot,
     shadow_click,
     shadow_type,
-} from "@perspective-dev/perspective-test";
+} from "@perspective-dev/test";
 
 // NOTE: Change this file to be a .ts file.
 
@@ -35,7 +35,7 @@ async function checkSaveDisabled(page, expr) {
 
 test.beforeEach(async ({ page }) => {
     await page.goto(
-        "/node_modules/@perspective-dev/perspective-viewer/test/html/superstore.html",
+        "/node_modules/@perspective-dev/viewer/test/html/superstore.html",
     );
     await page.evaluate(async () => {
         while (!window["__TEST_PERSPECTIVE_READY__"]) {

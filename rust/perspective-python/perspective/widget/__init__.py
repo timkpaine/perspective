@@ -125,10 +125,10 @@ class PerspectiveWidget(DOMWidget, PerspectiveViewer):
 
     # Required by ipywidgets for proper registration of the backend
     _model_name = Unicode("PerspectiveModel").tag(sync=True)
-    _model_module = Unicode("@perspective-dev/perspective-jupyterlab").tag(sync=True)
+    _model_module = Unicode("@perspective-dev/jupyterlab").tag(sync=True)
     _model_module_version = Unicode("~{}".format(__version__)).tag(sync=True)
     _view_name = Unicode("PerspectiveView").tag(sync=True)
-    _view_module = Unicode("@perspective-dev/perspective-jupyterlab").tag(sync=True)
+    _view_module = Unicode("@perspective-dev/jupyterlab").tag(sync=True)
     _view_module_version = Unicode("~{}".format(__version__)).tag(sync=True)
 
     def __init__(

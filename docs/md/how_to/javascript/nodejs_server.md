@@ -9,7 +9,7 @@ browser memory and CPU footprint.
 An example in Node.js:
 
 ```javascript
-const { WebSocketServer, table } = require("@perspective-dev/perspective");
+const { WebSocketServer, table } = require("@perspective-dev/client");
 const fs = require("fs");
 
 // Start a WS/HTTP host on port 8080.  The `assets` property allows

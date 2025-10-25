@@ -10,8 +10,8 @@
 // ┃ of the [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0). ┃
 // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 
-import { test, expect } from "@perspective-dev/perspective-test";
-import { make_client, PerspectiveServer } from "@perspective-dev/perspective";
+import { test, expect } from "@perspective-dev/test";
+import { make_client, PerspectiveServer } from "@perspective-dev/client";
 
 test("Proxy session tunnels requests through client", async () => {
     const { client, server } = connectClientToServer();

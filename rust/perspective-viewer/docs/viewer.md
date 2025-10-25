@@ -1,5 +1,5 @@
 The JavaScript language bindings for`<perspective-viewer>` Custom Element, the
-main UI for [Perspective](https://perspective.finos.org).
+main UI for [Perspective](https://perspective-dev.github.io).
 
 <div class="warning">
 The examples in this module are in JavaScript. See <a href="https://docs.rs/crate/perspective/latest"><code>perspective</code></a> docs for the Rust API.
@@ -17,9 +17,9 @@ application - these modules export nothing, but rather register the components
 for use within your site's regular HTML:
 
 ```javascript
-import "@perspective-dev/perspective-viewer";
-import "@perspective-dev/perspective-viewer-datagrid";
-import "@perspective-dev/perspective-viewer-d3fc";
+import "@perspective-dev/viewer";
+import "@perspective-dev/viewer-datagrid";
+import "@perspective-dev/viewer-d3fc";
 ```
 
 Once imported, the `<perspective-viewer>` Web Component will be available in any
@@ -44,31 +44,31 @@ themed accordingly:
 
 ```javascript
 // Themes based on Thought Merchants's Prospective design
-import "@perspective-dev/perspective-viewer/dist/css/pro.css";
-import "@perspective-dev/perspective-viewer/dist/css/pro-dark.css";
+import "@perspective-dev/viewer/dist/css/pro.css";
+import "@perspective-dev/viewer/dist/css/pro-dark.css";
 
 // Other themes
-import "@perspective-dev/perspective-viewer/dist/css/solarized.css";
-import "@perspective-dev/perspective-viewer/dist/css/solarized-dark.css";
-import "@perspective-dev/perspective-viewer/dist/css/monokai.css";
-import "@perspective-dev/perspective-viewer/dist/css/vaporwave.css";
+import "@perspective-dev/viewer/dist/css/solarized.css";
+import "@perspective-dev/viewer/dist/css/solarized-dark.css";
+import "@perspective-dev/viewer/dist/css/monokai.css";
+import "@perspective-dev/viewer/dist/css/vaporwave.css";
 ```
 
 Alternatively, you may use `themes.css`, which bundles all default themes
 
 ```javascript
-import "@perspective-dev/perspective-viewer/dist/css/themes.css";
+import "@perspective-dev/viewer/dist/css/themes.css";
 ```
 
 If you choose not to bundle the themes yourself, they are available through
-[CDN](https://cdn.jsdelivr.net/npm/@perspective-dev/perspective-viewer/dist/css/).
-These can be directly linked in your HTML file:
+[CDN](https://cdn.jsdelivr.net/npm/@perspective-dev/viewer/dist/css/). These can
+be directly linked in your HTML file:
 
 ```html
 <link
     rel="stylesheet"
     crossorigin="anonymous"
-    href="https://cdn.jsdelivr.net/npm/@perspective-dev/perspective-viewer/dist/css/pro.css"
+    href="https://cdn.jsdelivr.net/npm/@perspective-dev/viewer/dist/css/pro.css"
 />
 ```
 
@@ -227,9 +227,9 @@ await elem.restore(JSON.stringify(json_token));
 Using the JSON format, every facet of a `<perspective-viewer>`'s configuration
 can be manipulated from JavaScript using the `restore()` method. The valid
 structure of properties is described via the
-[`ViewerConfig`](https://github.com/finos/perspective/blob/ebced4caa/rust/perspective-viewer/src/ts/viewer.ts#L16)
+[`ViewerConfig`](https://github.com/perspective-dev/perspective/blob/ebced4caa/rust/perspective-viewer/src/ts/viewer.ts#L16)
 and embedded
-[`ViewConfig`](https://github.com/finos/perspective/blob/ebced4caa19435a2a57d4687be7e428a4efc759b/packages/perspective/index.d.ts#L140)
+[`ViewConfig`](https://github.com/perspective-dev/perspective/blob/ebced4caa19435a2a57d4687be7e428a4efc759b/packages/perspective/index.d.ts#L140)
 type declarations, and [`View`](view.md) chapter of the documentation which has
 several interactive examples for each `ViewConfig` property.
 

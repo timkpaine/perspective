@@ -10,16 +10,12 @@
 // ┃ of the [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0). ┃
 // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 
-import {
-    test,
-    expect,
-    DEFAULT_CONFIG,
-} from "@perspective-dev/perspective-test";
-import { API_VERSION } from "@perspective-dev/perspective-test";
+import { test, expect, DEFAULT_CONFIG } from "@perspective-dev/test";
+import { API_VERSION } from "@perspective-dev/test";
 
 test.beforeEach(async ({ page }) => {
     await page.goto(
-        "/node_modules/@perspective-dev/perspective-viewer/test/html/plugin-priority-order.html",
+        "/node_modules/@perspective-dev/viewer/test/html/plugin-priority-order.html",
     );
     await page.evaluate(async () => {
         while (!window["__TEST_PERSPECTIVE_READY__"]) {

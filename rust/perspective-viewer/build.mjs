@@ -11,9 +11,9 @@
 // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 
 import { execSync } from "child_process";
-import { build } from "@perspective-dev/perspective-esbuild-plugin/build.js";
-import { PerspectiveEsbuildPlugin } from "@perspective-dev/perspective-esbuild-plugin";
-import { NodeModulesExternal } from "@perspective-dev/perspective-esbuild-plugin/external.js";
+import { build } from "@perspective-dev/esbuild-plugin/build.js";
+import { PerspectiveEsbuildPlugin } from "@perspective-dev/esbuild-plugin";
+import { NodeModulesExternal } from "@perspective-dev/esbuild-plugin/external.js";
 import * as fs from "node:fs";
 import { BuildCss } from "@prospective.co/procss/target/cjs/procss.js";
 import { compress } from "pro_self_extracting_wasm";

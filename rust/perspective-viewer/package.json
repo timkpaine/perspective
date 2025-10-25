@@ -1,10 +1,10 @@
 {
-    "name": "@perspective-dev/perspective-viewer",
+    "name": "@perspective-dev/viewer",
     "version": "3.8.0",
     "description": "The `<perspective-viewer>` Custom Element, frontend for Perspective.js",
     "repository": {
         "type": "git",
-        "url": "https://github.com/finos/perspective"
+        "url": "https://github.com/perspective-dev/perspective"
     },
     "type": "module",
     "license": "Apache-2.0",
@@ -36,13 +36,13 @@
         "access": "public"
     },
     "dependencies": {
-        "@perspective-dev/perspective": "workspace:",
+        "@perspective-dev/client": "workspace:",
         "pro_self_extracting_wasm": "catalog:"
     },
     "devDependencies": {
-        "@perspective-dev/perspective-esbuild-plugin": "workspace:",
-        "@perspective-dev/perspective-test": "workspace:",
-        "@perspective-dev/perspective-metadata": "workspace:",
+        "@perspective-dev/esbuild-plugin": "workspace:",
+        "@perspective-dev/test": "workspace:",
+        "@perspective-dev/metadata": "workspace:",
         "@prospective.co/procss": "catalog:",
         "@playwright/test": "catalog:",
         "@playwright/experimental-ct-react": "catalog:",

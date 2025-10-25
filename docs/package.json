@@ -1,5 +1,5 @@
 {
-    "name": "@perspective-dev/perspective-docs",
+    "name": "@perspective-dev/docs",
     "version": "3.8.0",
     "private": true,
     "scripts": {
@@ -17,10 +17,10 @@
     "dependencies": {
         "@docusaurus/core": "^3.7.0",
         "@docusaurus/preset-classic": "^3.7.0",
-        "@perspective-dev/perspective-viewer-d3fc": "workspace:",
-        "@perspective-dev/perspective-viewer-datagrid": "workspace:",
-        "@perspective-dev/perspective-viewer": "workspace:",
-        "@perspective-dev/perspective": "workspace:",
+        "@perspective-dev/viewer-d3fc": "workspace:",
+        "@perspective-dev/viewer-datagrid": "workspace:",
+        "@perspective-dev/viewer": "workspace:",
+        "@perspective-dev/client": "workspace:",
         "@mdx-js/react": "^3.0.0",
         "blocks": "workspace:",
         "clsx": "^2.0.0",

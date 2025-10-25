@@ -10,16 +10,13 @@
 // ┃ of the [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0). ┃
 // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 
-import {
-    PageView as PspViewer,
-    compareNodes,
-} from "@perspective-dev/perspective-test";
+import { PageView as PspViewer, compareNodes } from "@perspective-dev/test";
 
-import { expect, test } from "@perspective-dev/perspective-test";
+import { expect, test } from "@perspective-dev/test";
 
 test.describe("Regressions", function () {
     test.beforeEach(async ({ page }) => {
-        await page.goto("/tools/perspective-test/src/html/basic-test.html");
+        await page.goto("/tools/test/src/html/basic-test.html");
         await page.evaluate(async () => {
             while (!window["__TEST_PERSPECTIVE_READY__"]) {
                 await new Promise((x) => setTimeout(x, 10));
@@ -162,7 +159,7 @@ let runTests = (title: string, beforeEachAndLocalTests: () => void) => {
 
 runTests("Datagrid Column Styles", () => {
     test.beforeEach(async ({ page }) => {
-        await page.goto("/tools/perspective-test/src/html/basic-test.html");
+        await page.goto("/tools/test/src/html/basic-test.html");
         await page.evaluate(async () => {
             while (!window["__TEST_PERSPECTIVE_READY__"]) {
                 await new Promise((x) => setTimeout(x, 10));
@@ -279,9 +276,7 @@ test.skip("Edit highlights go away when view re-draws", async ({ page }) => {
 // Data grid table header rows look different when a split-by is present.
 runTests("Datagrid Column Styles - Split-by", () => {
     test.beforeEach(async ({ page }) => {
-        await page.goto(
-            "/tools/perspective-test/src/html/superstore-test.html",
-        );
+        await page.goto("/tools/test/src/html/superstore-test.html");
 
         await page.evaluate(async () => {
             while (!window["__TEST_PERSPECTIVE_READY__"]) {
@@ -293,9 +288,7 @@ runTests("Datagrid Column Styles - Split-by", () => {
     test("Datagrid Column Styles - Only edit buttons get styled", async ({
         page,
     }) => {
-        await page.goto(
-            "/tools/perspective-test/src/html/superstore-test.html",
-        );
+        await page.goto("/tools/test/src/html/superstore-test.html");
 
         await page.evaluate(async () => {
             while (!window["__TEST_PERSPECTIVE_READY__"]) {

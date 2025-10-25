@@ -11,12 +11,13 @@
     "keywords": [],
     "license": "Apache-2.0",
     "dependencies": {
-        "@perspective-dev/perspective": "workspace:",
-        "@perspective-dev/perspective-viewer": "workspace:",
-        "@perspective-dev/perspective-viewer-d3fc": "workspace:",
-        "@perspective-dev/perspective-viewer-datagrid": "workspace:",
-        "@perspective-dev/perspective-viewer-openlayers": "workspace:",
-        "@perspective-dev/perspective-workspace": "workspace:",
+        "@perspective-dev/client": "workspace:",
+        "@perspective-dev/server": "workspace:",
+        "@perspective-dev/viewer": "workspace:",
+        "@perspective-dev/viewer-d3fc": "workspace:",
+        "@perspective-dev/viewer-datagrid": "workspace:",
+        "@perspective-dev/viewer-openlayers": "workspace:",
+        "@perspective-dev/workspace": "workspace:",
         "superstore-arrow": "catalog:"
     },
     "devDependencies": {

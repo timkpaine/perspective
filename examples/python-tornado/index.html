@@ -3,10 +3,10 @@
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
 
-        <script type="module" src="/node_modules/@perspective-dev/perspective-viewer-datagrid/dist/cdn/perspective-viewer-datagrid.js"></script>
-        <script type="module" src="/node_modules/@perspective-dev/perspective-viewer-d3fc/dist/cdn/perspective-viewer-d3fc.js"></script>
+        <script type="module" src="/node_modules/@perspective-dev/viewer-datagrid/dist/cdn/perspective-viewer-datagrid.js"></script>
+        <script type="module" src="/node_modules/@perspective-dev/viewer-d3fc/dist/cdn/perspective-viewer-d3fc.js"></script>
 
-        <link rel="stylesheet" crossorigin="anonymous" href="/node_modules/@perspective-dev/perspective-viewer/dist/css/themes.css" />
+        <link rel="stylesheet" crossorigin="anonymous" href="/node_modules/@perspective-dev/viewer/dist/css/themes.css" />
 
         <style>
             perspective-viewer {
@@ -23,8 +23,8 @@
         <perspective-viewer id="viewer"></perspective-viewer>
 
         <script type="module">
-            import "/node_modules/@perspective-dev/perspective-viewer/dist/cdn/perspective-viewer.js";
-            import perspective from "/node_modules/@perspective-dev/perspective/dist/cdn/perspective.js";
+            import "/node_modules/@perspective-dev/viewer/dist/cdn/perspective-viewer.js";
+            import perspective from "/node_modules/@perspective-dev/client/dist/cdn/perspective.js";
 
             /**
              * `perspective.websocket` connects to a remote Perspective server

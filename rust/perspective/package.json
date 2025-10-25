@@ -1,11 +1,11 @@
 {
-    "name": "@perspective-dev/perspective-rs",
+    "name": "@perspective-dev/rust",
     "version": "3.8.0",
     "description": "",
     "private": true,
     "repository": {
         "type": "git",
-        "url": "https://github.com/finos/perspective"
+        "url": "https://github.com/perspective-dev/perspective"
     },
     "type": "module",
     "license": "Apache-2.0",

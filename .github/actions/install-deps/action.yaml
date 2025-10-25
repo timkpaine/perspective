@@ -184,7 +184,7 @@ runs:
           if: ${{ !startsWith(github.ref_name, 'v') }}
           run: |
               git config --global --add safe.directory $GITHUB_WORKSPACE
-              node tools/perspective-scripts/version.mjs --nightly
+              node tools/scripts/version.mjs --nightly
 
         - name: Install Python dependencies
           shell: bash

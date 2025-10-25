@@ -11,7 +11,7 @@
 // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 
 import { execSync } from "child_process";
-import perspective from "@perspective-dev/perspective";
+import perspective from "@perspective-dev/client";
 import {
     Uint8ArrayReader,
     ZipReader,

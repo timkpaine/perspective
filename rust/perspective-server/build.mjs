@@ -20,7 +20,7 @@ import "zx/globals";
 const __dirname = url.fileURLToPath(new URL(".", import.meta.url)).slice(0, -1);
 
 const env = process.env.PSP_DEBUG ? "debug" : "release";
-const cwd = path.join(process.cwd(), "dist", env);
+const cwd = path.join(process.cwd(), "build", env);
 const cmake_dir = path.join(__dirname, "cpp", "perspective");
 const { compress } = await import("pro_self_extracting_wasm");
 
@@ -81,11 +81,11 @@ try {
         ...make_flags,
     ]);
 
-    fs.cpSync("dist/release/web", "dist/web", { recursive: true });
+    fs.cpSync("build/release/web", "dist/wasm", { recursive: true });
     if (!process.env.PSP_HEAP_INSTRUMENTS) {
         compress(
-            `./dist/web/perspective-server.wasm`,
-            `./dist/web/perspective-server.wasm`,
+            `./dist/wasm/perspective-server.wasm`,
+            `./dist/wasm/perspective-server.wasm`,
         );
     }
 } catch (e) {

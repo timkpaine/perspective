@@ -12,8 +12,8 @@
 
 import { execFileSync } from "node:child_process";
 import fs from "node:fs";
-import { getPyodideDistDir } from "@perspective-dev/perspective-scripts/pyodide.mjs";
-import { getEmscriptenWheelPath } from "@perspective-dev/perspective-scripts/workspace.mjs";
+import { getPyodideDistDir } from "@perspective-dev/scripts/pyodide.mjs";
+import { getEmscriptenWheelPath } from "@perspective-dev/scripts/workspace.mjs";
 
 // avoid executing this script directly, instead run `pnpm run test` from the workspace root
 // to pass extra arguments to pytest, run (with perspective-python focused):

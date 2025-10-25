@@ -10,12 +10,12 @@
 // ┃ of the [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0). ┃
 // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 
-import { test, expect } from "@perspective-dev/perspective-test";
+import { test, expect } from "@perspective-dev/test";
 
 test.describe("browser focus", async () => {
     test.beforeEach(async function init({ page }) {
         await page.goto(
-            "/node_modules/@perspective-dev/perspective-viewer/test/html/superstore_with_input.html",
+            "/node_modules/@perspective-dev/viewer/test/html/superstore_with_input.html",
         );
 
         await page.evaluate(async () => {

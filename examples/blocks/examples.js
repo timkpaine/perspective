@@ -31,12 +31,12 @@ const LOCAL_EXAMPLES = [
 exports.LOCAL_EXAMPLES = LOCAL_EXAMPLES;
 
 exports.get_examples = function get_examples(
-    root = "https://perspective.finos.org/",
+    root = "https://perspective-dev.github.io/",
 ) {
     const standalone = [
         // {
-        //     img: "https://perspective.finos.org/img/jupyterlab.png?",
-        //     url: "http://beta.mybinder.org/v2/gh/finos/perspective/master?urlpath=lab/tree/examples/jupyter-notebooks",
+        //     img: "https://perspective-dev.github.io/img/jupyterlab.png?",
+        //     url: "http://beta.mybinder.org/v2/gh/perspective-dev/perspective/master?urlpath=lab/tree/examples/jupyter-notebooks",
         //     name: "jupyterlab",
         // },
     ];

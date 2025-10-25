@@ -101,7 +101,7 @@ If you are reporting a build or install error:
 
 For JavaScript (browser):
 
-- `@perspective-dev/perspective` version
+- `@perspective-dev/client` version
 - Browser and version
 - OS
 - (if websocket) Language/version/OS of perspective server

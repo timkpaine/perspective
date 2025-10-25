@@ -11,7 +11,7 @@
 // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 
 //! `perspective_client` is the client implementation of
-//! [Perspective](https://perspective.finos.org), designed to be used from Rust
+//! [Perspective](https://perspective-dev.github.io), designed to be used from Rust
 //! directly, and as a core to `perspective-js` and `perspective-python` crates
 //! which wrap language-specific bindings for this module.
 //!

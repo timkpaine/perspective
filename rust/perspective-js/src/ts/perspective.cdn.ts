@@ -13,7 +13,10 @@
 import perspective from "./perspective.browser.ts";
 export * from "./perspective.browser.ts";
 
-const url = new URL("../wasm/perspective-server.wasm", import.meta.url);
-perspective.init_server(fetch(url));
+const url = new URL(
+    "../../../server/dist/wasm/perspective-server.wasm",
+    import.meta.url,
+);
 
+perspective.init_server(fetch(url));
 export default perspective;

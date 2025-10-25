@@ -32,25 +32,25 @@ view = table.view(group_by = ["CounterParty", "Security"])
 arrow = view.to_arrow()
 ```
 
-[More Examples](https://github.com/finos/perspective/tree/master/examples) are
-available on GitHub.
+[More Examples](https://github.com/perspective-dev/perspective/tree/master/examples)
+are available on GitHub.
 
 ## What's included
 
 The `perspective` module exports several tools:
 
--   `Server` the constructor for a new isntance of the Perspective data engine.
--   The `perspective.widget` module exports `PerspectiveWidget`, the JupyterLab
-    widget for interactive visualization in a notebook cell.
--   The `perspective.handlers` modules exports web frameworks handlers that
-    interface with a `perspective-client` in JavaScript.
-    -   `perspective.handlers.tornado.PerspectiveTornadoHandler` for
-        [Tornado](https://www.tornadoweb.org/)
-    -   `perspective.handlers.starlette.PerspectiveStarletteHandler` for
-        [Starlette](https://www.starlette.io/) and
-        [FastAPI](https://fastapi.tiangolo.com)
-    -   `perspective.handlers.aiohttp.PerspectiveAIOHTTPHandler` for
-        [AIOHTTP](https://docs.aiohttp.org),
+- `Server` the constructor for a new isntance of the Perspective data engine.
+- The `perspective.widget` module exports `PerspectiveWidget`, the JupyterLab
+  widget for interactive visualization in a notebook cell.
+- The `perspective.handlers` modules exports web frameworks handlers that
+  interface with a `perspective-client` in JavaScript.
+    - `perspective.handlers.tornado.PerspectiveTornadoHandler` for
+      [Tornado](https://www.tornadoweb.org/)
+    - `perspective.handlers.starlette.PerspectiveStarletteHandler` for
+      [Starlette](https://www.starlette.io/) and
+      [FastAPI](https://fastapi.tiangolo.com)
+    - `perspective.handlers.aiohttp.PerspectiveAIOHTTPHandler` for
+      [AIOHTTP](https://docs.aiohttp.org),
 
 ### Virtual UI server
 

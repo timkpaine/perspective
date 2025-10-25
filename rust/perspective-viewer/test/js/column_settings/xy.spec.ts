@@ -10,13 +10,10 @@
 // ┃ of the [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0). ┃
 // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 
-import {
-    PageView as PspViewer,
-    compareNodes,
-} from "@perspective-dev/perspective-test";
-import { SymbolPair } from "@perspective-dev/perspective-test/src/js/models/column_settings";
+import { PageView as PspViewer, compareNodes } from "@perspective-dev/test";
+import { SymbolPair } from "@perspective-dev/test/src/js/models/column_settings";
 
-import { expect, test } from "@perspective-dev/perspective-test";
+import { expect, test } from "@perspective-dev/test";
 import { Page } from "@playwright/test";
 
 const symbols = [
@@ -106,7 +103,7 @@ async function checkSymbolsSection(
 
 test.describe("X/Y Scatter", () => {
     test.beforeEach(async ({ page }) => {
-        await page.goto("/tools/perspective-test/src/html/basic-test.html");
+        await page.goto("/tools/test/src/html/basic-test.html");
         await page.evaluate(async () => {
             while (!window["__TEST_PERSPECTIVE_READY__"]) {
                 await new Promise((x) => setTimeout(x, 10));

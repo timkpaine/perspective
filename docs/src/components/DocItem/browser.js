@@ -11,8 +11,8 @@
 // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 
 export async function main(colorMode) {
-    await import("@perspective-dev/perspective-viewer", { type: "module" });
-    await import("@perspective-dev/perspective-viewer-datagrid");
+    await import("@perspective-dev/viewer", { type: "module" });
+    await import("@perspective-dev/viewer-datagrid");
 
     await customElements.whenDefined("perspective-viewer");
     const viewers = document.querySelectorAll(

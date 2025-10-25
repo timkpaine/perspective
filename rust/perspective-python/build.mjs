@@ -11,7 +11,7 @@
 // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 
 import * as fs from "node:fs";
-import sh from "../../tools/perspective-scripts/sh.mjs";
+import sh from "../../tools/scripts/sh.mjs";
 import * as url from "url";
 import * as toml from "@iarna/toml";
 import * as tar from "tar";
@@ -118,7 +118,7 @@ if (build_sdist) {
     const data_dir = `perspective_python-${version}.data`;
     const testfile = path.join(
         data_dir,
-        "data/share/jupyter/labextensions/@perspective-dev/perspective-jupyterlab/package.json",
+        "data/share/jupyter/labextensions/@perspective-dev/jupyterlab/package.json",
     );
     if (!fs.existsSync(testfile)) {
         throw new Error(

@@ -1,0 +1,35 @@
+{
+    "name": "@perspective-dev/react",
+    "version": "3.8.0",
+    "description": "",
+    "main": "index.js",
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "exports": {
+        ".": "./dist/esm/index.js"
+    },
+    "type": "module",
+    "scripts": {
+        "build": "node ./build.mjs",
+        "clean": "node ./clean.mjs",
+        "docs": "node ./docs.mjs"
+    },
+    "publishConfig": {
+        "access": "public"
+    },
+    "dependencies": {
+        "@perspective-dev/client": "workspace:",
+        "@perspective-dev/viewer": "workspace:",
+        "@types/react": "catalog:",
+        "react": "catalog:",
+        "react-dom": "catalog:"
+    },
+    "devDependencies": {
+        "@perspective-dev/esbuild-plugin": "workspace:",
+        "superstore-arrow": "catalog:",
+        "typescript": "catalog:",
+        "typedoc": "catalog:",
+        "zx": "catalog:"
+    }
+}

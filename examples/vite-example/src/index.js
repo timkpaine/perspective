@@ -10,16 +10,16 @@
 // ┃ of the [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0). ┃
 // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 
-import perspective from "@perspective-dev/perspective";
-import perspective_viewer from "@perspective-dev/perspective-viewer";
-import "@perspective-dev/perspective-viewer-datagrid";
-import "@perspective-dev/perspective-viewer-d3fc";
+import perspective from "@perspective-dev/client";
+import perspective_viewer from "@perspective-dev/viewer";
+import "@perspective-dev/viewer-datagrid";
+import "@perspective-dev/viewer-d3fc";
 
-import "@perspective-dev/perspective-viewer/dist/css/pro-dark.css";
+import "@perspective-dev/viewer/dist/css/pro-dark.css";
 import "./index.css";
 
-import SERVER_WASM from "@perspective-dev/perspective/dist/wasm/perspective-server.wasm?url";
-import CLIENT_WASM from "@perspective-dev/perspective-viewer/dist/wasm/perspective-viewer.wasm?url";
+import SERVER_WASM from "@perspective-dev/server/dist/wasm/perspective-server.wasm?url";
+import CLIENT_WASM from "@perspective-dev/viewer/dist/wasm/perspective-viewer.wasm?url";
 
 await Promise.all([
     perspective.init_server(fetch(SERVER_WASM)),

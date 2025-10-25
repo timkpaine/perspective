@@ -14,7 +14,7 @@ import type { HTMLPerspectiveViewerPluginElement } from "./plugin";
 import { PerspectiveViewerElement } from "../../dist/wasm/perspective-viewer.js";
 import type React from "react";
 import { ViewerConfigUpdate } from "./ts-rs/ViewerConfigUpdate.js";
-import type { ViewWindow } from "@perspective-dev/perspective";
+import type { ViewWindow } from "@perspective-dev/client";
 
 // JSX / React extensions
 

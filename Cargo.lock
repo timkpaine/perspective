@@ -1786,6 +1786,18 @@ dependencies = [
 ]
 
 [[package]]
+name = "metadata"
+version = "0.0.0"
+dependencies = [
+ "cargo-bundle-licenses",
+ "perspective-client",
+ "perspective-js",
+ "perspective-server",
+ "perspective-viewer",
+ "ts-rs",
+]
+
+[[package]]
 name = "mime"
 version = "0.3.17"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -2055,22 +2067,10 @@ dependencies = [
 
 [[package]]
 name = "perspective-lint"
-version = "3.4.1"
+version = "3.8.0"
 dependencies = [
  "glob",
  "yew-fmt",
-]
-
-[[package]]
-name = "perspective-metadata"
-version = "0.0.0"
-dependencies = [
- "cargo-bundle-licenses",
- "perspective-client",
- "perspective-js",
- "perspective-server",
- "perspective-viewer",
- "ts-rs",
 ]
 
 [[package]]

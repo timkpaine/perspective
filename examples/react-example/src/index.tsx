@@ -10,21 +10,21 @@
 // ┃ of the [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0). ┃
 // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 
-// # [Perspective bootstrapping](https://perspective.finos.org/guide/how_to/javascript/importing.html)
+// # [Perspective bootstrapping](https://perspective-dev.github.io/guide/how_to/javascript/importing.html)
 
 // Here we're initializing the WASM interpreter that powers the perspective API
-// and viewer, as covered in the [user guide section on bundling](https://perspective.finos.org/guide/how_to/javascript/importing.html).
+// and viewer, as covered in the [user guide section on bundling](https://perspective-dev.github.io/guide/how_to/javascript/importing.html).
 // This example is written assuming that the bundler is configured
 // to treat these files as a "file" and returns a path as the default export.
 // Use ./build.js as an example. The type stubs are in ./globals.d.ts
 
-import perspective from "@perspective-dev/perspective";
-import perspective_viewer from "@perspective-dev/perspective-viewer";
-import "@perspective-dev/perspective-viewer-datagrid";
-import "@perspective-dev/perspective-viewer-d3fc";
+import perspective from "@perspective-dev/client";
+import perspective_viewer from "@perspective-dev/viewer";
+import "@perspective-dev/viewer-datagrid";
+import "@perspective-dev/viewer-d3fc";
 
-import SERVER_WASM from "@perspective-dev/perspective/dist/wasm/perspective-server.wasm";
-import CLIENT_WASM from "@perspective-dev/perspective-viewer/dist/wasm/perspective-viewer.wasm";
+import SERVER_WASM from "@perspective-dev/server/dist/wasm/perspective-server.wasm";
+import CLIENT_WASM from "@perspective-dev/viewer/dist/wasm/perspective-viewer.wasm";
 
 await Promise.all([
     perspective.init_server(fetch(SERVER_WASM)),
@@ -37,8 +37,8 @@ await Promise.all([
 // table creation function which both downloads data and loads it into the
 // engine.
 
-import type * as psp from "@perspective-dev/perspective";
-import type * as pspViewer from "@perspective-dev/perspective-viewer";
+import type * as psp from "@perspective-dev/client";
+import type * as pspViewer from "@perspective-dev/viewer";
 
 import SUPERSTORE_ARROW from "superstore-arrow/superstore.lz4.arrow";
 
@@ -62,9 +62,9 @@ const CONFIG: pspViewer.ViewerConfigUpdate = {
 
 import * as React from "react";
 import { createRoot } from "react-dom/client";
-import { PerspectiveViewer } from "@perspective-dev/perspective-react";
+import { PerspectiveViewer } from "@perspective-dev/react";
 
-import "@perspective-dev/perspective-viewer/dist/css/themes.css";
+import "@perspective-dev/viewer/dist/css/themes.css";
 import "./index.css";
 
 interface ToolbarState {

@@ -2,7 +2,7 @@
     "name": "react-example",
     "private": true,
     "version": "3.8.0",
-    "description": "An example app built using `@perspective-dev/perspective-viewer`.",
+    "description": "An example app built using `@perspective-dev/viewer`.",
     "type": "module",
     "scripts": {
         "build": "node build.js",
@@ -11,11 +11,11 @@
     "keywords": [],
     "license": "Apache-2.0",
     "dependencies": {
-        "@perspective-dev/perspective": "workspace:",
-        "@perspective-dev/perspective-viewer": "workspace:",
-        "@perspective-dev/perspective-viewer-d3fc": "workspace:",
-        "@perspective-dev/perspective-viewer-datagrid": "workspace:",
-        "@perspective-dev/perspective-react": "workspace:",
+        "@perspective-dev/client": "workspace:",
+        "@perspective-dev/viewer": "workspace:",
+        "@perspective-dev/viewer-d3fc": "workspace:",
+        "@perspective-dev/viewer-datagrid": "workspace:",
+        "@perspective-dev/react": "workspace:",
         "react": "catalog:",
         "react-dom": "catalog:",
         "superstore-arrow": "catalog:"

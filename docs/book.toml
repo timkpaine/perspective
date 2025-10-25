@@ -27,12 +27,12 @@ build-dir = "static/guide"
 # smart-punctuation = true
 # mathjax-support = false
 copy-fonts = true
-git-repository-url = "https://github.com/finos/perspective"
+git-repository-url = "https://github.com/perspective-dev/perspective"
 git-repository-icon = "fa-github"
-site-url = "https://perspective.finos.org/guide/"
+site-url = "https://perspective-dev.github.io/guide/"
 additional-css = [
     "md/perspective.css",
-    "node_modules/@perspective-dev/perspective-viewer/dist/css/themes.css",
+    "node_modules/@perspective-dev/viewer/dist/css/themes.css",
 ]
 # additional-js = []
 # no-section-label = false

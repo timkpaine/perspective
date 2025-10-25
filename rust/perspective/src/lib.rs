@@ -10,7 +10,7 @@
 // ┃ of the [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0). ┃
 // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 
-//! The Rust language bindings for [Perspective](https://perspective.finos.org),
+//! The Rust language bindings for [Perspective](https://perspective-dev.github.io),
 //! a high performance data-visualization and analytics component for the web
 //! browser.
 //!

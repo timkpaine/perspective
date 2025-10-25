@@ -1,3 +1,0 @@
-#!/usr/bin/env node --max-old-space-size=8192
-
-require("@perspective-dev/perspective-cli");

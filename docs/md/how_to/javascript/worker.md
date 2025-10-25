@@ -34,12 +34,11 @@ const client = perspective.websocket("http://localhost:8080/");
 
 ## Node.js
 
-The Node.js runtime for the `@perspective-dev/perspective` module runs
-in-process by default and does not implement a `child_process` interface, so no
-need to call the `.worker()` factory function. Instead, the `perspective`
-library exports the functions directly and run synchronously in the main
-process.
+The Node.js runtime for the `@perspective-dev/client` module runs in-process by
+default and does not implement a `child_process` interface, so no need to call
+the `.worker()` factory function. Instead, the `perspective` library exports the
+functions directly and run synchronously in the main process.
 
 ```javascript
-const client = require("@perspective-dev/perspective");
+const client = require("@perspective-dev/client");
 ```

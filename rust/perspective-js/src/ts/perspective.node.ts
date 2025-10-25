@@ -20,15 +20,17 @@ import path from "node:path";
 import { webcrypto } from "node:crypto";
 import type * as net from "node:net";
 import * as url from "node:url";
+import { createRequire } from "node:module";
 
 import * as perspective_client from "../../dist/wasm/perspective-js.js";
 import { load_wasm_stage_0 } from "./wasm/decompress.js";
 import * as engine from "./wasm/engine.ts";
 import { compile_perspective } from "./wasm/emscripten_api.ts";
-
 import * as psp_websocket from "./websocket.ts";
 
 const __dirname = path.dirname(url.fileURLToPath(import.meta.url));
+
+const { resolve } = createRequire(import.meta.url);
 
 if (!globalThis.crypto) {
     globalThis.crypto = webcrypto as Crypto;
@@ -40,7 +42,9 @@ const uncompressed_client_wasm = await fs
 
 await perspective_client.default({ module_or_path: uncompressed_client_wasm });
 const SYNC_MODULE = await fs
-    .readFile(path.join(__dirname, "../../dist/wasm/perspective-server.wasm"))
+    .readFile(
+        resolve("@perspective-dev/server/dist/wasm/perspective-server.wasm"),
+    )
     .then((buffer) => load_wasm_stage_0(buffer.buffer as ArrayBuffer))
     .then((buffer) => compile_perspective(buffer.buffer as ArrayBuffer));
 

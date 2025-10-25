@@ -15,7 +15,7 @@ import {
     getSvgContentString,
     compareSVGContentsToSnapshot,
     PageView,
-} from "@perspective-dev/perspective-test";
+} from "@perspective-dev/test";
 
 import EXAMPLES from "../../src/components/ExampleGallery/features";
 

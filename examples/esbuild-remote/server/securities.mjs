@@ -10,7 +10,7 @@
 // ┃ of the [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0). ┃
 // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 
-import perspective from "@perspective-dev/perspective";
+import perspective from "@perspective-dev/client";
 
 // Cache updates for faster update rates (but less data diversity)>
 const CACHE_INPUT = false;
