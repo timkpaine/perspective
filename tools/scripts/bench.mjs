@@ -15,10 +15,9 @@ import sh from "./sh.mjs";
 import { get_scope } from "./sh_perspective.mjs";
 
 dotenv.config({ path: "./.perspectiverc", quiet: true });
-
 const scope = get_scope();
-if (scope.includes("perspective")) {
-    sh`pnpm run --recursive --filter perspective-bench bench_js`.runSync();
-} else if (scope.includes("perspective-python")) {
-    sh`pnpm run --recursive --filter perspective-bench bench_python`.runSync();
+if (scope.includes("client")) {
+    sh`pnpm run --recursive --filter bench bench_js`.runSync();
+} else if (scope.includes("python")) {
+    sh`pnpm run --recursive --filter bench bench_python`.runSync();
 }
