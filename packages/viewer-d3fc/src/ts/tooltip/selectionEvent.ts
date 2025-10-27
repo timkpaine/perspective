@@ -22,7 +22,7 @@ export const raiseEvent = (node, data, settings) => {
     const filter = settings.filter.concat(groupFilters).concat(splitFilters);
 
     node.dispatchEvent(
-        new CustomEvent("perspective-click", {
+        new CustomEvent("perspective-select", {
             bubbles: true,
             composed: true,
             detail: {

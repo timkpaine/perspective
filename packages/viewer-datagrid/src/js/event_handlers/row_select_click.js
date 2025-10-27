@@ -16,14 +16,17 @@ export async function selectionListener(
     regularTable,
     viewer,
     selected_rows_map,
+    /** @type {MouseEvent} */
     event,
 ) {
     const meta = regularTable.getMeta(event.target);
     if (!viewer.hasAttribute("selectable")) return;
     if (event.handled) return;
-    if (event.which !== 1) {
+    if (event.shiftKey) return;
+    if (event.button !== 0) {
         return;
     }
+    event.stopImmediatePropagation();
 
     if (!meta) {
         return;

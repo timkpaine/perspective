@@ -98,35 +98,142 @@ function tests(context, compare) {
             },
         };
 
-        const cfg = await page.evaluate(async (config) => {
+        async function awaitConfigChange() {
+            return await page.evaluate(async () => {
+                let resolve;
+                const timer = new Promise((x) => {
+                    resolve = x;
+                });
+
+                workspace.addEventListener("workspace-layout-update", resolve);
+                await timer;
+                workspace.removeEventListener(
+                    "workspace-layout-update",
+                    resolve,
+                );
+
+                return await workspace.save();
+            });
+        }
+
+        await page.evaluate(async (config) => {
             const workspace = document.getElementById("workspace");
             await workspace.restore(config);
             await workspace.flush();
-            const event = new Event("mousedown", { bubbles: true });
-            event.which = 1;
-
-            document
-                .querySelector(
-                    ".workspace-master-widget perspective-viewer-datagrid",
-                )
-                .shadowRoot.querySelector(
-                    "tbody tr:nth-child(6) th:last-of-type",
-                )
-                .dispatchEvent(event);
-
-            let resolve;
-            const timer = new Promise((x) => {
-                resolve = x;
-            });
-
-            workspace.addEventListener("workspace-layout-update", resolve);
-            await timer;
-
-            return await workspace.save();
         }, config);
 
+        let cfgPromise = awaitConfigChange();
+        await page
+            .locator(".workspace-master-widget perspective-viewer-datagrid")
+            .locator("tbody tr:nth-child(6) th:last-of-type")
+            .click();
+        let cfg = await cfgPromise;
+
         expect(cfg.viewers.Two.filter).toEqual([["State", "==", "Colorado"]]);
+
+        cfgPromise = awaitConfigChange();
+        await page
+            .locator(".workspace-master-widget perspective-viewer-datagrid")
+            .locator("tbody tr:nth-child(6) th:last-of-type")
+            .click();
+        cfg = await cfgPromise;
+
+        expect(cfg.viewers.Two.filter).toEqual([]);
+
         return compare(page, `${context}-datagrid-filters-work.txt`);
+    });
+
+    test("Child classes of datagrid behave the same way", async ({ page }) => {
+        const config = {
+            viewers: {
+                One: {
+                    table: "superstore",
+                    name: "Test",
+                    group_by: ["State"],
+                    columns: ["Sales"],
+                    plugin: "My Datagrid",
+                },
+                Two: { table: "superstore", name: "One" },
+            },
+            master: {
+                widgets: ["One"],
+            },
+            detail: {
+                main: {
+                    currentIndex: 0,
+                    type: "tab-area",
+                    widgets: ["Two"],
+                },
+            },
+        };
+
+        await page.evaluate(async () => {
+            class MyGrid extends customElements.get(
+                "perspective-viewer-datagrid",
+            ) {
+                get name() {
+                    return "My Datagrid";
+                }
+            }
+            customElements.define("my-grid", MyGrid);
+            customElements.get("perspective-viewer").registerPlugin("my-grid");
+        });
+
+        async function awaitConfigChange() {
+            return await page.evaluate(async () => {
+                let resolve;
+                const timer = new Promise((x) => {
+                    resolve = x;
+                });
+
+                workspace.addEventListener("workspace-layout-update", resolve);
+                await timer;
+                workspace.removeEventListener(
+                    "workspace-layout-update",
+                    resolve,
+                );
+
+                return await workspace.save();
+            });
+        }
+
+        await page.evaluate(async (config) => {
+            const workspace = document.getElementById("workspace");
+            await workspace.restore(config);
+            await workspace.flush();
+        }, config);
+
+        let cfgPromise = awaitConfigChange();
+        await page
+            .locator(".workspace-master-widget my-grid")
+            .locator("tbody tr:nth-child(6) th:last-of-type")
+            .click();
+        let cfg = await cfgPromise;
+
+        expect(cfg.viewers.Two.filter).toEqual([["State", "==", "Colorado"]]);
+
+        cfgPromise = awaitConfigChange();
+        await page
+            .locator(".workspace-master-widget my-grid")
+            .locator("tbody tr:nth-child(6) th:last-of-type")
+            .click({
+                delay: 10,
+            });
+        cfg = await cfgPromise;
+
+        // console.log("OLD", cfg.viewers.Two.filter);
+        // await page.evaluate(async () => {
+        //     await new Promise((r) => setTimeout(r, 5000));
+        // });
+        // cfg = await page.evaluate(async () => {
+        //     const cfg = await workspace.save();
+        //     console.log("NEW", JSON.stringify(cfg.viewers.Two.filter));
+        //     return cfg;
+        // });
+
+        expect(cfg.viewers.Two.filter).toEqual([]);
+
+        return compare(page, `${context}-my-datagrid-filters-work.txt`);
     });
 }
 
