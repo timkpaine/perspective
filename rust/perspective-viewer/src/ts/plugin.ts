@@ -10,9 +10,9 @@
 // ┃ of the [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0). ┃
 // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 
-import { View } from "@finos/perspective";
+import { View } from "@perspective-dev/client";
 
-// import type * as perspective from "@finos/perspective";
+// import type * as perspective from "@perspective-dev/client";
 
 /**
  * The `IPerspectiveViewerPlugin` interface defines the necessary API for a
@@ -69,7 +69,7 @@ export interface IPerspectiveViewerPlugin {
      * preventing the use from applying configs which violate this min.
      *
      * While this option can technically be `undefined` (as in the case of
-     * `@finos/perspective-viewer-datagrid`), doing so currently has nearly
+     * `@perspective-dev/viewer-datagrid`), doing so currently has nearly
      * identical behavior to 1.
      */
     get min_config_columns(): number | undefined;
@@ -173,7 +173,7 @@ export interface IPerspectiveViewerPlugin {
      *
      * `save()` should be used for user-persistent settings that are
      * data-agnostic, so the user can have persistent view during refresh or
-     * reload.  For example, `@finos/perspective-viewer-d3fc` uses
+     * reload.  For example, `@perspective-dev/viewer-d3fc` uses
      * `plugin_config` to remember the user-repositionable legend coordinates.
      */
     save(): Promise<any>;

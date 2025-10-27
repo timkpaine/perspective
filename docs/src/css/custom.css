@@ -13,7 +13,7 @@
 
 @import url("https://fonts.googleapis.com/css?display=block&family=Open+Sans:400");
 
-@import "@finos/perspective-viewer/dist/css/themes.css";
+@import "@perspective-dev/viewer/dist/css/themes.css";
 @import "regular_table_reset.css";
 
 perspective-viewer {

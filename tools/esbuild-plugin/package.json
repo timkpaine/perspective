@@ -1,0 +1,22 @@
+{
+    "name": "@perspective-dev/esbuild-plugin",
+    "version": "3.8.0",
+    "description": "esbuild plugin for Perspective",
+    "author": "",
+    "license": "Apache-2.0",
+    "main": "index.js",
+    "publishConfig": {
+        "access": "public"
+    },
+    "files": [
+        "*.js",
+        "README.md"
+    ],
+    "dependencies": {
+        "esbuild": "catalog:"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/perspective-dev/perspective/packages/build"
+    }
+}

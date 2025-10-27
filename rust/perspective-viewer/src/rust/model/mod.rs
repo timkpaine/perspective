@@ -14,7 +14,7 @@
 //! object.  The major components which hold `PerspectiveViewer`-scoped state
 //! are broken up roughly by some single resource responsibility -
 //!
-//! - `Session` manages the `@finos/perspective` engine `Table` and `View`
+//! - `Session` manages the `@perspective-dev/client` engine `Table` and `View`
 //!   objects, plus caches some related metadata `Schema`.
 //! - `Renderer` manages the JavaScript Custom Element plugin.
 //! - .. etc.

@@ -1,0 +1,28 @@
+{
+    "name": "@perspective-dev/scripts",
+    "version": "3.8.0",
+    "description": "Build scripts based on perspective",
+    "private": true,
+    "files": [
+        "**/*"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/perspective-dev/perspective/tools/scripts"
+    },
+    "author": "",
+    "license": "Apache-2.0",
+    "devDependencies": {
+        "auto-changelog": "catalog:",
+        "fs-extra": "catalog:",
+        "inquirer": "catalog:",
+        "glob-gitignore": "catalog:",
+        "octokit": "catalog:",
+        "typescript": "catalog:",
+        "tsx": "catalog:",
+        "@iarna/toml": "catalog:",
+        "@playwright/experimental-ct-react": "catalog:",
+        "@playwright/test": "catalog:",
+        "zx": "catalog:"
+    }
+}

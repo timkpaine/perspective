@@ -10,13 +10,13 @@
 // ┃ of the [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0). ┃
 // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 
-import { test, expect } from "@finos/perspective-test";
+import { test, expect } from "@perspective-dev/test";
 // import {
 //
 //     compareSVGContentsToSnapshot,
 //     getSvgContentString,
 //     SUPERSTORE_CSV_PATH,
-// } from "@finos/perspective-test";
+// } from "@perspective-dev/test";
 // import path from "path";
 
 // async function get_contents(page) {

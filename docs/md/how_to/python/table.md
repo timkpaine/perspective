@@ -5,11 +5,11 @@ A `Table` can be created from a dataset or a schema, the specifics of which are
 guide. In Python, however, Perspective supports additional data types that are
 commonly used when processing data:
 
--   `pandas.DataFrame`
--   `polars.DataFrame`
--   `bytes` (encoding an Apache Arrow)
--   `objects` (either extracting a repr or via reference)
--   `str` (encoding as a CSV)
+- `pandas.DataFrame`
+- `polars.DataFrame`
+- `bytes` (encoding an Apache Arrow)
+- `objects` (either extracting a repr or via reference)
+- `str` (encoding as a CSV)
 
 A `Table` is created in a similar fashion to its JavaScript equivalent:
 
@@ -76,7 +76,7 @@ _local time_ according to the Python runtime.
 
 This behavior is consistent with Perspective's behavior in JavaScript. For more
 details, see this in-depth
-[explanation](https://github.com/finos/perspective/pull/867) of
+[explanation](https://github.com/perspective-dev/perspective/pull/867) of
 `perspective-python` semantics around time zone handling.
 
 ```

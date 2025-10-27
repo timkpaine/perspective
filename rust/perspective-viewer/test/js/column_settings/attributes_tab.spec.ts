@@ -11,10 +11,10 @@
 // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 
 import { test, expect } from "@playwright/test";
-import { PageView } from "@finos/perspective-test";
+import { PageView } from "@perspective-dev/test";
 
 test.beforeEach(async ({ page }) => {
-    await page.goto("/tools/perspective-test/src/html/basic-test.html");
+    await page.goto("/tools/test/src/html/basic-test.html");
     await page.evaluate(async () => {
         while (!window["__TEST_PERSPECTIVE_READY__"]) {
             await new Promise((x) => setTimeout(x, 10));

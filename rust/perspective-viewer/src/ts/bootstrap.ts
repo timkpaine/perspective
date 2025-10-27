@@ -11,7 +11,7 @@
 // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 
 import * as wasm_module from "../../dist/wasm/perspective-viewer.js";
-import { load_wasm_stage_0 } from "@finos/perspective/src/ts/wasm/decompress.ts";
+import { load_wasm_stage_0 } from "@perspective-dev/client/src/ts/wasm/decompress.ts";
 
 export async function init_client(
     wasm_binary:

@@ -14,7 +14,7 @@ import perspective, { PerspectiveWasm } from "./perspective.browser.ts";
 export * from "./perspective.browser.ts";
 
 // @ts-ignore;
-import server_wasm from "../../dist/wasm/perspective-server.wasm";
+import server_wasm from "@perspective-dev/server/dist/wasm/perspective-server.wasm";
 
 // @ts-ignore;
 import client_wasm from "../../dist/wasm/perspective-js.wasm";

@@ -38,5 +38,5 @@ where possible.
 
 ## Node.js
 
-There is a Node.js build as well for `@finos/perspective` data engine, which
-shouldn't require any special instructions to use.
+There is a Node.js build as well for `@perspective-dev/client` data engine,
+which shouldn't require any special instructions to use.

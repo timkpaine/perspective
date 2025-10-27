@@ -6,12 +6,12 @@ ESM builds must be _bootstrapped_ with their `.wasm` binaries to initialize. The
 `wasm` binaries can be found in their respective `dist/wasm` directories.
 
 ```javascript
-import perspective_viewer from "@finos/perspective-viewer";
-import perspective from "@finos/perspective";
+import perspective_viewer from "@perspective-dev/viewer";
+import perspective from "@perspective-dev/client";
 
 // TODO These paths must be provided by the bundler!
-const SERVER_WASM = ... // "@finos/perspective/dist/wasm/perspective-server.wasm"
-const CLIENT_WASM = ... // "@finos/perspective-viewer/dist/wasm/perspective-viewer.wasm"
+const SERVER_WASM = ... // "@perspective-dev/server/dist/wasm/perspective-server.wasm"
+const CLIENT_WASM = ... // "@perspective-dev/viewer/dist/wasm/perspective-viewer.wasm"
 
 await Promise.all([
     perspective.init_server(SERVER_WASM),
@@ -28,8 +28,8 @@ The exact syntax will vary slightly depending on the bundler.
 ### Vite
 
 ```javascript
-import SERVER_WASM from "@finos/perspective/dist/wasm/perspective-server.wasm?url";
-import CLIENT_WASM from "@finos/perspective-viewer/dist/wasm/perspective-viewer.wasm?url";
+import SERVER_WASM from "@perspective-dev/server/dist/wasm/perspective-server.wasm?url";
+import CLIENT_WASM from "@perspective-dev/viewer/dist/wasm/perspective-viewer.wasm?url";
 
 await Promise.all([
     perspective.init_server(fetch(SERVER_WASM)),
@@ -52,8 +52,8 @@ export default defineConfig({
 ### ESBuild
 
 ```javascript
-import SERVER_WASM from "@finos/perspective/dist/wasm/perspective-server.wasm";
-import CLIENT_WASM from "@finos/perspective-viewer/dist/wasm/perspective-viewer.wasm";
+import SERVER_WASM from "@perspective-dev/server/dist/wasm/perspective-server.wasm";
+import CLIENT_WASM from "@perspective-dev/viewer/dist/wasm/perspective-viewer.wasm";
 
 await Promise.all([
     perspective.init_server(fetch(SERVER_WASM)),
@@ -76,8 +76,8 @@ ESBuild config JSON to encode this asset as a `file`:
 ### Webpack
 
 ```javascript
-import SERVER_WASM from "@finos/perspective/dist/wasm/perspective-server.wasm";
-import CLIENT_WASM from "@finos/perspective-viewer/dist/wasm/perspective-viewer.wasm";
+import SERVER_WASM from "@perspective-dev/server/dist/wasm/perspective-server.wasm";
+import CLIENT_WASM from "@perspective-dev/viewer/dist/wasm/perspective-viewer.wasm";
 
 await Promise.all([
     perspective.init_server(SERVER_WASM),
@@ -111,8 +111,8 @@ Webpack config:
 ## Inline builds with a bundler <!-- How to -->
 
 ```javascript
-import "@finos/perspective-viewer/dist/esm/perspective-viewer.inline.js";
-import psp from "@finos/perspective/dist/esm/perspective.inline.js";
+import "@perspective-dev/viewer/dist/esm/perspective-viewer.inline.js";
+import psp from "@perspective-dev/client/dist/esm/perspective.inline.js";
 ```
 
 ## CDN builds <!-- How to -->
@@ -125,10 +125,10 @@ statement:
 
 ```html
 <script type="module">
-    import "https://cdn.jsdelivr.net/npm/@finos/perspective-viewer/dist/cdn/perspective-viewer.js";
-    import "https://cdn.jsdelivr.net/npm/@finos/perspective-viewer-datagrid/dist/cdn/perspective-viewer-datagrid.js";
-    import "https://cdn.jsdelivr.net/npm/@finos/perspective-viewer-d3fc/dist/cdn/perspective-viewer-d3fc.js";
-    import perspective from "https://cdn.jsdelivr.net/npm/@finos/perspective/dist/cdn/perspective.js";
+    import "https://cdn.jsdelivr.net/npm/@perspective-dev/viewer/dist/cdn/perspective-viewer.js";
+    import "https://cdn.jsdelivr.net/npm/@perspective-dev/viewer-datagrid/dist/cdn/perspective-viewer-datagrid.js";
+    import "https://cdn.jsdelivr.net/npm/@perspective-dev/viewer-d3fc/dist/cdn/perspective-viewer-d3fc.js";
+    import perspective from "https://cdn.jsdelivr.net/npm/@perspective-dev/client/dist/cdn/perspective.js";
 
     // .. Do stuff here ..
 </script>
@@ -136,13 +136,13 @@ statement:
 
 ## Node.js builds
 
-The Node.js runtime for the `@finos/perspective` module runs in-process by
+The Node.js runtime for the `@perspective-dev/client` module runs in-process by
 default and does not implement a `child_process` interface. Hence, there is no
 `worker()` method, and the module object itself directly exports the full
 `perspective` API.
 
 ```javascript
-const perspective = require("@finos/perspective");
+const perspective = require("@perspective-dev/client");
 ```
 
 In Node.js, perspective does not run in a WebWorker (as this API does not exist

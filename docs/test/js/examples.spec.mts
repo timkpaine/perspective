@@ -15,7 +15,7 @@ import {
     getSvgContentString,
     compareSVGContentsToSnapshot,
     PageView,
-} from "@finos/perspective-test";
+} from "@perspective-dev/test";
 
 import EXAMPLES from "../../src/components/ExampleGallery/features";
 
@@ -44,7 +44,7 @@ test.describe("Examples", () => {
                     sort: [],
                     aggregates: {},
                 },
-                config
+                config,
             );
             await page.evaluate(async (config) => {
                 const viewer = document.querySelector("perspective-viewer");
@@ -95,7 +95,7 @@ test("test svgs", async ({ page }) => {
     const viewer = new PageView(page);
     await viewer.restore({ plugin: "X/Y Scatter" });
     const contents = await getSvgContentString(
-        "perspective-viewer-d3fc-xyscatter"
+        "perspective-viewer-d3fc-xyscatter",
     )(page);
     console.log(contents);
 });

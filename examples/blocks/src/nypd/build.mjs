@@ -12,7 +12,7 @@
 
 // Gets the updated data from the NYCLU and prepare it for Perspective.
 
-import perspective from "@finos/perspective";
+import perspective from "@perspective-dev/client";
 import { Uint8ArrayReader, ZipReader, TextWriter } from "@zip.js/zip.js";
 
 import * as fs from "node:fs/promises";
@@ -68,7 +68,7 @@ async function main() {
     if (!fss.existsSync(`${__dirname}/nypdccrb.arrow`)) {
         await fs.writeFile(
             `${__dirname}/nypdccrb.arrow`,
-            await fetch_progress(DATA_URL)
+            await fetch_progress(DATA_URL),
         );
 
         console.log("Wrote nypdccrb.arrow");

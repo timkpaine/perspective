@@ -22,12 +22,13 @@ automatically call the correct build and test tools.
 `Perspective.js` and `perspective-python` **require** the following system
 dependencies to be installed:
 
--   [CMake](https://cmake.org/) (version 3.29.5 or higher)
--   [pnpm](https://pnpm.io/).
+- [CMake](https://cmake.org/) (version 3.29.5 or higher)
+- [pnpm](https://pnpm.io/).
 
 **_This list may be non-exhaustive depending on your OS/environment; please open
-a thread in [Discussions](https://github.com/finos/perspective/discussions) if
-you have any questions_**
+a thread in
+[Discussions](https://github.com/perspective-dev/perspective/discussions) if you
+have any questions_**
 
 ## Build
 
@@ -111,10 +112,10 @@ do.
 # builds labextension to the perspective-python python package root directory
 PACKAGE=perspective-jupyterlab pnpm run build
 # editable install of the python package
-pnpm -F @finos/perspective-python develop:maturin
+pnpm -F @perspective-dev/python develop:maturin
 # set up symlink of our labextension to jupyter share directory
 # this directory's path is in the output of `jupyter labextension list`
-pnpm -F @finos/perspective-python develop:labextension
+pnpm -F @perspective-dev/python develop:labextension
 ```
 
 Afterwards, you should see it listed as a "local extension" when you run
@@ -190,7 +191,7 @@ pnpm run test
 ### JavaScript
 
 The JavaScript test suite is composed of two sections: a Node.js test, which
-asserts behavior of the `@finos/perspective` library, and a suite of
+asserts behavior of the `@perspective-dev/client` library, and a suite of
 [Playwright](https://playwright.dev/) tests, which assert the behavior of the
 rest of the UI facing packages.
 
@@ -211,8 +212,8 @@ pip install -vv perspective-python
 
 The most common culprits are:
 
--   CMake version is too old
--   Boost headers are missing or too old
+- CMake version is too old
+- Boost headers are missing or too old
 
 ---
 

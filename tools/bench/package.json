@@ -1,0 +1,64 @@
+{
+    "name": "@perspective-dev/bench",
+    "version": "2.0.1",
+    "description": "Benchmark utility based on perspective",
+    "private": true,
+    "main": "src/js/bench.mjs",
+    "files": [
+        "src/**/*",
+        "perspective-bench"
+    ],
+    "bin": "perspective-bench",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/perspective-dev/perspective/packages/bench"
+    },
+    "scripts": {
+        "bench_js": "node --experimental-wasm-memory64 basic_suite.mjs",
+        "bench_python": "node --experimental-wasm-memory64 python_suite.mjs"
+    },
+    "author": "",
+    "license": "Apache-2.0",
+    "devDependencies": {
+        "@perspective-dev/client": "workspace:",
+        "microtime": "catalog:",
+        "superstore-arrow": "catalog:",
+        "zx": "catalog:"
+    },
+    "dependencies": {
+        "perspective-3-8-0": "npm:@finos/perspective@3.8.0",
+        "perspective-3-7-0": "npm:@finos/perspective@3.7.0",
+        "perspective-3-6-0": "npm:@finos/perspective@3.6.0",
+        "perspective-3-5-0": "npm:@finos/perspective@3.5.0",
+        "perspective-3-4-0": "npm:@finos/perspective@3.4.0",
+        "perspective-3-3-0": "npm:@finos/perspective@3.3.0",
+        "perspective-3-2-0": "npm:@finos/perspective@3.2.0",
+        "perspective-3-1-0": "npm:@finos/perspective@3.1.0",
+        "perspective-3-0-0": "npm:@finos/perspective@3.0.0",
+        "perspective-2-10-0": "npm:@finos/perspective@2.10.0",
+        "perspective-2-9-0": "npm:@finos/perspective@2.9.0",
+        "perspective-2-8-0": "npm:@finos/perspective@2.8.0",
+        "perspective-2-7-0": "npm:@finos/perspective@2.7.0",
+        "perspective-2-6-0": "npm:@finos/perspective@2.6.0",
+        "perspective-2-5-0": "npm:@finos/perspective@2.5.0",
+        "perspective-2-4-0": "npm:@finos/perspective@2.4.0",
+        "perspective-2-3-0": "npm:@finos/perspective@2.3.0",
+        "perspective-2-2-0": "npm:@finos/perspective@2.2.0",
+        "perspective-2-1-0": "npm:@finos/perspective@2.1.0",
+        "perspective-1-1-0": "npm:@finos/perspective@1.1.0",
+        "perspective-1-0-0": "npm:@finos/perspective@1.0.0",
+        "perspective-0-10-0": "npm:@finos/perspective@0.10.0",
+        "perspective-0-9-0": "npm:@finos/perspective@0.9.0"
+    },
+    "deprecatedDependencies": {
+        "perspective-2-0-0": "npm:@finos/perspective@2.0.0",
+        "perspective-1-9-0": "npm:@finos/perspective@1.9.0",
+        "perspective-1-8-0": "npm:@finos/perspective@1.8.0",
+        "perspective-1-7-0": "npm:@finos/perspective@1.7.0",
+        "perspective-1-6-0": "npm:@finos/perspective@1.6.0",
+        "perspective-1-5-0": "npm:@finos/perspective@1.5.0",
+        "perspective-1-4-0": "npm:@finos/perspective@1.4.0",
+        "perspective-1-3-0": "npm:@finos/perspective@1.3.0",
+        "perspective-1-2-0": "npm:@finos/perspective@1.2.0"
+    }
+}

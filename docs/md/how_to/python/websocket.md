@@ -32,7 +32,7 @@ Using Tornado and
 `Perspective`'s JavaScript library, we can set up "distributed" Perspective
 instances that allows multiple browser `perspective-viewer` clients to read from
 a common `perspective-python` server, as in the
-[Tornado Example Project](https://github.com/finos/perspective/tree/master/examples/python-tornado).
+[Tornado Example Project](https://github.com/perspective-dev/perspective/tree/master/examples/python-tornado).
 
 This architecture works by maintaining two `Tables`—one on the server, and one
 on the client that mirrors the server's `Table` automatically using `on_update`.
@@ -79,7 +79,7 @@ _*index.html*_
     // Create a client that expects a Perspective server
     // to accept connections at the specified URL.
     const websocket = await perspective.websocket(
-        "ws://localhost:8888/websocket"
+        "ws://localhost:8888/websocket",
     );
 
     // Get a handle to the Table on the server
@@ -99,12 +99,12 @@ _*index.html*_
 
 For a more complex example that offers distributed editing of the server
 dataset, see
-[client_server_editing.html](https://github.com/finos/perspective/blob/master/examples/python-tornado/client_server_editing.html).
+[client_server_editing.html](https://github.com/perspective-dev/perspective/blob/master/examples/python-tornado/client_server_editing.html).
 
 We also provide examples for Starlette/FastAPI and AIOHTTP:
 
--   [Starlette Example Project](https://github.com/finos/perspective/tree/master/examples/python-starlette).
--   [AIOHTTP Example Project](https://github.com/finos/perspective/tree/master/examples/python-aiohttp).
+- [Starlette Example Project](https://github.com/perspective-dev/perspective/tree/master/examples/python-starlette).
+- [AIOHTTP Example Project](https://github.com/perspective-dev/perspective/tree/master/examples/python-aiohttp).
 
 ## Server-only Mode
 

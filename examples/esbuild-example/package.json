@@ -2,7 +2,7 @@
     "name": "esbuild-example",
     "private": true,
     "version": "3.8.0",
-    "description": "An esbuild example app built using `@finos/perspective-viewer`.",
+    "description": "An esbuild example app built using `@perspective-dev/viewer`.",
     "scripts": {
         "build": "node build.js",
         "start": "node build.js && http-server dist"
@@ -10,10 +10,10 @@
     "keywords": [],
     "license": "Apache-2.0",
     "dependencies": {
-        "@finos/perspective": "workspace:",
-        "@finos/perspective-viewer": "workspace:",
-        "@finos/perspective-viewer-d3fc": "workspace:",
-        "@finos/perspective-viewer-datagrid": "workspace:",
+        "@perspective-dev/client": "workspace:",
+        "@perspective-dev/viewer": "workspace:",
+        "@perspective-dev/viewer-d3fc": "workspace:",
+        "@perspective-dev/viewer-datagrid": "workspace:",
         "superstore-arrow": "catalog:"
     },
     "devDependencies": {

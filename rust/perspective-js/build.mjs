@@ -11,9 +11,9 @@
 // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 
 import { execSync } from "child_process";
-import { build } from "@finos/perspective-esbuild-plugin/build.js";
-import { PerspectiveEsbuildPlugin } from "@finos/perspective-esbuild-plugin";
-import { NodeModulesExternal } from "@finos/perspective-esbuild-plugin/external.js";
+import { build } from "@perspective-dev/esbuild-plugin/build.js";
+import { PerspectiveEsbuildPlugin } from "@perspective-dev/esbuild-plugin";
+import { NodeModulesExternal } from "@perspective-dev/esbuild-plugin/external.js";
 
 import "zx/globals";
 import { compress } from "pro_self_extracting_wasm";
@@ -119,10 +119,6 @@ async function build_rust() {
 }
 
 async function build_web_assets() {
-    fs.cpSync("../../rust/perspective-server/dist/web", "dist/wasm", {
-        recursive: true,
-    });
-
     await Promise.all(BUILD.map(build)).catch((e) => {
         console.error(e);
         process.exit(1);

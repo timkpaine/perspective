@@ -1,4 +1,0 @@
-#!/usr/bin/env node
-
-const { registerCmd } = require("@finos/perspective-bench");
-registerCmd();

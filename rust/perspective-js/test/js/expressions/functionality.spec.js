@@ -12,7 +12,7 @@
 
 import * as expressions_common from "./common.js";
 
-import { test, expect } from "@finos/perspective-test";
+import { test, expect } from "@perspective-dev/test";
 import perspective from "../perspective_client";
 
 /**

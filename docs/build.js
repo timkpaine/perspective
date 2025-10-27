@@ -17,7 +17,9 @@ const path = require("node:path");
 const mkdirp = require("mkdirp");
 const EXAMPLES = require("./src/components/ExampleGallery/features.js").default;
 
-const perspective = import("@finos/perspective/dist/esm/perspective.node.js");
+const perspective = import(
+    "@perspective-dev/client/dist/esm/perspective.node.js"
+);
 
 const DEFAULT_VIEWPORT = {
     width: 400,
@@ -72,7 +74,7 @@ async function run_with_theme(page, is_dark = false) {
                 sort: [],
                 aggregates: {},
             },
-            config
+            config,
         );
         console.log(JSON.stringify(new_config));
 
@@ -98,8 +100,8 @@ async function run_with_theme(page, is_dark = false) {
 
     cp.execSync(
         `montage -mode concatenate -tile 5x ${shuffle(files).join(
-            " "
-        )} static/features/montage${is_dark ? "_dark" : "_light"}.png`
+            " ",
+        )} static/features/montage${is_dark ? "_dark" : "_light"}.png`,
     );
 
     // fs.writeFileSync("features/index.html", `<html><style>img{width:200px;height:150px;</style><body>${html.join("")}</body></html>`);

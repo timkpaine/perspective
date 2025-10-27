@@ -92,7 +92,7 @@ jobs:
             - name: Metadata Build
               run: pnpm run build --ci
               env:
-                  PACKAGE: "perspective-metadata"
+                  PACKAGE: "metadata"
 
             - name: Lint
               run: pnpm run lint --nightly
@@ -155,21 +155,23 @@ jobs:
             - name: WebAssembly Build
               run: pnpm run build --ci
               env:
-                  PACKAGE: "perspective-server,perspective,perspective-viewer,perspective-viewer-datagrid,perspective-viewer-d3fc,perspective-viewer-openlayers,perspective-workspace,perspective-cli,perspective-react"
+                  PACKAGE: "server,client,viewer,viewer-datagrid,viewer-d3fc,viewer-openlayers,workspace,react"
                   # PSP_USE_CCACHE: 1
 
             - uses: actions/upload-artifact@v4
               with:
                   name: perspective-js-dist
                   path: |
-                      rust/perspective-js/dist/
+                      rust/perspective-js/dist
+                      rust/perspective-js/src
+                      rust/perspective-server/dist
                       rust/perspective-viewer/dist
-                      packages/perspective-viewer-d3fc/dist
-                      packages/perspective-viewer-datagrid/dist
-                      packages/perspective-viewer-openlayers/dist
-                      packages/perspective-cli/dist
-                      packages/perspective-workspace/dist
-                      packages/perspective-react/dist
+                      rust/perspective-viewer/src
+                      packages/viewer-d3fc/dist
+                      packages/viewer-datagrid/dist
+                      packages/viewer-openlayers/dist
+                      packages/workspace/dist
+                      packages/react/dist
 
     # ,-,---.       .    .  .-,--.     .  .
     #  '|___/ . . . |  ,-|   '|__/ . . |- |-. ,-. ,-.
@@ -242,7 +244,7 @@ jobs:
               run: pnpm run build
               if: ${{ !contains(matrix.os, 'windows') }}
               env:
-                  PACKAGE: "perspective-python"
+                  PACKAGE: "python"
                   PSP_ARCH: ${{ matrix.arch }}
                   PSP_ROOT_DIR: ${{ github.workspace }}
                   PSP_BUILD_WHEEL: 1
@@ -256,7 +258,7 @@ jobs:
                   CARGO_TARGET_DIR: D:\psp-rust
                   PSP_CPP_BUILD_DIR: D:\psp-build
                   PSP_ROOT_DIR: ${{ github.workspace }}
-                  PACKAGE: "perspective-python"
+                  PACKAGE: "python"
                   PSP_ARCH: ${{ matrix.arch }}
                   PSP_BUILD_WHEEL: 1
 
@@ -326,7 +328,7 @@ jobs:
               run: pnpm run build
               if: ${{ !contains(matrix.os, 'windows') }}
               env:
-                  PACKAGE: "perspective-rs"
+                  PACKAGE: "rust"
                   PSP_ROOT_DIR: ${{ github.workspace }}
 
             - name: Rust Build (Windows)
@@ -337,13 +339,13 @@ jobs:
               env:
                   CARGO_TARGET_DIR: D:\psp-rust
                   PSP_ROOT_DIR: ${{ github.workspace }}
-                  PACKAGE: "perspective-rs"
+                  PACKAGE: "rust"
 
             - name: Rust Test
               if: ${{ !contains(matrix.os, 'windows') }}
               run: pnpm run test
               env:
-                  PACKAGE: "perspective-rs"
+                  PACKAGE: "rust"
                   PSP_ROOT_DIR: ${{ github.workspace }}
 
             - name: Rust Test (Windows)
@@ -354,7 +356,7 @@ jobs:
               env:
                   CARGO_TARGET_DIR: D:\psp-rust
                   PSP_ROOT_DIR: ${{ github.workspace }}
-                  PACKAGE: "perspective-rs"
+                  PACKAGE: "rust"
 
             - name: Package
               if: ${{ !contains(matrix.os, 'windows') && steps.config-step.outputs.FULL_RUN }}
@@ -411,7 +413,7 @@ jobs:
               run: pnpm install && pnpm run build
               env:
                   PSP_PYODIDE: 1
-                  PACKAGE: "perspective-python"
+                  PACKAGE: "python"
                   CI: 1
 
             - uses: actions/upload-artifact@v4
@@ -470,7 +472,7 @@ jobs:
               run: pnpm run test
               env:
                   PSP_PYODIDE: 1
-                  PACKAGE: "perspective-python"
+                  PACKAGE: "python"
                   CI: 1
     # ,-,---.       .    .             .   ,--,--'      .
     #  '|___/ . . . |  ,-|   ,-. ,-. ,-|   `- | ,-. ,-. |-
@@ -547,14 +549,14 @@ jobs:
             - name: Build extension
               run: pnpm run build
               env:
-                  PACKAGE: "perspective-jupyterlab"
+                  PACKAGE: "jupyterlab"
 
-            - run: node tools/perspective-scripts/repack_wheel.mjs
+            - run: node tools/scripts/repack_wheel.mjs
 
             - name: Python Build sdist
               run: pnpm run build
               env:
-                  PACKAGE: "perspective-python"
+                  PACKAGE: "python"
                   if: ${{ runner.os == 'Linux' }}
                   # PSP_USE_CCACHE: 1
                   # PSP_ARCH: ${{ matrix.arch }}
@@ -579,7 +581,7 @@ jobs:
               if: ${{ runner.os == 'Linux' }}
               run: pnpm run test
               env:
-                  PACKAGE: "perspective-jupyterlab"
+                  PACKAGE: "jupyterlab"
                   # PSP_USE_CCACHE: 1
 
             - name: Run Jupyter Integration Tests
@@ -589,7 +591,7 @@ jobs:
                   jupyter lab --generate-config
                   pnpm run test --jupyter
               env:
-                  PACKAGE: "perspective-jupyterlab"
+                  PACKAGE: "jupyterlab"
                   # PSP_USE_CCACHE: 1
 
     #  ,--,--'      .    ,-_/              .---.               .
@@ -635,7 +637,7 @@ jobs:
             - name: Run Tests
               run: pnpm run test
               env:
-                  PACKAGE: "perspective-server,perspective,perspective-viewer,perspective-viewer-datagrid,perspective-viewer-d3fc,perspective-viewer-openlayers,perspective-workspace,perspective-cli,perspective-react"
+                  PACKAGE: "server,client,viewer,viewer-datagrid,viewer-d3fc,viewer-openlayers,workspace,react"
                   # PSP_USE_CCACHE: 1
 
     # ,--,--'      .   .-,--.     .  .
@@ -704,7 +706,7 @@ jobs:
             - name: Run Tests
               run: pnpm run test
               env:
-                  PACKAGE: "perspective-python"
+                  PACKAGE: "python"
                   # PSP_USE_CCACHE: 1
 
     test_python_sdist:
@@ -781,7 +783,7 @@ jobs:
               shell: bash
               run: |
                   jupyter labextension list --debug
-                  jupyter labextension list 2>&1 | grep '@finos/perspective-jupyterlab'
+                  jupyter labextension list 2>&1 | grep '@perspective-dev/jupyterlab'
 
             - name: Run import test
               run: python -c 'import perspective'
@@ -842,12 +844,12 @@ jobs:
             - name: Benchmarks
               run: pnpm run bench
               env:
-                  PACKAGE: "perspective-python"
+                  PACKAGE: "python"
 
             - uses: actions/upload-artifact@v4
               with:
                   name: perspective-python-benchmarks
-                  path: tools/perspective-bench/dist/benchmark-python.arrow
+                  path: tools/bench/dist/benchmark-python.arrow
 
     # ,-,---.             .                 .
     #  '|___/ ,-. ,-. ,-. |-. ,-,-. ,-. ,-. | ,
@@ -893,12 +895,12 @@ jobs:
             - name: Benchmarks
               run: pnpm run bench
               env:
-                  PACKAGE: "perspective"
+                  PACKAGE: "client"
 
             - uses: actions/upload-artifact@v4
               with:
                   name: perspective-js-benchmarks
-                  path: tools/perspective-bench/dist/benchmark-js.arrow
+                  path: tools/bench/dist/benchmark-js.arrow
 
     # .-,--.     .   .        .
     #  '|__/ . . |-. |  . ,-. |-.
@@ -988,25 +990,25 @@ jobs:
               working-directory: ./rust/perspective-viewer
 
             - run: pnpm pack --pack-destination=../..
-              working-directory: ./packages/perspective-viewer-datagrid
+              working-directory: ./packages/viewer-datagrid
 
             - run: pnpm pack --pack-destination=../..
-              working-directory: ./packages/perspective-viewer-d3fc
+              working-directory: ./packages/viewer-d3fc
 
             - run: pnpm pack --pack-destination=../..
-              working-directory: ./packages/perspective-viewer-openlayers
+              working-directory: ./packages/viewer-openlayers
 
             - run: pnpm pack --pack-destination=../..
-              working-directory: ./packages/perspective-workspace
+              working-directory: ./packages/workspace
 
             - run: pnpm pack --pack-destination=../..
-              working-directory: ./packages/perspective-react
+              working-directory: ./packages/react
 
             - run: pnpm pack --pack-destination=../..
-              working-directory: ./packages/perspective-cli
+              working-directory: ./packages/cli
 
             - run: pnpm pack --pack-destination=../..
-              working-directory: ./packages/perspective-jupyterlab
+              working-directory: ./packages/jupyterlab
 
             - name: Upload nightly artifacts
               uses: actions/upload-artifact@v4

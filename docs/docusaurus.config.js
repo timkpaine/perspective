@@ -22,7 +22,7 @@ const examples = fs.readdirSync("static/blocks").map((ex) => {
             (x) =>
                 !x.startsWith(".") &&
                 !x.endsWith(".png") &&
-                !x.endsWith(".arrow")
+                !x.endsWith(".arrow"),
         )
         .map((x) => {
             return {
@@ -47,16 +47,17 @@ function link(title, path) {
 const config = {
     title: "Perspective",
     // tagline: "Dinosaurs are cool",
-    url: "https://perspective.finos.org",
+    url: "https://perspective-dev.github.io",
     baseUrl: "/",
     onBrokenLinks: "warn",
     onBrokenMarkdownLinks: "warn",
-    favicon: "https://www.finos.org/hubfs/FINOS/finos-logo/favicon.ico",
+    favicon: "https://openjsf.org/favicon.ico",
 
     // GitHub pages deployment config.
     // If you aren't using GitHub pages, you don't need these.
-    organizationName: "finos", // Usually your GitHub org/user name.
-    projectName: "perspective", // Usually your repo name.
+    organizationName: "perspective-dev", // Usually your GitHub org/user name.
+    projectName: "perspective-dev.github.io", // Usually your repo name.
+    deploymentBranch: "main",
     trailingSlash: true,
 
     customFields: {
@@ -157,29 +158,29 @@ const config = {
                             {
                                 type: "html",
                                 value: link(
-                                    "<code>@finos/perspective</code> Browser",
-                                    "/browser/modules/src_ts_perspective.browser.ts.html"
+                                    "<code>@perspective-dev/client</code> Browser",
+                                    "/browser/modules/src_ts_perspective.browser.ts.html",
                                 ),
                             },
                             {
                                 type: "html",
                                 value: link(
-                                    "<code>@finos/perspective</code> Node.js",
-                                    "/node/modules/src_ts_perspective.node.ts.html"
+                                    "<code>@perspective-dev/client</code> Node.js",
+                                    "/node/modules/src_ts_perspective.node.ts.html",
                                 ),
                             },
                             {
                                 type: "html",
                                 value: link(
-                                    "<code>@finos/perspective-viewer</code>",
-                                    "/viewer/modules/perspective-viewer.html"
+                                    "<code>@perspective-dev/viewer</code>",
+                                    "/viewer/modules/perspective-viewer.html",
                                 ),
                             },
                             {
                                 type: "html",
                                 value: link(
-                                    "<code>@finos/perspective-react</code>",
-                                    "/react/index.html"
+                                    "<code>@perspective-dev/react</code>",
+                                    "/react/index.html",
                                 ),
                             },
                             {
@@ -218,7 +219,7 @@ const config = {
                         label: "Examples",
                     },
                     {
-                        href: "https://github.com/finos/perspective",
+                        href: "https://github.com/perspective-dev/perspective",
                         label: "GitHub",
                         position: "right",
                     },
@@ -244,7 +245,7 @@ const config = {
                     //     items: [
                     //         {
                     //             label: "GitHub",
-                    //             href: "https://github.com/finos/perspective",
+                    //             href: "https://github.com/perspective-dev/perspective",
                     //         },
                     //         {
                     //             href: "https://www.prospective.co/blog",

@@ -5,10 +5,10 @@ itself) can be serialized or deserialized. This include all column, filter,
 pivot, expressions, etc. properties, as well as datagrid style settings, config
 panel visibility, and more. This overloaded feature covers a range of use cases:
 
--   Setting a `<perspective-viewer>`'s initial state after a `load()` call.
--   Updating a single or subset of properties, without modifying others.
--   Resetting some or all properties to their data-relative default.
--   Persisting a user's configuration to `localStorage` or a server.
+- Setting a `<perspective-viewer>`'s initial state after a `load()` call.
+- Updating a single or subset of properties, without modifying others.
+- Resetting some or all properties to their data-relative default.
+- Persisting a user's configuration to `localStorage` or a server.
 
 ## Serializing and deserializing the viewer state
 
@@ -48,9 +48,9 @@ await elem.restore(JSON.stringify(json_token));
 Using the JSON format, every facet of a `<perspective-viewer>`'s configuration
 can be manipulated from JavaScript using the `restore()` method. The valid
 structure of properties is described via the
-[`ViewerConfig`](https://github.com/finos/perspective/blob/ebced4caa/rust/perspective-viewer/src/ts/viewer.ts#L16)
+[`ViewerConfig`](https://github.com/perspective-dev/perspective/blob/ebced4caa/rust/perspective-viewer/src/ts/viewer.ts#L16)
 and embedded
-[`ViewConfig`](https://github.com/finos/perspective/blob/ebced4caa19435a2a57d4687be7e428a4efc759b/packages/perspective/index.d.ts#L140)
+[`ViewConfig`](https://github.com/perspective-dev/perspective/blob/ebced4caa19435a2a57d4687be7e428a4efc759b/packages/perspective/index.d.ts#L140)
 type declarations, and [`View`](view.md) chapter of the documentation which has
 several interactive examples for each `ViewConfig` property.
 

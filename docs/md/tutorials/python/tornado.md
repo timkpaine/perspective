@@ -64,9 +64,9 @@ using `perspective.websocket` and `open_table()`. First, create a client that
 expects a Perspective server to accept connections at the specified URL:
 
 ```javascript
-import "@finos/perspective-viewer";
-import "@finos/perspective-viewer-datagrid";
-import perspective from "@finos/perspective";
+import "@perspective-dev/viewer";
+import "@perspective-dev/viewer-datagrid";
+import perspective from "@perspective-dev/client";
 
 const websocket = await perspective.websocket("ws://localhost:8888/websocket");
 ```

@@ -10,10 +10,10 @@
 // ┃ of the [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0). ┃
 // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 
-import perspective from "/node_modules/@finos/perspective/dist/cdn/perspective.js";
-import "/node_modules/@finos/perspective-viewer/dist/cdn/perspective-viewer.js";
-import "/node_modules/@finos/perspective-viewer-datagrid/dist/cdn/perspective-viewer-datagrid.js";
-import "/node_modules/@finos/perspective-viewer-d3fc/dist/cdn/perspective-viewer-d3fc.js";
+import perspective from "/node_modules/@perspective-dev/client/dist/cdn/perspective.js";
+import "/node_modules/@perspective-dev/viewer/dist/cdn/perspective-viewer.js";
+import "/node_modules/@perspective-dev/viewer-datagrid/dist/cdn/perspective-viewer-datagrid.js";
+import "/node_modules/@perspective-dev/viewer-d3fc/dist/cdn/perspective-viewer-d3fc.js";
 
 const RESOLUTION = 100;
 

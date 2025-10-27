@@ -1,15 +1,14 @@
 ## Python
 
 \`perspective-python\`, built on the same C++ data engine used by the
-[WebAssembly version](https://perspective.finos.org/docs/md/js.html), implements
-the Perspective API directly in Python, either as a virtualized server for
-Production, or as an embedded JupyterLab Widget for Research.
+[WebAssembly version](https://perspective-dev.github.io/docs/md/js.html),
+implements the Perspective API directly in Python, either as a virtualized
+server for Production, or as an embedded JupyterLab Widget for Research.
 
-For Application Developers, virtualized `<perspective-viewer>` will only
-consume the data necessary to render the current screen, enabling _ludicrous size_
-datasets with nearly instant load. Or - efficiently stream the entire dataset to the
-WebAssembly runtime via Apache Arrow, and give your server a
-break!
+For Application Developers, virtualized `<perspective-viewer>` will only consume
+the data necessary to render the current screen, enabling _ludicrous size_
+datasets with nearly instant load. Or - efficiently stream the entire dataset to
+the WebAssembly runtime via Apache Arrow, and give your server a break!
 
 For Researchers and Data Scientists, `PerspectiveWidget` is available as a
 [Jupyter/JupyterLab](https://jupyterlab.readthedocs.io/en/stable/) widget,

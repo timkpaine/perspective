@@ -10,8 +10,8 @@
 // ┃ of the [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0). ┃
 // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 
-import { test } from "@finos/perspective-test";
-import { compareContentsToSnapshot } from "@finos/perspective-test";
+import { test } from "@perspective-dev/test";
+import { compareContentsToSnapshot } from "@perspective-dev/test";
 import * as prettier from "prettier";
 
 async function get_contents(page) {

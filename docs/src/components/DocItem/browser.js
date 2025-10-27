@@ -11,12 +11,12 @@
 // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 
 export async function main(colorMode) {
-    await import("@finos/perspective-viewer", { type: "module" });
-    await import("@finos/perspective-viewer-datagrid");
+    await import("@perspective-dev/viewer", { type: "module" });
+    await import("@perspective-dev/viewer-datagrid");
 
     await customElements.whenDefined("perspective-viewer");
     const viewers = document.querySelectorAll(
-        "perspective-viewer:not(.nosuperstore)"
+        "perspective-viewer:not(.nosuperstore)",
     );
 
     const { SUPERSTORE_TABLE } = await import("@site/src/data/superstore.js");

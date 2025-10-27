@@ -22,7 +22,7 @@ default-members = [
 ]
 members = [
     "rust/lint",
-    "rust/generate-metadata",
+    "rust/metadata",
     "rust/bundle",
     "rust/perspective",
     "rust/perspective-client",

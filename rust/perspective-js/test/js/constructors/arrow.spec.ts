@@ -11,12 +11,12 @@
 // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 
 import * as arrow from "apache-arrow";
-import { test, expect } from "@finos/perspective-test";
+import { test, expect } from "@perspective-dev/test";
 import perspective from "../perspective_client";
 
 test.describe("Arrow", function () {
     test.describe("Date columns", function () {
-        // https://github.com/finos/perspective/issues/2894
+        // https://github.com/perspective-dev/perspective/issues/2894
         // https://github.com/jdangerx/repro-perspective-float-filter/tree/dates
         test("Date columns are preserved through Arrow in and out", async function () {
             const tableData = arrow.tableFromArrays({

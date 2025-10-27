@@ -10,11 +10,11 @@
 // ┃ of the [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0). ┃
 // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 
-import { test, expect } from "@finos/perspective-test";
+import { test, expect } from "@perspective-dev/test";
 
 test.describe("perspective.js module", function () {
     test("does not access the WASM module until it is ready", async () => {
-        const perspective = await import("@finos/perspective");
+        const perspective = await import("@perspective-dev/client");
         const tbl = await perspective.table([{ x: 1 }]);
         const size = await tbl.size();
         expect(size).toEqual(1);

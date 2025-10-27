@@ -9,7 +9,7 @@ browser memory and CPU footprint.
 An example in Node.js:
 
 ```javascript
-const { WebSocketServer, table } = require("@finos/perspective");
+const { WebSocketServer, table } = require("@perspective-dev/client");
 const fs = require("fs");
 
 // Start a WS/HTTP host on port 8080.  The `assets` property allows
@@ -29,7 +29,7 @@ const elem = document.getElementsByTagName("perspective-viewer")[0];
 
 // Bind to the server's worker instead of instantiating a Web Worker.
 const websocket = await perspective.websocket(
-    window.location.origin.replace("http", "ws")
+    window.location.origin.replace("http", "ws"),
 );
 
 // Create a virtual `Table` to the preloaded data source.  `table` and `view`

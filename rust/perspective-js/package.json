@@ -1,10 +1,10 @@
 {
-    "name": "@finos/perspective",
+    "name": "@perspective-dev/client",
     "version": "3.8.0",
     "description": "",
     "repository": {
         "type": "git",
-        "url": "https://github.com/finos/perspective"
+        "url": "https://github.com/perspective-dev/perspective"
     },
     "type": "module",
     "license": "Apache-2.0",
@@ -37,21 +37,21 @@
     "scripts": {
         "build": "node ./build.mjs",
         "clean": "node ./clean.mjs",
-        "docs": "node ./docs..mjs"
+        "docs": "node ./docs.mjs"
     },
     "publishConfig": {
         "access": "public"
     },
     "dependencies": {
+        "@perspective-dev/server": "workspace:",
         "pro_self_extracting_wasm": "catalog:",
         "stoppable": "catalog:",
         "ws": "catalog:"
     },
     "devDependencies": {
-        "@finos/perspective-esbuild-plugin": "workspace:",
-        "@finos/perspective-metadata": "workspace:",
-        "@finos/perspective-server": "workspace:",
-        "@finos/perspective-test": "workspace:",
+        "@perspective-dev/esbuild-plugin": "workspace:",
+        "@perspective-dev/metadata": "workspace:",
+        "@perspective-dev/test": "workspace:",
         "@playwright/experimental-ct-react": "catalog:",
         "@playwright/test": "catalog:",
         "@types/node": "catalog:",

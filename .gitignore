@@ -40,13 +40,14 @@ docs/static/features
 docs/static/guide
 examples/blocks/src/nypd/nypdccrb.arrow
 node_modules
-packages/perspective-jupyterlab/test/config/jupyter/migrated
+packages/jupyterlab/test/config/jupyter/migrated
 py_modules
 python/cmake
 python/cpp
 rust/perspective-client/docs/expression_gen.md
 rust/perspective-client/src/rust/proto.rs
 rust/perspective-js/src/ts/ts-rs
+rust/perspective-server/build
 rust/perspective-python/LICENSE_THIRDPARTY_cargo.yml
 rust/perspective-python/LICENSE.md
 rust/perspective-server/docs/lib_gen.md
