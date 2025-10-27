@@ -12,7 +12,7 @@
 
 [package]
 name = "perspective-viewer"
-version = "3.8.0"
+version = "4.0.0"
 authors = ["Andrew Stein <steinlink@gmail.com>"]
 edition = "2024"
 description = "A data visualization and analytics component, especially well-suited for large and/or streaming datasets."
@@ -48,8 +48,8 @@ anyhow = "1.0.66"
 wasm-bindgen-test = "0.3.13"
 
 [dependencies]
-perspective-client = { version = "3.8.0" }
-perspective-js = { version = "3.8.0" }
+perspective-client = { version = "4.0.0" }
+perspective-js = { version = "4.0.0" }
 
 # Provides async `Mutex` for locked sections such as `render`
 async-lock = "2.5.0"
@@ -102,9 +102,9 @@ thiserror = { version = "1.0.55" }
 
 # specta = { version = "2.0.0-rc.9", features = ["typescript"] }
 ts-rs = { version = "11.0.1", features = [
-    "serde-json-impl",
-    "no-serde-warnings",
-    "import-esm",
+  "serde-json-impl",
+  "no-serde-warnings",
+  "import-esm",
 ] }
 
 # Async-aware logging that can be disabled at compile-time.
@@ -128,54 +128,54 @@ web-sys.version = "0.3.77"
 
 # Browser stdlib bindings
 web-sys.features = [
-    "Blob",
-    "Clipboard",
-    "CssStyleDeclaration",
-    "CssStyleSheet",
-    "CssRuleList",
-    "CssRule",
-    "CssStyleRule",
-    "CustomEvent",
-    "CustomEventInit",
-    "DataTransfer",
-    "Document",
-    "DomRect",
-    "DomStringMap",
-    "DomTokenList",
-    "Element",
-    "Event",
-    "EventTarget",
-    "EventListener",
-    "FontFace",
-    "FontFaceSet",
-    "FontFaceSetIterator",
-    "FontFaceSetIteratorResult",
-    "HtmlCollection",
-    "HtmlElement",
-    "HtmlTextAreaElement",
-    "HtmlStyleElement",
-    "HtmlSelectElement",
-    "InputEvent",
-    "KeyboardEvent",
-    "MutationObserver",
-    "MutationObserverInit",
-    "MutationRecord",
-    "Navigator",
-    "Node",
-    "NodeList",
-    "Performance",
-    "PerformanceMark",
-    "Range",
-    "ReadableStreamDefaultReader",
-    "Selection",
-    "ShadowRoot",
-    "ShadowRootMode",
-    "ShadowRootInit",
-    "StyleSheet",
-    "StyleSheetList",
-    "Url",
-    "VisibilityState",
-    "Window",
+  "Blob",
+  "Clipboard",
+  "CssStyleDeclaration",
+  "CssStyleSheet",
+  "CssRuleList",
+  "CssRule",
+  "CssStyleRule",
+  "CustomEvent",
+  "CustomEventInit",
+  "DataTransfer",
+  "Document",
+  "DomRect",
+  "DomStringMap",
+  "DomTokenList",
+  "Element",
+  "Event",
+  "EventTarget",
+  "EventListener",
+  "FontFace",
+  "FontFaceSet",
+  "FontFaceSetIterator",
+  "FontFaceSetIteratorResult",
+  "HtmlCollection",
+  "HtmlElement",
+  "HtmlTextAreaElement",
+  "HtmlStyleElement",
+  "HtmlSelectElement",
+  "InputEvent",
+  "KeyboardEvent",
+  "MutationObserver",
+  "MutationObserverInit",
+  "MutationRecord",
+  "Navigator",
+  "Node",
+  "NodeList",
+  "Performance",
+  "PerformanceMark",
+  "Range",
+  "ReadableStreamDefaultReader",
+  "Selection",
+  "ShadowRoot",
+  "ShadowRootMode",
+  "ShadowRootInit",
+  "StyleSheet",
+  "StyleSheetList",
+  "Url",
+  "VisibilityState",
+  "Window",
 ]
 
 serde_with = { version = "3.6.1", features = ["indexmap_2"] }

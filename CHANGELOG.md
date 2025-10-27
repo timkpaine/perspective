@@ -1,6 +1,27 @@
-# [v3.8.0](https://github.com/finos/perspective/releases/tag/v3.8.0)
+# [v4.0.0](https://github.com/perspective-dev/perspective/releases/tag/v4.0.0)
 
-_1 September 2025_ ([Full changelog](https://github.com/finos/perspective/compare/v3.7.4...v3.8.0))
+_28 October 2025_ ([Full changelog](https://github.com/finos/perspective/compare/v4.0.0...v4.0.0))
+
+**Breaking**
+
+- Move to OpenJS Foundation [#3073](https://github.com/finos/perspective/pull/3073)
+
+Fixes
+
+- Fix `View::expand`, `View::collapse` unlocked server section [#3074](https://github.com/finos/perspective/pull/3074)
+- Fix concurrent update/view creation segfault [#3068](https://github.com/finos/perspective/pull/3068)
+- Fix plugins which inherit from `perspective-viewer-datagrid` [#3064](https://github.com/finos/perspective/pull/3064)
+- Fix jupyterlab renderers [#3059](https://github.com/finos/perspective/pull/3059)
+- Fix `aggregates` field in `View::get_config` [#3053](https://github.com/finos/perspective/pull/3053)
+
+Misc
+
+- Correct images to correspond to architecture explanations [#3067](https://github.com/finos/perspective/pull/3067)
+- Disable `pnpm` post install scripts and fix `pnpm audit` dependencies [#3054](https://github.com/finos/perspective/pull/3054)
+
+# [v3.8.0](https://github.com/perspective-dev/perspective/releases/tag/v3.8.0)
+
+_2 September 2025_ ([Full changelog](https://github.com/finos/perspective/compare/v3.7.4...v3.8.0))
 
 **Breaking**
 
@@ -19,15 +40,15 @@ Misc
 - Remove blog links [#3043](https://github.com/finos/perspective/pull/3043)
 - Add API docs for `perspective-react` [#3037](https://github.com/finos/perspective/pull/3037)
 
-# [v3.7.4](https://github.com/finos/perspective/releases/tag/v3.7.4)
+# [v3.7.4](https://github.com/perspective-dev/perspective/releases/tag/v3.7.4)
 
-_21 July 2025_ ([Full changelog](https://github.com/finos/perspective/compare/v3.7.3...v3.7.4))
+_20 July 2025_ ([Full changelog](https://github.com/finos/perspective/compare/v3.7.3...v3.7.4))
 
 Features
 
 - Upgrade `Client::system_info` [#3036](https://github.com/finos/perspective/pull/3036)
 
-# [v3.7.3](https://github.com/finos/perspective/releases/tag/v3.7.3)
+# [v3.7.3](https://github.com/perspective-dev/perspective/releases/tag/v3.7.3)
 
 _13 July 2025_ ([Full changelog](https://github.com/finos/perspective/compare/v3.7.2...v3.7.3))
 
@@ -39,7 +60,7 @@ Fixes
 
 - Fix thread safety of multiple `Server` instances in the same process [#3034](https://github.com/finos/perspective/pull/3034)
 
-# [v3.7.2](https://github.com/finos/perspective/releases/tag/v3.7.2)
+# [v3.7.2](https://github.com/perspective-dev/perspective/releases/tag/v3.7.2)
 
 _8 July 2025_ ([Full changelog](https://github.com/finos/perspective/compare/v3.7.1...v3.7.2))
 
@@ -51,7 +72,7 @@ Misc
 
 - Refactor docs [#3029](https://github.com/finos/perspective/pull/3029)
 
-# [v3.7.1](https://github.com/finos/perspective/releases/tag/v3.7.1)
+# [v3.7.1](https://github.com/perspective-dev/perspective/releases/tag/v3.7.1)
 
 _2 July 2025_ ([Full changelog](https://github.com/finos/perspective/compare/v3.7.0...v3.7.1))
 
@@ -63,7 +84,7 @@ Misc
 
 - Fix dep version conflict with `rand` [#3024](https://github.com/finos/perspective/pull/3024)
 
-# [v3.7.0](https://github.com/finos/perspective/releases/tag/v3.7.0)
+# [v3.7.0](https://github.com/perspective-dev/perspective/releases/tag/v3.7.0)
 
 _30 June 2025_ ([Full changelog](https://github.com/finos/perspective/compare/v3.6.1...v3.7.0))
 
@@ -98,7 +119,7 @@ Misc
 - Nightly versions [#2990](https://github.com/finos/perspective/pull/2990)
 - Nightly artifacts [#2987](https://github.com/finos/perspective/pull/2987)
 
-# [v3.6.1](https://github.com/finos/perspective/releases/tag/v3.6.1)
+# [v3.6.1](https://github.com/perspective-dev/perspective/releases/tag/v3.6.1)
 
 _30 April 2025_ ([Full changelog](https://github.com/finos/perspective/compare/v3.6.0...v3.6.1))
 
@@ -106,7 +127,7 @@ Fixes
 
 - Fix line chart alt Y axis on zoom [#2986](https://github.com/finos/perspective/pull/2986)
 
-# [v3.6.0](https://github.com/finos/perspective/releases/tag/v3.6.0)
+# [v3.6.0](https://github.com/perspective-dev/perspective/releases/tag/v3.6.0)
 
 _24 April 2025_ ([Full changelog](https://github.com/finos/perspective/compare/v3.5.1...v3.6.0))
 
@@ -114,7 +135,7 @@ _24 April 2025_ ([Full changelog](https://github.com/finos/perspective/compare/v
 
 - Fix `limit` overflow bug [#2983](https://github.com/finos/perspective/pull/2983)
 
-# [v3.5.1](https://github.com/finos/perspective/releases/tag/v3.5.1)
+# [v3.5.1](https://github.com/perspective-dev/perspective/releases/tag/v3.5.1)
 
 _11 April 2025_ ([Full changelog](https://github.com/finos/perspective/compare/v3.5.0...v3.5.1))
 
@@ -126,7 +147,7 @@ Misc
 
 - Add vscode settings to enable prettier [#2959](https://github.com/finos/perspective/pull/2959)
 
-# [v3.5.0](https://github.com/finos/perspective/releases/tag/v3.5.0)
+# [v3.5.0](https://github.com/perspective-dev/perspective/releases/tag/v3.5.0)
 
 _10 April 2025_ ([Full changelog](https://github.com/finos/perspective/compare/v3.4.3...v3.5.0))
 
@@ -145,7 +166,7 @@ Misc
 
 - Fix parallel_for and cleanup commented out code. [#2972](https://github.com/finos/perspective/pull/2972)
 
-# [v3.4.3](https://github.com/finos/perspective/releases/tag/v3.4.3)
+# [v3.4.3](https://github.com/perspective-dev/perspective/releases/tag/v3.4.3)
 
 _20 March 2025_ ([Full changelog](https://github.com/finos/perspective/compare/v3.4.2...v3.4.3))
 
@@ -154,7 +175,7 @@ Fixes
 - Fix date filters in perspective-{select,click} events [#2957](https://github.com/finos/perspective/pull/2957)
 - Invalidate viewer session before loading table [#2958](https://github.com/finos/perspective/pull/2958)
 
-# [v3.4.2](https://github.com/finos/perspective/releases/tag/v3.4.2)
+# [v3.4.2](https://github.com/perspective-dev/perspective/releases/tag/v3.4.2)
 
 _14 March 2025_ ([Full changelog](https://github.com/finos/perspective/compare/v3.4.1...v3.4.2))
 
@@ -162,9 +183,9 @@ Fixes
 
 - Add timeouts to pytest, fix jupyterlab error [#2952](https://github.com/finos/perspective/pull/2952)
 
-# [v3.4.1](https://github.com/finos/perspective/releases/tag/v3.4.1)
+# [v3.4.1](https://github.com/perspective-dev/perspective/releases/tag/v3.4.1)
 
-_10 March 2025_ ([Full changelog](https://github.com/finos/perspective/compare/v3.4.0...v3.4.1))
+_12 March 2025_ ([Full changelog](https://github.com/finos/perspective/compare/v3.4.0...v3.4.1))
 
 Features
 
@@ -174,7 +195,7 @@ Fixes
 
 - Fix segfault in Python webservers [#2943](https://github.com/finos/perspective/pull/2943)
 
-# [v3.4.0](https://github.com/finos/perspective/releases/tag/v3.4.0)
+# [v3.4.0](https://github.com/perspective-dev/perspective/releases/tag/v3.4.0)
 
 _6 March 2025_ ([Full changelog](https://github.com/finos/perspective/compare/v3.3.4...v3.4.0))
 
@@ -194,7 +215,7 @@ Misc
 
 - Shrink `d3fc` bundle [#2934](https://github.com/finos/perspective/pull/2934)
 
-# [v3.3.4](https://github.com/finos/perspective/releases/tag/v3.3.4)
+# [v3.3.4](https://github.com/perspective-dev/perspective/releases/tag/v3.3.4)
 
 _9 February 2025_ ([Full changelog](https://github.com/finos/perspective/compare/v3.3.3...v3.3.4))
 
@@ -202,7 +223,7 @@ Fixes
 
 - Fix datagrid scroll drift on resize [#2919](https://github.com/finos/perspective/pull/2919)
 
-# [v3.3.3](https://github.com/finos/perspective/releases/tag/v3.3.3)
+# [v3.3.3](https://github.com/perspective-dev/perspective/releases/tag/v3.3.3)
 
 _4 February 2025_ ([Full changelog](https://github.com/finos/perspective/compare/v3.3.2...v3.3.3))
 
@@ -212,7 +233,7 @@ Misc
 - Fix API docs [#2910](https://github.com/finos/perspective/pull/2910)
 - Support for pyodide 0.27.1, including pyarrow + pandas [#2901](https://github.com/finos/perspective/pull/2901)
 
-# [v3.3.2](https://github.com/finos/perspective/releases/tag/v3.3.2)
+# [v3.3.2](https://github.com/perspective-dev/perspective/releases/tag/v3.3.2)
 
 _1 February 2025_ ([Full changelog](https://github.com/finos/perspective/compare/v3.3.1...v3.3.2))
 
@@ -220,7 +241,7 @@ Features
 
 - Fix overallocations [#2909](https://github.com/finos/perspective/pull/2909)
 
-# [v3.3.1](https://github.com/finos/perspective/releases/tag/v3.3.1)
+# [v3.3.1](https://github.com/perspective-dev/perspective/releases/tag/v3.3.1)
 
 _26 January 2025_ ([Full changelog](https://github.com/finos/perspective/compare/v3.3.0...v3.3.1))
 
@@ -228,7 +249,7 @@ Fixes
 
 - Fix `date` formatting for `perspective-viewer-datagrid` plugin [#2904](https://github.com/finos/perspective/pull/2904)
 
-# [v3.3.0](https://github.com/finos/perspective/releases/tag/v3.3.0)
+# [v3.3.0](https://github.com/perspective-dev/perspective/releases/tag/v3.3.0)
 
 _14 January 2025_ ([Full changelog](https://github.com/finos/perspective/compare/v3.2.1...v3.3.0))
 
@@ -240,7 +261,7 @@ Misc
 
 - Add build support for `Memory64` [#2888](https://github.com/finos/perspective/pull/2888)
 
-# [v3.2.1](https://github.com/finos/perspective/releases/tag/v3.2.1)
+# [v3.2.1](https://github.com/perspective-dev/perspective/releases/tag/v3.2.1)
 
 _23 December 2024_ ([Full changelog](https://github.com/finos/perspective/compare/v3.2.0...v3.2.1))
 
@@ -258,7 +279,7 @@ Misc
 
 - Fix examples and cleanup CSS [#2886](https://github.com/finos/perspective/pull/2886)
 
-# [v3.2.0](https://github.com/finos/perspective/releases/tag/v3.2.0)
+# [v3.2.0](https://github.com/perspective-dev/perspective/releases/tag/v3.2.0)
 
 _9 December 2024_ ([Full changelog](https://github.com/finos/perspective/compare/v3.1.8...v3.2.0))
 
@@ -270,7 +291,7 @@ Fixes
 
 - Fix duplicate columns [#2872](https://github.com/finos/perspective/pull/2872)
 
-# [v3.1.8](https://github.com/finos/perspective/releases/tag/v3.1.8)
+# [v3.1.8](https://github.com/perspective-dev/perspective/releases/tag/v3.1.8)
 
 _2 December 2024_ ([Full changelog](https://github.com/finos/perspective/compare/v3.1.7...v3.1.8))
 
@@ -280,7 +301,7 @@ Fixes
 - Allow for passthrough of event loop in psp webserver handlers [#2829](https://github.com/finos/perspective/pull/2829)
 - Fix workspace dark theme, theme render bug [#2864](https://github.com/finos/perspective/pull/2864)
 
-# [v3.1.7](https://github.com/finos/perspective/releases/tag/v3.1.7)
+# [v3.1.7](https://github.com/perspective-dev/perspective/releases/tag/v3.1.7)
 
 _30 November 2024_ ([Full changelog](https://github.com/finos/perspective/compare/v3.1.6...v3.1.7))
 
@@ -292,7 +313,7 @@ Misc
 
 - Add some information on JSON input formats [#2856](https://github.com/finos/perspective/pull/2856)
 
-# [v3.1.6](https://github.com/finos/perspective/releases/tag/v3.1.6)
+# [v3.1.6](https://github.com/perspective-dev/perspective/releases/tag/v3.1.6)
 
 _18 November 2024_ ([Full changelog](https://github.com/finos/perspective/compare/v3.1.5...v3.1.6))
 
@@ -308,7 +329,7 @@ Misc
 
 - Check pyarrow import and make clear(er) error message [#2848](https://github.com/finos/perspective/pull/2848)
 
-# [v3.1.5](https://github.com/finos/perspective/releases/tag/v3.1.5)
+# [v3.1.5](https://github.com/perspective-dev/perspective/releases/tag/v3.1.5)
 
 _15 November 2024_ ([Full changelog](https://github.com/finos/perspective/compare/v3.1.4...v3.1.5))
 
@@ -327,7 +348,7 @@ Misc
 - Update ExprTk [#2825](https://github.com/finos/perspective/pull/2825)
 - sdist licensing follow ups [#2843](https://github.com/finos/perspective/pull/2843)
 
-# [v3.1.4](https://github.com/finos/perspective/releases/tag/v3.1.4)
+# [v3.1.4](https://github.com/perspective-dev/perspective/releases/tag/v3.1.4)
 
 _7 November 2024_ ([Full changelog](https://github.com/finos/perspective/compare/v3.1.3...v3.1.4))
 
@@ -346,7 +367,7 @@ Misc
 - Fix failed color range update [#2823](https://github.com/finos/perspective/pull/2823)
 - CI sdist fixes, port conda patch, fix ODR violation [#2826](https://github.com/finos/perspective/pull/2826)
 
-# [v3.1.3](https://github.com/finos/perspective/releases/tag/v3.1.3)
+# [v3.1.3](https://github.com/perspective-dev/perspective/releases/tag/v3.1.3)
 
 _31 October 2024_ ([Full changelog](https://github.com/finos/perspective/compare/v3.1.2...v3.1.3))
 
@@ -359,7 +380,7 @@ Fixes
 - Escape esbuild plugin's symbol replacement. [#2807](https://github.com/finos/perspective/pull/2807)
 - Add aarch64 Mac runners to test_python, restore PSP_ARCH dev behavior [#2802](https://github.com/finos/perspective/pull/2802)
 
-# [v3.1.2](https://github.com/finos/perspective/releases/tag/v3.1.2)
+# [v3.1.2](https://github.com/perspective-dev/perspective/releases/tag/v3.1.2)
 
 _22 October 2024_ ([Full changelog](https://github.com/finos/perspective/compare/v3.1.1...v3.1.2))
 
@@ -368,7 +389,7 @@ Fixes
 - Fix docs, inline builds, export, and workspace CSS [#2800](https://github.com/finos/perspective/pull/2800)
 - arrow: Fix cross-compiling errors on macos [#2798](https://github.com/finos/perspective/pull/2798)
 
-# [v3.1.1](https://github.com/finos/perspective/releases/tag/v3.1.1)
+# [v3.1.1](https://github.com/perspective-dev/perspective/releases/tag/v3.1.1)
 
 _18 October 2024_ ([Full changelog](https://github.com/finos/perspective/compare/v3.1.0...v3.1.1))
 
@@ -383,7 +404,7 @@ Misc
 - Port Conda patches, use vendored boost [#2793](https://github.com/finos/perspective/pull/2793)
 - Update documentation for `3.x` [#2778](https://github.com/finos/perspective/pull/2778)
 
-# [v3.1.0](https://github.com/finos/perspective/releases/tag/v3.1.0)
+# [v3.1.0](https://github.com/perspective-dev/perspective/releases/tag/v3.1.0)
 
 _23 September 2024_ ([Full changelog](https://github.com/finos/perspective/compare/v3.0.3...v3.1.0))
 
@@ -407,7 +428,7 @@ Misc
 - Upgrade Apache Arrow C++ to 17.0.0 [#2749](https://github.com/finos/perspective/pull/2749)
 - Emscripten wheel fixes [#2739](https://github.com/finos/perspective/pull/2739)
 
-# [v3.0.3](https://github.com/finos/perspective/releases/tag/v3.0.3)
+# [v3.0.3](https://github.com/perspective-dev/perspective/releases/tag/v3.0.3)
 
 _3 September 2024_ ([Full changelog](https://github.com/finos/perspective/compare/v3.0.2...v3.0.3))
 
@@ -419,7 +440,7 @@ Misc
 
 - Support packaging in CI [#2735](https://github.com/finos/perspective/pull/2735)
 
-# [v3.0.2](https://github.com/finos/perspective/releases/tag/v3.0.2)
+# [v3.0.2](https://github.com/perspective-dev/perspective/releases/tag/v3.0.2)
 
 _30 August 2024_ ([Full changelog](https://github.com/finos/perspective/compare/v3.0.1...v3.0.2))
 
@@ -429,7 +450,7 @@ Fixes
 - Fix `PerspectiveTornadoHandler` misnamed `close()` [#2720](https://github.com/finos/perspective/pull/2720)
 - fix: Doctype in html export [#2690](https://github.com/finos/perspective/pull/2690)
 
-# [v3.0.1](https://github.com/finos/perspective/releases/tag/v3.0.1)
+# [v3.0.1](https://github.com/perspective-dev/perspective/releases/tag/v3.0.1)
 
 _25 August 2024_ ([Full changelog](https://github.com/finos/perspective/compare/v3.0.0...v3.0.1))
 
@@ -443,7 +464,7 @@ Misc
 
 - Fix docs site serialized loading, docs.rs gen [#2718](https://github.com/finos/perspective/pull/2718)
 
-# [v3.0.0](https://github.com/finos/perspective/releases/tag/v3.0.0)
+# [v3.0.0](https://github.com/perspective-dev/perspective/releases/tag/v3.0.0)
 
 _23 August 2024_ ([Full changelog](https://github.com/finos/perspective/compare/v2.10.1...v3.0.0))
 
@@ -474,7 +495,7 @@ Misc
 - New status indicator [#2692](https://github.com/finos/perspective/pull/2692)
 - Docs and examples update for new API [#2659](https://github.com/finos/perspective/pull/2659)
 
-# [v2.10.1](https://github.com/finos/perspective/releases/tag/v2.10.1)
+# [v2.10.1](https://github.com/perspective-dev/perspective/releases/tag/v2.10.1)
 
 _23 May 2024_ ([Full changelog](https://github.com/finos/perspective/compare/v2.10.0...v2.10.1))
 
@@ -490,7 +511,7 @@ Misc
 - Update contributing documentation for DCO [#2595](https://github.com/finos/perspective/pull/2595)
 - Update to pyodide 0.25.1 for pyodide/pyodide#4655 [#2596](https://github.com/finos/perspective/pull/2596)
 
-# [v2.10.0](https://github.com/finos/perspective/releases/tag/v2.10.0)
+# [v2.10.0](https://github.com/perspective-dev/perspective/releases/tag/v2.10.0)
 
 _25 March 2024_ ([Full changelog](https://github.com/finos/perspective/compare/v2.9.0...v2.10.0))
 
@@ -499,7 +520,7 @@ Features
 - Debug component [#2574](https://github.com/finos/perspective/pull/2574)
 - Expression editor & filter UX updates [#2572](https://github.com/finos/perspective/pull/2572)
 
-# [v2.9.0](https://github.com/finos/perspective/releases/tag/v2.9.0)
+# [v2.9.0](https://github.com/perspective-dev/perspective/releases/tag/v2.9.0)
 
 _12 March 2024_ ([Full changelog](https://github.com/finos/perspective/compare/v2.8.1...v2.9.0))
 
@@ -520,7 +541,7 @@ Misc
 
 - Update Pyodide to version 0.25.0 [#2547](https://github.com/finos/perspective/pull/2547)
 
-# [v2.8.1](https://github.com/finos/perspective/releases/tag/v2.8.1)
+# [v2.8.1](https://github.com/perspective-dev/perspective/releases/tag/v2.8.1)
 
 _26 February 2024_ ([Full changelog](https://github.com/finos/perspective/compare/v2.8.0...v2.8.1))
 
@@ -535,7 +556,7 @@ Misc
 - Add Docs Tests [#2502](https://github.com/finos/perspective/pull/2502)
 - Add workspaceFolder to cargo_target_dir [#2537](https://github.com/finos/perspective/pull/2537)
 
-# [v2.8.0](https://github.com/finos/perspective/releases/tag/v2.8.0)
+# [v2.8.0](https://github.com/perspective-dev/perspective/releases/tag/v2.8.0)
 
 _16 February 2024_ ([Full changelog](https://github.com/finos/perspective/compare/v2.7.1...v2.8.0))
 
@@ -568,7 +589,7 @@ Misc
 - Fix cargo features [#2481](https://github.com/finos/perspective/pull/2481)
 - Fix docs site [#2462](https://github.com/finos/perspective/pull/2462)
 
-# [v2.7.1](https://github.com/finos/perspective/releases/tag/v2.7.1)
+# [v2.7.1](https://github.com/perspective-dev/perspective/releases/tag/v2.7.1)
 
 _29 November 2023_ ([Full changelog](https://github.com/finos/perspective/compare/v2.7.0...v2.7.1))
 
@@ -586,7 +607,7 @@ Misc
 
 - Fix Blocks build script execution [#2454](https://github.com/finos/perspective/pull/2454)
 
-# [v2.7.0](https://github.com/finos/perspective/releases/tag/v2.7.0)
+# [v2.7.0](https://github.com/perspective-dev/perspective/releases/tag/v2.7.0)
 
 _20 November 2023_ ([Full changelog](https://github.com/finos/perspective/compare/v2.6.1...v2.7.0))
 
@@ -615,7 +636,7 @@ Misc
 - Add CI requirements update script [#2422](https://github.com/finos/perspective/pull/2422)
 - Upgrade `pyodide` compatibility to v0.24.1 [#2402](https://github.com/finos/perspective/pull/2402)
 
-# [v2.6.1](https://github.com/finos/perspective/releases/tag/v2.6.1)
+# [v2.6.1](https://github.com/perspective-dev/perspective/releases/tag/v2.6.1)
 
 _1 November 2023_ ([Full changelog](https://github.com/finos/perspective/compare/v2.6.0...v2.6.1))
 
@@ -628,7 +649,7 @@ Fixes
 - Fix scroll panel height calculation bug [#2404](https://github.com/finos/perspective/pull/2404)
 - Fix `in` and `not in` filter UI bug [#2403](https://github.com/finos/perspective/pull/2403)
 
-# [v2.6.0](https://github.com/finos/perspective/releases/tag/v2.6.0)
+# [v2.6.0](https://github.com/perspective-dev/perspective/releases/tag/v2.6.0)
 
 _20 October 2023_ ([Full changelog](https://github.com/finos/perspective/compare/v2.5.2...v2.6.0))
 
@@ -645,7 +666,7 @@ Fixes
 - Column selector style updates [#2385](https://github.com/finos/perspective/pull/2385)
 - fix gradient values [#2384](https://github.com/finos/perspective/pull/2384)
 
-# [v2.5.2](https://github.com/finos/perspective/releases/tag/v2.5.2)
+# [v2.5.2](https://github.com/perspective-dev/perspective/releases/tag/v2.5.2)
 
 _8 October 2023_ ([Full changelog](https://github.com/finos/perspective/compare/v2.5.1...v2.5.2))
 
@@ -662,7 +683,7 @@ Misc
 - Fix tests [#2380](https://github.com/finos/perspective/pull/2380)
 - Localize NYPD, Magic and Olympics examples [#2375](https://github.com/finos/perspective/pull/2375)
 
-# [v2.5.1](https://github.com/finos/perspective/releases/tag/v2.5.1)
+# [v2.5.1](https://github.com/perspective-dev/perspective/releases/tag/v2.5.1)
 
 _31 August 2023_ ([Full changelog](https://github.com/finos/perspective/compare/v2.5.0...v2.5.1))
 
@@ -680,7 +701,7 @@ Misc
 - Update webpack dev server configuration options, fixes for perspective 2.0+ [#2350](https://github.com/finos/perspective/pull/2350)
 - Fix binder installation to not manage dependencies seperately [#2342](https://github.com/finos/perspective/pull/2342)
 
-# [v2.5.0](https://github.com/finos/perspective/releases/tag/v2.5.0)
+# [v2.5.0](https://github.com/perspective-dev/perspective/releases/tag/v2.5.0)
 
 _14 August 2023_ ([Full changelog](https://github.com/finos/perspective/compare/v2.4.0...v2.5.0))
 
@@ -692,7 +713,7 @@ Misc
 
 - prune win 2019 from ci, switch over to windows-2022 only [#2333](https://github.com/finos/perspective/pull/2333)
 
-# [v2.4.0](https://github.com/finos/perspective/releases/tag/v2.4.0)
+# [v2.4.0](https://github.com/perspective-dev/perspective/releases/tag/v2.4.0)
 
 _9 August 2023_ ([Full changelog](https://github.com/finos/perspective/compare/v2.3.2...v2.4.0))
 
@@ -711,7 +732,7 @@ Misc
 - Pin Python dependency versions [#2327](https://github.com/finos/perspective/pull/2327)
 - Fix build.rs escaping OUT_DIR [#2313](https://github.com/finos/perspective/pull/2313)
 
-# [v2.3.2](https://github.com/finos/perspective/releases/tag/v2.3.2)
+# [v2.3.2](https://github.com/perspective-dev/perspective/releases/tag/v2.3.2)
 
 _20 July 2023_ ([Full changelog](https://github.com/finos/perspective/compare/v2.3.1...v2.3.2))
 
@@ -726,7 +747,7 @@ Misc
 - Publish benchmarks [#2310](https://github.com/finos/perspective/pull/2310)
 - Add GitHub Releases [#2294](https://github.com/finos/perspective/pull/2294)
 
-# [v2.3.1](https://github.com/finos/perspective/releases/tag/v2.3.1)
+# [v2.3.1](https://github.com/perspective-dev/perspective/releases/tag/v2.3.1)
 
 _4 July 2023_ ([Full changelog](https://github.com/finos/perspective/compare/v2.3.0...v2.3.1))
 
@@ -750,7 +771,7 @@ Misc
 - Remove accidental test.only, ensure it never happens again [#2276](https://github.com/finos/perspective/pull/2276)
 - Add API to give number of views into table [#2267](https://github.com/finos/perspective/pull/2267)
 
-# [v2.3.0](https://github.com/finos/perspective/releases/tag/v2.3.0)
+# [v2.3.0](https://github.com/perspective-dev/perspective/releases/tag/v2.3.0)
 
 _20 June 2023_ ([Full changelog](https://github.com/finos/perspective/compare/v2.2.1...v2.3.0))
 
@@ -767,7 +788,7 @@ Misc
 - Validate installed emsdk version [#2256](https://github.com/finos/perspective/pull/2256)
 - Allow `pandas~=2.0.0` to be installed [#2244](https://github.com/finos/perspective/pull/2244)
 
-# [v2.2.1](https://github.com/finos/perspective/releases/tag/v2.2.1)
+# [v2.2.1](https://github.com/perspective-dev/perspective/releases/tag/v2.2.1)
 
 _4 June 2023_ ([Full changelog](https://github.com/finos/perspective/compare/v2.2.0...v2.2.1))
 
@@ -779,7 +800,7 @@ Fixes
 
 - Fix CSS positioning of expression panel in workspace [#2243](https://github.com/finos/perspective/pull/2243)
 
-# [v2.2.0](https://github.com/finos/perspective/releases/tag/v2.2.0)
+# [v2.2.0](https://github.com/perspective-dev/perspective/releases/tag/v2.2.0)
 
 _31 May 2023_ ([Full changelog](https://github.com/finos/perspective/compare/v2.1.4...v2.2.0))
 
@@ -797,7 +818,7 @@ Misc
 - Add Python 3.11 support [#2234](https://github.com/finos/perspective/pull/2234)
 - Add skip test: _update_with_missing_or_null_values [#2230](https://github.com/finos/perspective/pull/2230)
 
-# [v2.1.4](https://github.com/finos/perspective/releases/tag/v2.1.4)
+# [v2.1.4](https://github.com/perspective-dev/perspective/releases/tag/v2.1.4)
 
 _26 May 2023_ ([Full changelog](https://github.com/finos/perspective/compare/v2.1.3...v2.1.4))
 
@@ -806,7 +827,7 @@ Fixes
 - Fix median miscalculation for even-sized item list [#2224](https://github.com/finos/perspective/pull/2224)
 - Fix a bug when calling `load()` with a rejected promise [#2236](https://github.com/finos/perspective/pull/2236)
 
-# [v2.1.3](https://github.com/finos/perspective/releases/tag/v2.1.3)
+# [v2.1.3](https://github.com/perspective-dev/perspective/releases/tag/v2.1.3)
 
 _17 May 2023_ ([Full changelog](https://github.com/finos/perspective/compare/v2.1.2...v2.1.3))
 
@@ -814,7 +835,7 @@ Misc
 
 - Add 3.7 wheel [#2223](https://github.com/finos/perspective/pull/2223)
 
-# [v2.1.2](https://github.com/finos/perspective/releases/tag/v2.1.2)
+# [v2.1.2](https://github.com/perspective-dev/perspective/releases/tag/v2.1.2)
 
 _16 May 2023_ ([Full changelog](https://github.com/finos/perspective/compare/v2.1.1...v2.1.2))
 
@@ -822,7 +843,7 @@ Misc
 
 - Public `perspective-viewer` components [#2222](https://github.com/finos/perspective/pull/2222)
 
-# [v2.1.1](https://github.com/finos/perspective/releases/tag/v2.1.1)
+# [v2.1.1](https://github.com/perspective-dev/perspective/releases/tag/v2.1.1)
 
 _7 May 2023_ ([Full changelog](https://github.com/finos/perspective/compare/v2.1.0...v2.1.1))
 
@@ -832,7 +853,7 @@ Fixes
 - Fix windows python builds [#2217](https://github.com/finos/perspective/pull/2217)
 - Fix sum aggregate for integer type expression columns [#2216](https://github.com/finos/perspective/pull/2216)
 
-# [v2.1.0](https://github.com/finos/perspective/releases/tag/v2.1.0)
+# [v2.1.0](https://github.com/perspective-dev/perspective/releases/tag/v2.1.0)
 
 _6 May 2023_ ([Full changelog](https://github.com/finos/perspective/compare/v2.0.1...v2.1.0))
 
@@ -856,7 +877,7 @@ Misc
 - rename context menu names for perspective renderers in jupyterlab [#2209](https://github.com/finos/perspective/pull/2209)
 - New `playwright` test suite [#2201](https://github.com/finos/perspective/pull/2201)
 
-# [v2.0.1](https://github.com/finos/perspective/releases/tag/v2.0.1)
+# [v2.0.1](https://github.com/perspective-dev/perspective/releases/tag/v2.0.1)
 
 _10 April 2023_ ([Full changelog](https://github.com/finos/perspective/compare/v2.0.0...v2.0.1))
 
@@ -871,7 +892,7 @@ Misc
 - Reorder examples on `README.md` [#2176](https://github.com/finos/perspective/pull/2176)
 - link for dark mode logo in readme [#2166](https://github.com/finos/perspective/pull/2166)
 
-# [v2.0.0](https://github.com/finos/perspective/releases/tag/v2.0.0)
+# [v2.0.0](https://github.com/perspective-dev/perspective/releases/tag/v2.0.0)
 
 _4 April 2023_ ([Full changelog](https://github.com/finos/perspective/compare/v1.9.4...v2.0.0))
 
@@ -907,7 +928,7 @@ Misc
 - fix icon filenames for windows [#2118](https://github.com/finos/perspective/pull/2118)
 - New icons [#2111](https://github.com/finos/perspective/pull/2111)
 
-# [v1.9.4](https://github.com/finos/perspective/releases/tag/v1.9.4)
+# [v1.9.4](https://github.com/perspective-dev/perspective/releases/tag/v1.9.4)
 
 _22 February 2023_ ([Full changelog](https://github.com/finos/perspective/compare/v1.9.3...v1.9.4))
 
@@ -927,7 +948,7 @@ Misc
 - Updated README.md [#2098](https://github.com/finos/perspective/pull/2098)
 - Update charting tests to cover more HTML [#2092](https://github.com/finos/perspective/pull/2092)
 
-# [v1.9.3](https://github.com/finos/perspective/releases/tag/v1.9.3)
+# [v1.9.3](https://github.com/perspective-dev/perspective/releases/tag/v1.9.3)
 
 _19 January 2023_ ([Full changelog](https://github.com/finos/perspective/compare/v1.9.2...v1.9.3))
 
@@ -939,7 +960,7 @@ Misc
 
 - Fix script errors in publish and build commands [#2088](https://github.com/finos/perspective/pull/2088)
 
-# [v1.9.2](https://github.com/finos/perspective/releases/tag/v1.9.2)
+# [v1.9.2](https://github.com/perspective-dev/perspective/releases/tag/v1.9.2)
 
 _18 January 2023_ ([Full changelog](https://github.com/finos/perspective/compare/v1.9.1...v1.9.2))
 
@@ -951,7 +972,7 @@ Misc
 
 - Build cleanup [#2078](https://github.com/finos/perspective/pull/2078)
 
-# [v1.9.1](https://github.com/finos/perspective/releases/tag/v1.9.1)
+# [v1.9.1](https://github.com/perspective-dev/perspective/releases/tag/v1.9.1)
 
 _10 January 2023_ ([Full changelog](https://github.com/finos/perspective/compare/v1.9.0...v1.9.1))
 
@@ -969,7 +990,7 @@ Misc
 - Actually copy readme this time, fixes incomplete #1991 [#2071](https://github.com/finos/perspective/pull/2071)
 - Fix test regression in chrome [#2070](https://github.com/finos/perspective/pull/2070)
 
-# [v1.9.0](https://github.com/finos/perspective/releases/tag/v1.9.0)
+# [v1.9.0](https://github.com/perspective-dev/perspective/releases/tag/v1.9.0)
 
 _29 December 2022_ ([Full changelog](https://github.com/finos/perspective/compare/v1.8.1...v1.9.0))
 
@@ -990,7 +1011,7 @@ Misc
 - Fix copypasta in code of conduct, fix capitalization in readme [#2053](https://github.com/finos/perspective/pull/2053)
 - Update README gallery [#2044](https://github.com/finos/perspective/pull/2044)
 
-# [v1.8.1](https://github.com/finos/perspective/releases/tag/v1.8.1)
+# [v1.8.1](https://github.com/perspective-dev/perspective/releases/tag/v1.8.1)
 
 _10 December 2022_ ([Full changelog](https://github.com/finos/perspective/compare/v1.8.0...v1.8.1))
 
@@ -1003,7 +1024,7 @@ Fixes
 - Fix parsing of bug related to d3fc splitting selection data (redux of #2039) [#2043](https://github.com/finos/perspective/pull/2043)
 - Fix CSS and Scatter Chart positioning bugs [#2035](https://github.com/finos/perspective/pull/2035)
 
-# [v1.8.0](https://github.com/finos/perspective/releases/tag/v1.8.0)
+# [v1.8.0](https://github.com/perspective-dev/perspective/releases/tag/v1.8.0)
 
 _5 December 2022_ ([Full changelog](https://github.com/finos/perspective/compare/v1.7.2...v1.8.0))
 
@@ -1022,7 +1043,7 @@ Misc
 - remove reference to gitter from contributing docs [#2025](https://github.com/finos/perspective/pull/2025)
 - Fix cargo src rules, publish to crates.io [#2019](https://github.com/finos/perspective/pull/2019)
 
-# [v1.7.2](https://github.com/finos/perspective/releases/tag/v1.7.2)
+# [v1.7.2](https://github.com/perspective-dev/perspective/releases/tag/v1.7.2)
 
 _25 November 2022_ ([Full changelog](https://github.com/finos/perspective/compare/v1.7.1...v1.7.2))
 
@@ -1033,7 +1054,7 @@ Misc
 - Re-add secondary dependency as primary dependency to fix python tests [#2013](https://github.com/finos/perspective/pull/2013)
 - accidentally copying license as readme when disting python [#1991](https://github.com/finos/perspective/pull/1991)
 
-# [v1.7.1](https://github.com/finos/perspective/releases/tag/v1.7.1)
+# [v1.7.1](https://github.com/perspective-dev/perspective/releases/tag/v1.7.1)
 
 _7 October 2022_ ([Full changelog](https://github.com/finos/perspective/compare/v1.7.0...v1.7.1))
 
@@ -1042,7 +1063,7 @@ Misc
 - Move default plugin to WASM [#1986](https://github.com/finos/perspective/pull/1986)
 - Bump dependencies when installing and building python, drop support for `manylinux2010`  [#1984](https://github.com/finos/perspective/pull/1984)
 
-# [v1.7.0](https://github.com/finos/perspective/releases/tag/v1.7.0)
+# [v1.7.0](https://github.com/perspective-dev/perspective/releases/tag/v1.7.0)
 
 _1 October 2022_ ([Full changelog](https://github.com/finos/perspective/compare/v1.6.5...v1.7.0))
 
@@ -1060,7 +1081,7 @@ Misc
 - increment black to latest version [#1977](https://github.com/finos/perspective/pull/1977)
 - Better rust api [#1960](https://github.com/finos/perspective/pull/1960)
 
-# [v1.6.5](https://github.com/finos/perspective/releases/tag/v1.6.5)
+# [v1.6.5](https://github.com/perspective-dev/perspective/releases/tag/v1.6.5)
 
 _26 August 2022_ ([Full changelog](https://github.com/finos/perspective/compare/v1.6.4...v1.6.5))
 
@@ -1068,7 +1089,7 @@ Fixes
 
 - Fix column style menus for string & date(time) [#1950](https://github.com/finos/perspective/pull/1950)
 
-# [v1.6.4](https://github.com/finos/perspective/releases/tag/v1.6.4)
+# [v1.6.4](https://github.com/perspective-dev/perspective/releases/tag/v1.6.4)
 
 _22 August 2022_ ([Full changelog](https://github.com/finos/perspective/compare/v1.6.3...v1.6.4))
 
@@ -1082,7 +1103,7 @@ Misc
 
 - Per-component CSS model [#1943](https://github.com/finos/perspective/pull/1943)
 
-# [v1.6.3](https://github.com/finos/perspective/releases/tag/v1.6.3)
+# [v1.6.3](https://github.com/perspective-dev/perspective/releases/tag/v1.6.3)
 
 _10 August 2022_ ([Full changelog](https://github.com/finos/perspective/compare/v1.6.2...v1.6.3))
 
@@ -1099,7 +1120,7 @@ Misc
 - Refactor `@finos/perspective-viewer-datagrid` [#1927](https://github.com/finos/perspective/pull/1927)
 - Fix python `_requires_python` publish script on windows [#1929](https://github.com/finos/perspective/pull/1929)
 
-# [v1.6.2](https://github.com/finos/perspective/releases/tag/v1.6.2)
+# [v1.6.2](https://github.com/perspective-dev/perspective/releases/tag/v1.6.2)
 
 _2 August 2022_ ([Full changelog](https://github.com/finos/perspective/compare/v1.6.1...v1.6.2))
 
@@ -1112,7 +1133,7 @@ Misc
 
 - Cleanup up python requirements installation in CI, remove some dangling azure references, refresh python README [#1917](https://github.com/finos/perspective/pull/1917)
 
-# [v1.6.1](https://github.com/finos/perspective/releases/tag/v1.6.1)
+# [v1.6.1](https://github.com/perspective-dev/perspective/releases/tag/v1.6.1)
 
 _27 July 2022_ ([Full changelog](https://github.com/finos/perspective/compare/v1.6.0...v1.6.1))
 
@@ -1130,7 +1151,7 @@ Misc
 - Make `perspective-viewer` crate importable for external wasm projects [#1916](https://github.com/finos/perspective/pull/1916)
 - Fix publish issues [#1915](https://github.com/finos/perspective/pull/1915)
 
-# [v1.6.0](https://github.com/finos/perspective/releases/tag/v1.6.0)
+# [v1.6.0](https://github.com/perspective-dev/perspective/releases/tag/v1.6.0)
 
 _19 July 2022_ ([Full changelog](https://github.com/finos/perspective/compare/v1.5.1...v1.6.0))
 
@@ -1151,7 +1172,7 @@ Misc
 - Fix python CI builds for all linux variants [#1905](https://github.com/finos/perspective/pull/1905)
 - Expression Docs [#1903](https://github.com/finos/perspective/pull/1903)
 
-# [v1.5.1](https://github.com/finos/perspective/releases/tag/v1.5.1)
+# [v1.5.1](https://github.com/perspective-dev/perspective/releases/tag/v1.5.1)
 
 _8 July 2022_ ([Full changelog](https://github.com/finos/perspective/compare/v1.5.0...v1.5.1))
 
@@ -1172,7 +1193,7 @@ Misc
 - Fix jlab tests to use local packages [#1891](https://github.com/finos/perspective/pull/1891)
 - GHA default (remove azure) [#1854](https://github.com/finos/perspective/pull/1854)
 
-# [v1.5.0](https://github.com/finos/perspective/releases/tag/v1.5.0)
+# [v1.5.0](https://github.com/perspective-dev/perspective/releases/tag/v1.5.0)
 
 _4 July 2022_ ([Full changelog](https://github.com/finos/perspective/compare/v1.4.1...v1.5.0))
 
@@ -1190,7 +1211,7 @@ Misc
 - Changed default color label style for charts with multiple secondary axii [#1883](https://github.com/finos/perspective/pull/1883)
 - Update `emsdk` to `3.1.14` [#1866](https://github.com/finos/perspective/pull/1866)
 
-# [v1.4.1](https://github.com/finos/perspective/releases/tag/v1.4.1)
+# [v1.4.1](https://github.com/perspective-dev/perspective/releases/tag/v1.4.1)
 
 _22 June 2022_ ([Full changelog](https://github.com/finos/perspective/compare/v1.4.0...v1.4.1))
 
@@ -1213,7 +1234,7 @@ Misc
 - Include column name in error log for arrow filling [#1841](https://github.com/finos/perspective/pull/1841)
 - ExprTK/Perspective Documentation  [#1845](https://github.com/finos/perspective/pull/1845)
 
-# [v1.4.0](https://github.com/finos/perspective/releases/tag/v1.4.0)
+# [v1.4.0](https://github.com/perspective-dev/perspective/releases/tag/v1.4.0)
 
 _6 June 2022_ ([Full changelog](https://github.com/finos/perspective/compare/v1.3.13...v1.4.0))
 
@@ -1234,7 +1255,7 @@ Misc
 - remove duplicate steps [#1815](https://github.com/finos/perspective/pull/1815)
 - bump arrow version to 8.0.0 [#1816](https://github.com/finos/perspective/pull/1816)
 
-# [v1.3.13](https://github.com/finos/perspective/releases/tag/v1.3.13)
+# [v1.3.13](https://github.com/perspective-dev/perspective/releases/tag/v1.3.13)
 
 _13 May 2022_ ([Full changelog](https://github.com/finos/perspective/compare/v1.3.12...v1.3.13))
 
@@ -1247,7 +1268,7 @@ Misc
 
 - Fix jest timeouts for jupyterlab [#1805](https://github.com/finos/perspective/pull/1805)
 
-# [v1.3.12](https://github.com/finos/perspective/releases/tag/v1.3.12)
+# [v1.3.12](https://github.com/perspective-dev/perspective/releases/tag/v1.3.12)
 
 _9 May 2022_ ([Full changelog](https://github.com/finos/perspective/compare/v1.3.11...v1.3.12))
 
@@ -1259,7 +1280,7 @@ Fixes
 
 - Fix `restore()` error [#1803](https://github.com/finos/perspective/pull/1803)
 
-# [v1.3.11](https://github.com/finos/perspective/releases/tag/v1.3.11)
+# [v1.3.11](https://github.com/perspective-dev/perspective/releases/tag/v1.3.11)
 
 _1 May 2022_ ([Full changelog](https://github.com/finos/perspective/compare/v1.3.10...v1.3.11))
 
@@ -1273,7 +1294,7 @@ Fixes
 - Allow attempt to create workers from file protocol for e.g. electron [#1794](https://github.com/finos/perspective/pull/1794)
 - Fix `sum` aggregate to force re-agg for expression columns [#1793](https://github.com/finos/perspective/pull/1793)
 
-# [v1.3.10](https://github.com/finos/perspective/releases/tag/v1.3.10)
+# [v1.3.10](https://github.com/perspective-dev/perspective/releases/tag/v1.3.10)
 
 _26 April 2022_ ([Full changelog](https://github.com/finos/perspective/compare/v1.3.9...v1.3.10))
 
@@ -1281,7 +1302,7 @@ Fixes
 
 - Remove 'treemaps' persistent token for d3fc plugin [#1789](https://github.com/finos/perspective/pull/1789)
 
-# [v1.3.9](https://github.com/finos/perspective/releases/tag/v1.3.9)
+# [v1.3.9](https://github.com/perspective-dev/perspective/releases/tag/v1.3.9)
 
 _25 April 2022_ ([Full changelog](https://github.com/finos/perspective/compare/v1.3.8...v1.3.9))
 
@@ -1290,7 +1311,7 @@ Fixes
 - Fix `perspective-workspace` detach error [#1788](https://github.com/finos/perspective/pull/1788)
 - Fix spurious logging [#1785](https://github.com/finos/perspective/pull/1785)
 
-# [v1.3.8](https://github.com/finos/perspective/releases/tag/v1.3.8)
+# [v1.3.8](https://github.com/perspective-dev/perspective/releases/tag/v1.3.8)
 
 _18 April 2022_ ([Full changelog](https://github.com/finos/perspective/compare/v1.3.7...v1.3.8))
 
@@ -1298,7 +1319,7 @@ Fixes
 
 - Fix `perspective-workspace` webpack compat [#1784](https://github.com/finos/perspective/pull/1784)
 
-# [v1.3.7](https://github.com/finos/perspective/releases/tag/v1.3.7)
+# [v1.3.7](https://github.com/perspective-dev/perspective/releases/tag/v1.3.7)
 
 _18 April 2022_ ([Full changelog](https://github.com/finos/perspective/compare/v1.3.6...v1.3.7))
 
@@ -1312,7 +1333,7 @@ Misc
 - Add Github dark mode logo to `README.md`  [#1782](https://github.com/finos/perspective/pull/1782)
 - Make toolbar icons configurable [#1767](https://github.com/finos/perspective/pull/1767)
 
-# [v1.3.6](https://github.com/finos/perspective/releases/tag/v1.3.6)
+# [v1.3.6](https://github.com/perspective-dev/perspective/releases/tag/v1.3.6)
 
 _17 March 2022_ ([Full changelog](https://github.com/finos/perspective/compare/v1.3.5...v1.3.6))
 
@@ -1329,7 +1350,7 @@ Misc
 - Fix `--debug` flag for real this time [#1769](https://github.com/finos/perspective/pull/1769)
 - Fix `debug` build script [#1766](https://github.com/finos/perspective/pull/1766)
 
-# [v1.3.5](https://github.com/finos/perspective/releases/tag/v1.3.5)
+# [v1.3.5](https://github.com/perspective-dev/perspective/releases/tag/v1.3.5)
 
 _14 March 2022_ ([Full changelog](https://github.com/finos/perspective/compare/v1.3.4...v1.3.5))
 
@@ -1344,7 +1365,7 @@ Misc
 - Rust lint+nightly [#1760](https://github.com/finos/perspective/pull/1760)
 - Fix flatbuffers [#1757](https://github.com/finos/perspective/pull/1757)
 
-# [v1.3.4](https://github.com/finos/perspective/releases/tag/v1.3.4)
+# [v1.3.4](https://github.com/perspective-dev/perspective/releases/tag/v1.3.4)
 
 _10 March 2022_ ([Full changelog](https://github.com/finos/perspective/compare/v1.3.3...v1.3.4))
 
@@ -1366,7 +1387,7 @@ Misc
 - Disable OSX Python CI [#1754](https://github.com/finos/perspective/pull/1754)
 - Disable Windows builds [#1741](https://github.com/finos/perspective/pull/1741)
 
-# [v1.3.3](https://github.com/finos/perspective/releases/tag/v1.3.3)
+# [v1.3.3](https://github.com/perspective-dev/perspective/releases/tag/v1.3.3)
 
 _4 March 2022_ ([Full changelog](https://github.com/finos/perspective/compare/v1.3.2...v1.3.3))
 
@@ -1382,7 +1403,7 @@ Misc
 
 - Update dev docs [#1736](https://github.com/finos/perspective/pull/1736)
 
-# [v1.3.2](https://github.com/finos/perspective/releases/tag/v1.3.2)
+# [v1.3.2](https://github.com/perspective-dev/perspective/releases/tag/v1.3.2)
 
 _2 March 2022_ ([Full changelog](https://github.com/finos/perspective/compare/v1.3.1...v1.3.2))
 
@@ -1400,7 +1421,7 @@ Misc
 
 - Add tests [#1730](https://github.com/finos/perspective/pull/1730)
 
-# [v1.3.1](https://github.com/finos/perspective/releases/tag/v1.3.1)
+# [v1.3.1](https://github.com/perspective-dev/perspective/releases/tag/v1.3.1)
 
 _25 February 2022_ ([Full changelog](https://github.com/finos/perspective/compare/v1.3.0...v1.3.1))
 
@@ -1408,7 +1429,7 @@ Fixes
 
 - Fix python memory leak in `table()` [#1724](https://github.com/finos/perspective/pull/1724)
 
-# [v1.3.0](https://github.com/finos/perspective/releases/tag/v1.3.0)
+# [v1.3.0](https://github.com/perspective-dev/perspective/releases/tag/v1.3.0)
 
 _22 February 2022_ ([Full changelog](https://github.com/finos/perspective/compare/v1.2.0...v1.3.0))
 
@@ -1426,7 +1447,7 @@ Misc
 - Add column-style-checkbox css variables [#1715](https://github.com/finos/perspective/pull/1715)
 - Drag/drop tests [#1716](https://github.com/finos/perspective/pull/1716)
 
-# [v1.2.0](https://github.com/finos/perspective/releases/tag/v1.2.0)
+# [v1.2.0](https://github.com/perspective-dev/perspective/releases/tag/v1.2.0)
 
 _1 February 2022_ ([Full changelog](https://github.com/finos/perspective/compare/v1.1.1...v1.2.0))
 
@@ -1443,7 +1464,7 @@ Misc
 
 - Update docs for new theme API [#1713](https://github.com/finos/perspective/pull/1713)
 
-# [v1.1.1](https://github.com/finos/perspective/releases/tag/v1.1.1)
+# [v1.1.1](https://github.com/perspective-dev/perspective/releases/tag/v1.1.1)
 
 _18 January 2022_ ([Full changelog](https://github.com/finos/perspective/compare/v1.1.0...v1.1.1))
 
@@ -1457,7 +1478,7 @@ Misc
 
 - Pin `flatc` to 1.12.1 [#1705](https://github.com/finos/perspective/pull/1705)
 
-# [v1.1.0](https://github.com/finos/perspective/releases/tag/v1.1.0)
+# [v1.1.0](https://github.com/perspective-dev/perspective/releases/tag/v1.1.0)
 
 _5 January 2022_ ([Full changelog](https://github.com/finos/perspective/compare/v1.0.8...v1.1.0))
 
@@ -1478,7 +1499,7 @@ Misc
 - purge six dependency [#1689](https://github.com/finos/perspective/pull/1689)
 - Reduce CI: Turn off branch builds, only build on PRs to master [#1688](https://github.com/finos/perspective/pull/1688)
 
-# [v1.0.8](https://github.com/finos/perspective/releases/tag/v1.0.8)
+# [v1.0.8](https://github.com/perspective-dev/perspective/releases/tag/v1.0.8)
 
 _23 December 2021_ ([Full changelog](https://github.com/finos/perspective/compare/v1.0.7...v1.0.8))
 
@@ -1498,7 +1519,7 @@ Misc
 - Upgrade Arrow to `6.0.2` [#1680](https://github.com/finos/perspective/pull/1680)
 - Benchmarks update [#1681](https://github.com/finos/perspective/pull/1681)
 
-# [v1.0.7](https://github.com/finos/perspective/releases/tag/v1.0.7)
+# [v1.0.7](https://github.com/perspective-dev/perspective/releases/tag/v1.0.7)
 
 _13 December 2021_ ([Full changelog](https://github.com/finos/perspective/compare/v1.0.6...v1.0.7))
 
@@ -1514,7 +1535,7 @@ Misc
 
 - Build windows wheel every time so its tested [#1672](https://github.com/finos/perspective/pull/1672)
 
-# [v1.0.6](https://github.com/finos/perspective/releases/tag/v1.0.6)
+# [v1.0.6](https://github.com/perspective-dev/perspective/releases/tag/v1.0.6)
 
 _11 December 2021_ ([Full changelog](https://github.com/finos/perspective/compare/v1.0.5...v1.0.6))
 
@@ -1533,7 +1554,7 @@ Misc
 
 - add missing definition for re2 on os x to reenable conda builds [#1654](https://github.com/finos/perspective/pull/1654)
 
-# [v1.0.5](https://github.com/finos/perspective/releases/tag/v1.0.5)
+# [v1.0.5](https://github.com/perspective-dev/perspective/releases/tag/v1.0.5)
 
 _6 December 2021_ ([Full changelog](https://github.com/finos/perspective/compare/v1.0.4...v1.0.5))
 
@@ -1542,7 +1563,7 @@ Fixes
 - D3FC Treemap bug fixes [#1652](https://github.com/finos/perspective/pull/1652)
 - Fix `datetime`/`date`/`integer`/`float` filter occasionally resetting while typing [#1653](https://github.com/finos/perspective/pull/1653)
 
-# [v1.0.4](https://github.com/finos/perspective/releases/tag/v1.0.4)
+# [v1.0.4](https://github.com/perspective-dev/perspective/releases/tag/v1.0.4)
 
 _5 December 2021_ ([Full changelog](https://github.com/finos/perspective/compare/v1.0.3...v1.0.4))
 
@@ -1565,7 +1586,7 @@ Misc
 - Update CMakeLists.txt for more thread help on mac for conda [#1631](https://github.com/finos/perspective/pull/1631)
 - Fix Azure windows wheel step [#1629](https://github.com/finos/perspective/pull/1629)
 
-# [v1.0.3](https://github.com/finos/perspective/releases/tag/v1.0.3)
+# [v1.0.3](https://github.com/perspective-dev/perspective/releases/tag/v1.0.3)
 
 _23 November 2021_ ([Full changelog](https://github.com/finos/perspective/compare/v1.0.2...v1.0.3))
 
@@ -1583,7 +1604,7 @@ Misc
 - add threads explicit on mac [#1625](https://github.com/finos/perspective/pull/1625)
 - Fix publish through practice [#1620](https://github.com/finos/perspective/pull/1620)
 
-# [v1.0.2](https://github.com/finos/perspective/releases/tag/v1.0.2)
+# [v1.0.2](https://github.com/perspective-dev/perspective/releases/tag/v1.0.2)
 
 _20 November 2021_ ([Full changelog](https://github.com/finos/perspective/compare/v1.0.1...v1.0.2))
 
@@ -1605,7 +1626,7 @@ Misc
 - Upgrade `d3fc` to `15.2.4` and switch "Heatmap" to use canvas renderer [#1599](https://github.com/finos/perspective/pull/1599)
 - Add ExprTK example fractal [#1595](https://github.com/finos/perspective/pull/1595)
 
-# [v1.0.1](https://github.com/finos/perspective/releases/tag/v1.0.1)
+# [v1.0.1](https://github.com/perspective-dev/perspective/releases/tag/v1.0.1)
 
 _30 October 2021_ ([Full changelog](https://github.com/finos/perspective/compare/v1.0.0...v1.0.1))
 
@@ -1631,7 +1652,7 @@ Misc
 - Upgrade Apache Arrow to 5.0.0 [#1545](https://github.com/finos/perspective/pull/1545)
 - Update python classifiers [#1579](https://github.com/finos/perspective/pull/1579)
 
-# [v1.0.0](https://github.com/finos/perspective/releases/tag/v1.0.0)
+# [v1.0.0](https://github.com/perspective-dev/perspective/releases/tag/v1.0.0)
 
 _12 October 2021_ ([Full changelog](https://github.com/finos/perspective/compare/v1.0.0-rc.2...v1.0.0))
 
@@ -1644,12 +1665,12 @@ Misc
 
 - `docs` for updated `perspective-viewer` [#1574](https://github.com/finos/perspective/pull/1574)
 
-# [v1.0.0-rc.2](https://github.com/finos/perspective/releases/tag/v1.0.0-rc.2)
+# [v1.0.0-rc.2](https://github.com/perspective-dev/perspective/releases/tag/v1.0.0-rc.2)
 
 _29 September 2021_ ([Full changelog](https://github.com/finos/perspective/compare/v1.0.0-rc.1...v1.0.0-rc.2))
 
 
-# [v1.0.0-rc.1](https://github.com/finos/perspective/releases/tag/v1.0.0-rc.1)
+# [v1.0.0-rc.1](https://github.com/perspective-dev/perspective/releases/tag/v1.0.0-rc.1)
 
 _29 September 2021_ ([Full changelog](https://github.com/finos/perspective/compare/v1.0.0-rc.0...v1.0.0-rc.1))
 
@@ -1661,7 +1682,7 @@ Misc
 
 - Make `/node_modules` external to TS [#1557](https://github.com/finos/perspective/pull/1557)
 
-# [v1.0.0-rc.0](https://github.com/finos/perspective/releases/tag/v1.0.0-rc.0)
+# [v1.0.0-rc.0](https://github.com/perspective-dev/perspective/releases/tag/v1.0.0-rc.0)
 
 _28 September 2021_ ([Full changelog](https://github.com/finos/perspective/compare/v0.10.3...v1.0.0-rc.0))
 
@@ -1702,7 +1723,7 @@ Misc
 - Add docs for `&lt;perspective-viewer-plugin&gt;` [#1538](https://github.com/finos/perspective/pull/1538)
 - Lint upgrade and remove TypeScript for `@finos/perspective-jupyterlab` [#1537](https://github.com/finos/perspective/pull/1537)
 
-# [v0.10.3](https://github.com/finos/perspective/releases/tag/v0.10.3)
+# [v0.10.3](https://github.com/perspective-dev/perspective/releases/tag/v0.10.3)
 
 _31 August 2021_ ([Full changelog](https://github.com/finos/perspective/compare/v0.10.2...v0.10.3))
 
@@ -1711,7 +1732,7 @@ Fixes
 - Refactor `to_arrow`, fix row deltas for pivoted views [#1519](https://github.com/finos/perspective/pull/1519)
 - Fix count aggregate when last aggregate and partial updates are applied [#1518](https://github.com/finos/perspective/pull/1518)
 
-# [v0.10.2](https://github.com/finos/perspective/releases/tag/v0.10.2)
+# [v0.10.2](https://github.com/perspective-dev/perspective/releases/tag/v0.10.2)
 
 _30 August 2021_ ([Full changelog](https://github.com/finos/perspective/compare/v0.10.1...v0.10.2))
 
@@ -1720,7 +1741,7 @@ Fixes
 - Fix support for array-like filter terms [#1524](https://github.com/finos/perspective/pull/1524)
 - Add new aggregates to ViewConfig enum [#1516](https://github.com/finos/perspective/pull/1516)
 
-# [v0.10.1](https://github.com/finos/perspective/releases/tag/v0.10.1)
+# [v0.10.1](https://github.com/perspective-dev/perspective/releases/tag/v0.10.1)
 
 _12 August 2021_ ([Full changelog](https://github.com/finos/perspective/compare/v0.10.0...v0.10.1))
 
@@ -1740,7 +1761,7 @@ Misc
 - Preload fonts [#1481](https://github.com/finos/perspective/pull/1481)
 - Refactoring [#1471](https://github.com/finos/perspective/pull/1471)
 
-# [v0.10.0](https://github.com/finos/perspective/releases/tag/v0.10.0)
+# [v0.10.0](https://github.com/perspective-dev/perspective/releases/tag/v0.10.0)
 
 _8 July 2021_ ([Full changelog](https://github.com/finos/perspective/compare/v0.9.0...v0.10.0))
 
@@ -1764,7 +1785,7 @@ Misc
 - Add Jupyterlab tests to CI [#1460](https://github.com/finos/perspective/pull/1460)
 - Build Windows wheel, limit wheel builds to scheduled and tagged builds [#1453](https://github.com/finos/perspective/pull/1453)
 
-# [v0.9.0](https://github.com/finos/perspective/releases/tag/v0.9.0)
+# [v0.9.0](https://github.com/perspective-dev/perspective/releases/tag/v0.9.0)
 
 _16 June 2021_ ([Full changelog](https://github.com/finos/perspective/compare/v0.8.3...v0.9.0))
 
@@ -1795,7 +1816,7 @@ Misc
 - Expose `join` aggregate [#1434](https://github.com/finos/perspective/pull/1434)
 - organize azure pipelines file [#1381](https://github.com/finos/perspective/pull/1381)
 
-# [v0.8.3](https://github.com/finos/perspective/releases/tag/v0.8.3)
+# [v0.8.3](https://github.com/perspective-dev/perspective/releases/tag/v0.8.3)
 
 _12 May 2021_ ([Full changelog](https://github.com/finos/perspective/compare/v0.8.2...v0.8.3))
 
@@ -1803,7 +1824,7 @@ Misc
 
 - Double-render fix [#1420](https://github.com/finos/perspective/pull/1420)
 
-# [v0.8.2](https://github.com/finos/perspective/releases/tag/v0.8.2)
+# [v0.8.2](https://github.com/perspective-dev/perspective/releases/tag/v0.8.2)
 
 _11 May 2021_ ([Full changelog](https://github.com/finos/perspective/compare/v0.8.1...v0.8.2))
 
@@ -1813,7 +1834,7 @@ Fixes
 - Fix color gradient charts containing 0 [#1418](https://github.com/finos/perspective/pull/1418)
 - Fix styling bugs from CSS minification [#1417](https://github.com/finos/perspective/pull/1417)
 
-# [v0.8.1](https://github.com/finos/perspective/releases/tag/v0.8.1)
+# [v0.8.1](https://github.com/perspective-dev/perspective/releases/tag/v0.8.1)
 
 _10 May 2021_ ([Full changelog](https://github.com/finos/perspective/compare/v0.8.0...v0.8.1))
 
@@ -1834,7 +1855,7 @@ Misc
 - Install Boost from JFrog, fix outdated docs from #1409 [#1410](https://github.com/finos/perspective/pull/1410)
 - Upgrade `puppeteer` to `9.0.0` [#1408](https://github.com/finos/perspective/pull/1408)
 
-# [v0.8.0](https://github.com/finos/perspective/releases/tag/v0.8.0)
+# [v0.8.0](https://github.com/perspective-dev/perspective/releases/tag/v0.8.0)
 
 _27 April 2021_ ([Full changelog](https://github.com/finos/perspective/compare/v0.7.0...v0.8.0))
 
@@ -1856,7 +1877,7 @@ Misc
 - Updated `gh-pages` site and `README.md` [#1399](https://github.com/finos/perspective/pull/1399)
 - Disable column style menu for non-numeric columns [#1391](https://github.com/finos/perspective/pull/1391)
 
-# [v0.7.0](https://github.com/finos/perspective/releases/tag/v0.7.0)
+# [v0.7.0](https://github.com/perspective-dev/perspective/releases/tag/v0.7.0)
 
 _20 April 2021_ ([Full changelog](https://github.com/finos/perspective/compare/v0.6.2...v0.7.0))
 
@@ -1888,7 +1909,7 @@ Misc
 - Fix #1324: use ~major.minor.patch in PerspectiveWidget versioning [#1331](https://github.com/finos/perspective/pull/1331)
 - Add `SplitPanel` and port to Yew [#1326](https://github.com/finos/perspective/pull/1326)
 
-# [v0.6.2](https://github.com/finos/perspective/releases/tag/v0.6.2)
+# [v0.6.2](https://github.com/perspective-dev/perspective/releases/tag/v0.6.2)
 
 _11 February 2021_ ([Full changelog](https://github.com/finos/perspective/compare/v0.6.1...v0.6.2))
 
@@ -1896,7 +1917,7 @@ Fixes
 
 - Fix `@finos/perspective-jupyterlab` compat with webpack5 [#1323](https://github.com/finos/perspective/pull/1323)
 
-# [v0.6.1](https://github.com/finos/perspective/releases/tag/v0.6.1)
+# [v0.6.1](https://github.com/perspective-dev/perspective/releases/tag/v0.6.1)
 
 _11 February 2021_ ([Full changelog](https://github.com/finos/perspective/compare/v0.6.0...v0.6.1))
 
@@ -1926,7 +1947,7 @@ Misc
 - Upgrade Emscripten to 2.0.6 and remove emsdk docker image [#1232](https://github.com/finos/perspective/pull/1232)
 - Fix #1244: make test_wheels script use python -m pip [#1288](https://github.com/finos/perspective/pull/1288)
 
-# [v0.6.0](https://github.com/finos/perspective/releases/tag/v0.6.0)
+# [v0.6.0](https://github.com/perspective-dev/perspective/releases/tag/v0.6.0)
 
 _8 January 2021_ ([Full changelog](https://github.com/finos/perspective/compare/v0.5.6...v0.6.0))
 
@@ -1967,7 +1988,7 @@ Misc
 - Refactor C++, misc. C++ fixes [#1233](https://github.com/finos/perspective/pull/1233)
 - Explicitly import `tornado.locks` [#1227](https://github.com/finos/perspective/pull/1227)
 
-# [v0.5.6](https://github.com/finos/perspective/releases/tag/v0.5.6)
+# [v0.5.6](https://github.com/perspective-dev/perspective/releases/tag/v0.5.6)
 
 _15 October 2020_ ([Full changelog](https://github.com/finos/perspective/compare/v0.5.5...v0.5.6))
 
@@ -1991,7 +2012,7 @@ Misc
 - Improve Python Examples [#1197](https://github.com/finos/perspective/pull/1197)
 - Fix typo, update arrow version info.  [#1204](https://github.com/finos/perspective/pull/1204)
 
-# [v0.5.5](https://github.com/finos/perspective/releases/tag/v0.5.5)
+# [v0.5.5](https://github.com/perspective-dev/perspective/releases/tag/v0.5.5)
 
 _21 September 2020_ ([Full changelog](https://github.com/finos/perspective/compare/v0.5.3...v0.5.5))
 
@@ -2015,7 +2036,7 @@ Misc
 - Use `black` Python format [#1188](https://github.com/finos/perspective/pull/1188)
 - Move Python examples to `/examples/` [#1178](https://github.com/finos/perspective/pull/1178)
 
-# [v0.5.3](https://github.com/finos/perspective/releases/tag/v0.5.3)
+# [v0.5.3](https://github.com/perspective-dev/perspective/releases/tag/v0.5.3)
 
 _7 September 2020_ ([Full changelog](https://github.com/finos/perspective/compare/v0.5.2...v0.5.3))
 
@@ -2052,7 +2073,7 @@ Misc
 
 - Updated development.md to show correct Emscripten version. [#1138](https://github.com/finos/perspective/pull/1138)
 
-# [v0.5.2](https://github.com/finos/perspective/releases/tag/v0.5.2)
+# [v0.5.2](https://github.com/perspective-dev/perspective/releases/tag/v0.5.2)
 
 _28 July 2020_ ([Full changelog](https://github.com/finos/perspective/compare/v0.5.1...v0.5.2))
 
@@ -2072,7 +2093,7 @@ Misc
 - Fixed Typos in Perspective API Docs [#1096](https://github.com/finos/perspective/pull/1096)
 - Add client/server editing example, fix hypergrid to allow editing in workspace [#1109](https://github.com/finos/perspective/pull/1109)
 
-# [v0.5.1](https://github.com/finos/perspective/releases/tag/v0.5.1)
+# [v0.5.1](https://github.com/perspective-dev/perspective/releases/tag/v0.5.1)
 
 _25 June 2020_ ([Full changelog](https://github.com/finos/perspective/compare/v0.5.0...v0.5.1))
 
@@ -2104,7 +2125,7 @@ Misc
 - Remap lab extension command in makefile [#1046](https://github.com/finos/perspective/pull/1046)
 - Fixed typo on documentation page [#1062](https://github.com/finos/perspective/pull/1062)
 
-# [v0.5.0](https://github.com/finos/perspective/releases/tag/v0.5.0)
+# [v0.5.0](https://github.com/perspective-dev/perspective/releases/tag/v0.5.0)
 
 _24 May 2020_ ([Full changelog](https://github.com/finos/perspective/compare/v0.4.8...v0.5.0))
 
@@ -2131,7 +2152,7 @@ Misc
 - Upgrade `papaparse` [#1033](https://github.com/finos/perspective/pull/1033)
 - Update to emsdk 1.39.12 and remove 2gb MAXIMUM_MEMORY [#1015](https://github.com/finos/perspective/pull/1015)
 
-# [v0.4.8](https://github.com/finos/perspective/releases/tag/v0.4.8)
+# [v0.4.8](https://github.com/perspective-dev/perspective/releases/tag/v0.4.8)
 
 _21 April 2020_ ([Full changelog](https://github.com/finos/perspective/compare/v0.4.7...v0.4.8))
 
@@ -2144,7 +2165,7 @@ Misc
 - Adds -Wall and fixes C++ build warnings [#1017](https://github.com/finos/perspective/pull/1017)
 - Add Manylinux Python 3.7 wheel build + tests, disable Azure Windows Python build [#1010](https://github.com/finos/perspective/pull/1010)
 
-# [v0.4.7](https://github.com/finos/perspective/releases/tag/v0.4.7)
+# [v0.4.7](https://github.com/perspective-dev/perspective/releases/tag/v0.4.7)
 
 _6 April 2020_ ([Full changelog](https://github.com/finos/perspective/compare/v0.4.6...v0.4.7))
 
@@ -2168,7 +2189,7 @@ Misc
 - Purge `@finos/perspective-viewer-hypergrid` [#991](https://github.com/finos/perspective/pull/991)
 - Documentation: update PerspectiveTornadoServer to PerspectiveTornadoHandler [#987](https://github.com/finos/perspective/pull/987)
 
-# [v0.4.6](https://github.com/finos/perspective/releases/tag/v0.4.6)
+# [v0.4.6](https://github.com/perspective-dev/perspective/releases/tag/v0.4.6)
 
 _17 March 2020_ ([Full changelog](https://github.com/finos/perspective/compare/v0.4.5...v0.4.6))
 
@@ -2193,7 +2214,7 @@ Misc
 - update dependencies to jupyterlab 2.0, phosphor -&gt; lumino [#970](https://github.com/finos/perspective/pull/970)
 - Refactor out `WebsSocketManager` from `WebSockerServer` [#963](https://github.com/finos/perspective/pull/963)
 
-# [v0.4.5](https://github.com/finos/perspective/releases/tag/v0.4.5)
+# [v0.4.5](https://github.com/perspective-dev/perspective/releases/tag/v0.4.5)
 
 _28 February 2020_ ([Full changelog](https://github.com/finos/perspective/compare/v0.4.4...v0.4.5))
 
@@ -2206,7 +2227,7 @@ Misc
 
 - Refactor `gnode` and `gnode_state`, remove C++ test suite [#939](https://github.com/finos/perspective/pull/939)
 
-# [v0.4.4](https://github.com/finos/perspective/releases/tag/v0.4.4)
+# [v0.4.4](https://github.com/perspective-dev/perspective/releases/tag/v0.4.4)
 
 _26 February 2020_ ([Full changelog](https://github.com/finos/perspective/compare/v0.4.3...v0.4.4))
 
@@ -2231,7 +2252,7 @@ Misc
 - Package/dist license in python package [#930](https://github.com/finos/perspective/pull/930)
 - Adds test coverage reporting for`@finos/perspective` [#920](https://github.com/finos/perspective/pull/920)
 
-# [v0.4.3](https://github.com/finos/perspective/releases/tag/v0.4.3)
+# [v0.4.3](https://github.com/perspective-dev/perspective/releases/tag/v0.4.3)
 
 _12 February 2020_ ([Full changelog](https://github.com/finos/perspective/compare/v0.4.2...v0.4.3))
 
@@ -2250,7 +2271,7 @@ Misc
 - Fix bug where `perspective-viewer` doesn't resize [#911](https://github.com/finos/perspective/pull/911)
 - Set up CI with Azure Pipelines [#915](https://github.com/finos/perspective/pull/915)
 
-# [v0.4.2](https://github.com/finos/perspective/releases/tag/v0.4.2)
+# [v0.4.2](https://github.com/perspective-dev/perspective/releases/tag/v0.4.2)
 
 _10 February 2020_ ([Full changelog](https://github.com/finos/perspective/compare/v0.4.1...v0.4.2))
 
@@ -2286,7 +2307,7 @@ Misc
 - Update Python README [#893](https://github.com/finos/perspective/pull/893)
 - Improve Perspective Documentation [#873](https://github.com/finos/perspective/pull/873)
 
-# [v0.4.1](https://github.com/finos/perspective/releases/tag/v0.4.1)
+# [v0.4.1](https://github.com/perspective-dev/perspective/releases/tag/v0.4.1)
 
 _27 January 2020_ ([Full changelog](https://github.com/finos/perspective/compare/v0.4.0...v0.4.1))
 
@@ -2310,7 +2331,7 @@ Misc
 - Added simple webpack example and renamed existing webpack example [#869](https://github.com/finos/perspective/pull/869)
 - Python versioning fix [#863](https://github.com/finos/perspective/pull/863)
 
-# [v0.4.0](https://github.com/finos/perspective/releases/tag/v0.4.0)
+# [v0.4.0](https://github.com/perspective-dev/perspective/releases/tag/v0.4.0)
 
 _7 January 2020_ ([Full changelog](https://github.com/finos/perspective/compare/v0.4.0-rc.6...v0.4.0))
 
@@ -2332,12 +2353,12 @@ Misc
 - Workspace fixes [#858](https://github.com/finos/perspective/pull/858)
 - Update versioning script for Python [#852](https://github.com/finos/perspective/pull/852)
 
-# [v0.4.0-rc.6](https://github.com/finos/perspective/releases/tag/v0.4.0-rc.6)
+# [v0.4.0-rc.6](https://github.com/perspective-dev/perspective/releases/tag/v0.4.0-rc.6)
 
 _18 December 2019_ ([Full changelog](https://github.com/finos/perspective/compare/v0.4.0-rc.5...v0.4.0-rc.6))
 
 
-# [v0.4.0-rc.5](https://github.com/finos/perspective/releases/tag/v0.4.0-rc.5)
+# [v0.4.0-rc.5](https://github.com/perspective-dev/perspective/releases/tag/v0.4.0-rc.5)
 
 _18 December 2019_ ([Full changelog](https://github.com/finos/perspective/compare/v0.4.0-rc.4...v0.4.0-rc.5))
 
@@ -2376,7 +2397,7 @@ Misc
 - Add PerspectiveWorkspace olympics example to README [#820](https://github.com/finos/perspective/pull/820)
 - Update Perspective website with Python API and user guide [#819](https://github.com/finos/perspective/pull/819)
 
-# [v0.4.0-rc.4](https://github.com/finos/perspective/releases/tag/v0.4.0-rc.4)
+# [v0.4.0-rc.4](https://github.com/perspective-dev/perspective/releases/tag/v0.4.0-rc.4)
 
 _14 November 2019_ ([Full changelog](https://github.com/finos/perspective/compare/v0.4.0-rc.3...v0.4.0-rc.4))
 
@@ -2401,7 +2422,7 @@ Misc
 - add websocket export in type definition [#800](https://github.com/finos/perspective/pull/800)
 - Add umd build and updated tests for `perspective-phosphor` [#798](https://github.com/finos/perspective/pull/798)
 
-# [v0.4.0-rc.3](https://github.com/finos/perspective/releases/tag/v0.4.0-rc.3)
+# [v0.4.0-rc.3](https://github.com/perspective-dev/perspective/releases/tag/v0.4.0-rc.3)
 
 _6 November 2019_ ([Full changelog](https://github.com/finos/perspective/compare/v0.4.0-rc.2...v0.4.0-rc.3))
 
@@ -2418,7 +2439,7 @@ Misc
 - Fixed `client` flag to default to True on Windows [#788](https://github.com/finos/perspective/pull/788)
 - New logo & demo gif [#790](https://github.com/finos/perspective/pull/790)
 
-# [v0.4.0-rc.2](https://github.com/finos/perspective/releases/tag/v0.4.0-rc.2)
+# [v0.4.0-rc.2](https://github.com/perspective-dev/perspective/releases/tag/v0.4.0-rc.2)
 
 _31 October 2019_ ([Full changelog](https://github.com/finos/perspective/compare/v0.4.0-rc.1...v0.4.0-rc.2))
 
@@ -2430,7 +2451,7 @@ Misc
 
 - Hypergrid paintloop removal [#785](https://github.com/finos/perspective/pull/785)
 
-# [v0.4.0-rc.1](https://github.com/finos/perspective/releases/tag/v0.4.0-rc.1)
+# [v0.4.0-rc.1](https://github.com/perspective-dev/perspective/releases/tag/v0.4.0-rc.1)
 
 _24 October 2019_ ([Full changelog](https://github.com/finos/perspective/compare/v0.3.9...v0.4.0-rc.1))
 
@@ -2485,7 +2506,7 @@ Misc
 - Allow partial updates on computed column source columns [#729](https://github.com/finos/perspective/pull/729)
 - Python [#723](https://github.com/finos/perspective/pull/723)
 
-# [v0.3.9](https://github.com/finos/perspective/releases/tag/v0.3.9)
+# [v0.3.9](https://github.com/perspective-dev/perspective/releases/tag/v0.3.9)
 
 _16 September 2019_ ([Full changelog](https://github.com/finos/perspective/compare/v0.3.8...v0.3.9))
 
@@ -2520,7 +2541,7 @@ Misc
 - Calculate row offset in C++, refactor Table, remove implicit primary key mode [#692](https://github.com/finos/perspective/pull/692)
 - Fixed chunked arrow test to actually be chunked [#691](https://github.com/finos/perspective/pull/691)
 
-# [v0.3.8](https://github.com/finos/perspective/releases/tag/v0.3.8)
+# [v0.3.8](https://github.com/perspective-dev/perspective/releases/tag/v0.3.8)
 
 _26 August 2019_ ([Full changelog](https://github.com/finos/perspective/compare/v0.3.7...v0.3.8))
 
@@ -2529,7 +2550,7 @@ Misc
 - Emsdk upstream [#690](https://github.com/finos/perspective/pull/690)
 - 0-sided Performance Fix [#689](https://github.com/finos/perspective/pull/689)
 
-# [v0.3.7](https://github.com/finos/perspective/releases/tag/v0.3.7)
+# [v0.3.7](https://github.com/perspective-dev/perspective/releases/tag/v0.3.7)
 
 _20 August 2019_ ([Full changelog](https://github.com/finos/perspective/compare/v0.3.6...v0.3.7))
 
@@ -2553,7 +2574,7 @@ Misc
 - Allow arrow tables to be created from a schema [#663](https://github.com/finos/perspective/pull/663)
 - Updated example gists to use latest API [#661](https://github.com/finos/perspective/pull/661)
 
-# [v0.3.6](https://github.com/finos/perspective/releases/tag/v0.3.6)
+# [v0.3.6](https://github.com/perspective-dev/perspective/releases/tag/v0.3.6)
 
 _15 July 2019_ ([Full changelog](https://github.com/finos/perspective/compare/v0.3.5...v0.3.6))
 
@@ -2561,7 +2582,7 @@ Misc
 
 - Fixed webpack plugin resolution of require() [#660](https://github.com/finos/perspective/pull/660)
 
-# [v0.3.5](https://github.com/finos/perspective/releases/tag/v0.3.5)
+# [v0.3.5](https://github.com/perspective-dev/perspective/releases/tag/v0.3.5)
 
 _15 July 2019_ ([Full changelog](https://github.com/finos/perspective/compare/v0.3.4...v0.3.5))
 
@@ -2569,17 +2590,17 @@ Misc
 
 - Npm gh fix [#659](https://github.com/finos/perspective/pull/659)
 
-# [v0.3.4](https://github.com/finos/perspective/releases/tag/v0.3.4)
+# [v0.3.4](https://github.com/perspective-dev/perspective/releases/tag/v0.3.4)
 
 _12 July 2019_ ([Full changelog](https://github.com/finos/perspective/compare/v0.3.3...v0.3.4))
 
 
-# [v0.3.3](https://github.com/finos/perspective/releases/tag/v0.3.3)
+# [v0.3.3](https://github.com/perspective-dev/perspective/releases/tag/v0.3.3)
 
 _12 July 2019_ ([Full changelog](https://github.com/finos/perspective/compare/v0.3.2...v0.3.3))
 
 
-# [v0.3.2](https://github.com/finos/perspective/releases/tag/v0.3.2)
+# [v0.3.2](https://github.com/perspective-dev/perspective/releases/tag/v0.3.2)
 
 _12 July 2019_ ([Full changelog](https://github.com/finos/perspective/compare/v0.3.1...v0.3.2))
 
@@ -2599,7 +2620,7 @@ Misc
 - Don't use transferable for WASM payload [#635](https://github.com/finos/perspective/pull/635)
 - Fixed async loading of node.js module [#634](https://github.com/finos/perspective/pull/634)
 
-# [v0.3.1](https://github.com/finos/perspective/releases/tag/v0.3.1)
+# [v0.3.1](https://github.com/perspective-dev/perspective/releases/tag/v0.3.1)
 
 _25 June 2019_ ([Full changelog](https://github.com/finos/perspective/compare/v0.3.0...v0.3.1))
 
@@ -2615,7 +2636,7 @@ Misc
 - Remove support for ASM.JS, Internet Explorer and other non-WASM browsers [#629](https://github.com/finos/perspective/pull/629)
 - Memory usage fixes [#628](https://github.com/finos/perspective/pull/628)
 
-# [v0.3.0](https://github.com/finos/perspective/releases/tag/v0.3.0)
+# [v0.3.0](https://github.com/perspective-dev/perspective/releases/tag/v0.3.0)
 
 _10 June 2019_ ([Full changelog](https://github.com/finos/perspective/compare/v0.3.0-rc.4...v0.3.0))
 
@@ -2633,7 +2654,7 @@ Misc
 - Restore highchairs on phosphor/jlab until d3 is complete [#608](https://github.com/finos/perspective/pull/608)
 - Sync refactor [#606](https://github.com/finos/perspective/pull/606)
 
-# [v0.3.0-rc.4](https://github.com/finos/perspective/releases/tag/v0.3.0-rc.4)
+# [v0.3.0-rc.4](https://github.com/perspective-dev/perspective/releases/tag/v0.3.0-rc.4)
 
 _30 May 2019_ ([Full changelog](https://github.com/finos/perspective/compare/v0.3.0-rc.3...v0.3.0-rc.4))
 
@@ -2642,7 +2663,7 @@ Misc
 - Replace "distinct count" default aggregate with "count" [#604](https://github.com/finos/perspective/pull/604)
 - Replace atomic [#603](https://github.com/finos/perspective/pull/603)
 
-# [v0.3.0-rc.3](https://github.com/finos/perspective/releases/tag/v0.3.0-rc.3)
+# [v0.3.0-rc.3](https://github.com/perspective-dev/perspective/releases/tag/v0.3.0-rc.3)
 
 _28 May 2019_ ([Full changelog](https://github.com/finos/perspective/compare/v0.3.0-rc.2...v0.3.0-rc.3))
 
@@ -2660,7 +2681,7 @@ Misc
 - Row deltas return arrow-serialized data [#589](https://github.com/finos/perspective/pull/589)
 - Fix for webpack 4 themes generation error on Windows [#590](https://github.com/finos/perspective/pull/590)
 
-# [v0.3.0-rc.2](https://github.com/finos/perspective/releases/tag/v0.3.0-rc.2)
+# [v0.3.0-rc.2](https://github.com/perspective-dev/perspective/releases/tag/v0.3.0-rc.2)
 
 _22 May 2019_ ([Full changelog](https://github.com/finos/perspective/compare/v0.3.0-rc.1...v0.3.0-rc.2))
 
@@ -2711,7 +2732,7 @@ Misc
 - Support dates on the y-axis for heatmaps [#165](https://github.com/finos/perspective/pull/165)
 - Simplify plugin interface code [#167](https://github.com/finos/perspective/pull/167)
 
-# [v0.3.0-rc.1](https://github.com/finos/perspective/releases/tag/v0.3.0-rc.1)
+# [v0.3.0-rc.1](https://github.com/perspective-dev/perspective/releases/tag/v0.3.0-rc.1)
 
 _30 April 2019_ ([Full changelog](https://github.com/finos/perspective/compare/v0.2.23...v0.3.0-rc.1))
 
@@ -2727,7 +2748,7 @@ Misc
 - Filter control auto-focuses when dropped or modified [#557](https://github.com/finos/perspective/pull/557)
 - Fixed issue when # of charts changes in highcharts multichart mode [#556](https://github.com/finos/perspective/pull/556)
 
-# [v0.2.23](https://github.com/finos/perspective/releases/tag/v0.2.23)
+# [v0.2.23](https://github.com/perspective-dev/perspective/releases/tag/v0.2.23)
 
 _22 April 2019_ ([Full changelog](https://github.com/finos/perspective/compare/v0.2.22...v0.2.23))
 
@@ -2743,7 +2764,7 @@ Misc
 - Refactored data_slice to return t_tscalar [#541](https://github.com/finos/perspective/pull/541)
 - Remove header rows for column-only views [#540](https://github.com/finos/perspective/pull/540)
 
-# [v0.2.22](https://github.com/finos/perspective/releases/tag/v0.2.22)
+# [v0.2.22](https://github.com/perspective-dev/perspective/releases/tag/v0.2.22)
 
 _10 April 2019_ ([Full changelog](https://github.com/finos/perspective/compare/v0.2.21...v0.2.22))
 
@@ -2802,7 +2823,7 @@ Misc
 - Implemented themable color ranges for heatmap and X/Y [#133](https://github.com/finos/perspective/pull/133)
 -  Put color styles in settings so that they can be scoped to a chart [#125](https://github.com/finos/perspective/pull/125)
 
-# [v0.2.21](https://github.com/finos/perspective/releases/tag/v0.2.21)
+# [v0.2.21](https://github.com/perspective-dev/perspective/releases/tag/v0.2.21)
 
 _3 April 2019_ ([Full changelog](https://github.com/finos/perspective/compare/v0.2.20...v0.2.21))
 
@@ -2888,7 +2909,7 @@ Misc
 - Apply XY point colour based on mainValue [#73](https://github.com/finos/perspective/pull/73)
 - Date filter issue [#478](https://github.com/finos/perspective/pull/478)
 
-# [v0.2.20](https://github.com/finos/perspective/releases/tag/v0.2.20)
+# [v0.2.20](https://github.com/perspective-dev/perspective/releases/tag/v0.2.20)
 
 _7 March 2019_ ([Full changelog](https://github.com/finos/perspective/compare/v0.2.19...v0.2.20))
 
@@ -2921,7 +2942,7 @@ Misc
 - Update d3fc with fixed seriesSvgGrouped [#55](https://github.com/finos/perspective/pull/55)
 - Use a custom (fixed) version of the seriesSvgGrouped component [#52](https://github.com/finos/perspective/pull/52)
 
-# [v0.2.19](https://github.com/finos/perspective/releases/tag/v0.2.19)
+# [v0.2.19](https://github.com/perspective-dev/perspective/releases/tag/v0.2.19)
 
 _1 March 2019_ ([Full changelog](https://github.com/finos/perspective/compare/v0.2.18...v0.2.19))
 
@@ -2930,7 +2951,7 @@ Misc
 - Integration tests for D3FC [#458](https://github.com/finos/perspective/pull/458)
 - Click event fix [#461](https://github.com/finos/perspective/pull/461)
 
-# [v0.2.18](https://github.com/finos/perspective/releases/tag/v0.2.18)
+# [v0.2.18](https://github.com/perspective-dev/perspective/releases/tag/v0.2.18)
 
 _27 February 2019_ ([Full changelog](https://github.com/finos/perspective/compare/v0.2.17...v0.2.18))
 
@@ -2938,7 +2959,7 @@ Misc
 
 - Added missing `@babel/runtime` dependency [#459](https://github.com/finos/perspective/pull/459)
 
-# [v0.2.17](https://github.com/finos/perspective/releases/tag/v0.2.17)
+# [v0.2.17](https://github.com/perspective-dev/perspective/releases/tag/v0.2.17)
 
 _27 February 2019_ ([Full changelog](https://github.com/finos/perspective/compare/v0.2.16...v0.2.17))
 
@@ -2974,7 +2995,7 @@ Misc
 - Add date/time and linear cross-axis scales [#30](https://github.com/finos/perspective/pull/30)
 - Fixed css labelling and spacing and some Edge issues [#28](https://github.com/finos/perspective/pull/28)
 
-# [v0.2.16](https://github.com/finos/perspective/releases/tag/v0.2.16)
+# [v0.2.16](https://github.com/perspective-dev/perspective/releases/tag/v0.2.16)
 
 _19 February 2019_ ([Full changelog](https://github.com/finos/perspective/compare/v0.2.15...v0.2.16))
 
@@ -2996,7 +3017,7 @@ Misc
 - 0.2.15 changelog [#422](https://github.com/finos/perspective/pull/422)
 - Port View to C++ [#413](https://github.com/finos/perspective/pull/413)
 
-# [v0.2.15](https://github.com/finos/perspective/releases/tag/v0.2.15)
+# [v0.2.15](https://github.com/perspective-dev/perspective/releases/tag/v0.2.15)
 
 _7 February 2019_ ([Full changelog](https://github.com/finos/perspective/compare/v0.2.14...v0.2.15))
 
@@ -3008,7 +3029,7 @@ Misc
 - `null` category axis fix [#416](https://github.com/finos/perspective/pull/416)
 - Fix isCrossOrigin function issue for non-webpack builds  [#412](https://github.com/finos/perspective/pull/412)
 
-# [v0.2.14](https://github.com/finos/perspective/releases/tag/v0.2.14)
+# [v0.2.14](https://github.com/perspective-dev/perspective/releases/tag/v0.2.14)
 
 _4 February 2019_ ([Full changelog](https://github.com/finos/perspective/compare/v0.2.13...v0.2.14))
 
@@ -3017,7 +3038,7 @@ Misc
 - Webpack fix [#409](https://github.com/finos/perspective/pull/409)
 - Added `flush()` method to `&lt;perspective-viewer&gt;` [#408](https://github.com/finos/perspective/pull/408)
 
-# [v0.2.13](https://github.com/finos/perspective/releases/tag/v0.2.13)
+# [v0.2.13](https://github.com/perspective-dev/perspective/releases/tag/v0.2.13)
 
 _4 February 2019_ ([Full changelog](https://github.com/finos/perspective/compare/v0.2.12...v0.2.13))
 
@@ -3042,7 +3063,7 @@ Misc
 - [WIP] Merging JS and Python binding code - Part 2 [#389](https://github.com/finos/perspective/pull/389)
 - Remove cross /src imports in packages [#390](https://github.com/finos/perspective/pull/390)
 
-# [v0.2.12](https://github.com/finos/perspective/releases/tag/v0.2.12)
+# [v0.2.12](https://github.com/perspective-dev/perspective/releases/tag/v0.2.12)
 
 _18 January 2019_ ([Full changelog](https://github.com/finos/perspective/compare/v0.2.11...v0.2.12))
 
@@ -3078,7 +3099,7 @@ Misc
 - Unified data access interface [#352](https://github.com/finos/perspective/pull/352)
 - Adding test harness for jupyterlab extension [#351](https://github.com/finos/perspective/pull/351)
 
-# [v0.2.11](https://github.com/finos/perspective/releases/tag/v0.2.11)
+# [v0.2.11](https://github.com/perspective-dev/perspective/releases/tag/v0.2.11)
 
 _20 December 2018_ ([Full changelog](https://github.com/finos/perspective/compare/v0.2.10...v0.2.11))
 
@@ -3091,7 +3112,7 @@ Misc
 - Fix #291 Null values in filters [#344](https://github.com/finos/perspective/pull/344)
 - Empty string column type inference fix [#343](https://github.com/finos/perspective/pull/343)
 
-# [v0.2.10](https://github.com/finos/perspective/releases/tag/v0.2.10)
+# [v0.2.10](https://github.com/perspective-dev/perspective/releases/tag/v0.2.10)
 
 _9 December 2018_ ([Full changelog](https://github.com/finos/perspective/compare/v0.2.9...v0.2.10))
 
@@ -3108,7 +3129,7 @@ Misc
 - Refactor parse_data [#329](https://github.com/finos/perspective/pull/329)
 - Viewer memory leak on delete() [#328](https://github.com/finos/perspective/pull/328)
 
-# [v0.2.9](https://github.com/finos/perspective/releases/tag/v0.2.9)
+# [v0.2.9](https://github.com/perspective-dev/perspective/releases/tag/v0.2.9)
 
 _25 November 2018_ ([Full changelog](https://github.com/finos/perspective/compare/v0.2.8...v0.2.9))
 
@@ -3120,7 +3141,7 @@ Misc
 - Fun Animations! [#326](https://github.com/finos/perspective/pull/326)
 - Full column sort [#325](https://github.com/finos/perspective/pull/325)
 
-# [v0.2.8](https://github.com/finos/perspective/releases/tag/v0.2.8)
+# [v0.2.8](https://github.com/perspective-dev/perspective/releases/tag/v0.2.8)
 
 _21 November 2018_ ([Full changelog](https://github.com/finos/perspective/compare/v0.2.7...v0.2.8))
 
@@ -3138,7 +3159,7 @@ Misc
 - Jupyterlab plugin feature improvements [#307](https://github.com/finos/perspective/pull/307)
 - Fixed webpack build for Jupyterlab [#306](https://github.com/finos/perspective/pull/306)
 
-# [v0.2.7](https://github.com/finos/perspective/releases/tag/v0.2.7)
+# [v0.2.7](https://github.com/perspective-dev/perspective/releases/tag/v0.2.7)
 
 _12 November 2018_ ([Full changelog](https://github.com/finos/perspective/compare/v0.2.6...v0.2.7))
 
@@ -3146,7 +3167,7 @@ Misc
 
 - Fixed package error which excluded perspective from it's own plugin [#304](https://github.com/finos/perspective/pull/304)
 
-# [v0.2.6](https://github.com/finos/perspective/releases/tag/v0.2.6)
+# [v0.2.6](https://github.com/perspective-dev/perspective/releases/tag/v0.2.6)
 
 _12 November 2018_ ([Full changelog](https://github.com/finos/perspective/compare/v0.2.5...v0.2.6))
 
@@ -3155,7 +3176,7 @@ Misc
 - Integration fixes [#303](https://github.com/finos/perspective/pull/303)
 - Reorganize ViewPrivate [#302](https://github.com/finos/perspective/pull/302)
 
-# [v0.2.5](https://github.com/finos/perspective/releases/tag/v0.2.5)
+# [v0.2.5](https://github.com/perspective-dev/perspective/releases/tag/v0.2.5)
 
 _9 November 2018_ ([Full changelog](https://github.com/finos/perspective/compare/v0.2.4...v0.2.5))
 
@@ -3163,7 +3184,7 @@ Misc
 
 - Ported to babel 7 [#301](https://github.com/finos/perspective/pull/301)
 
-# [v0.2.4](https://github.com/finos/perspective/releases/tag/v0.2.4)
+# [v0.2.4](https://github.com/perspective-dev/perspective/releases/tag/v0.2.4)
 
 _8 November 2018_ ([Full changelog](https://github.com/finos/perspective/compare/v0.2.3...v0.2.4))
 
@@ -3179,7 +3200,7 @@ Misc
 - Replace _column_view with semantically named methods [#294](https://github.com/finos/perspective/pull/294)
 - Refactor __WORKER__ into proper singleton [#292](https://github.com/finos/perspective/pull/292)
 
-# [v0.2.3](https://github.com/finos/perspective/releases/tag/v0.2.3)
+# [v0.2.3](https://github.com/perspective-dev/perspective/releases/tag/v0.2.3)
 
 _25 October 2018_ ([Full changelog](https://github.com/finos/perspective/compare/v0.2.2...v0.2.3))
 
@@ -3206,7 +3227,7 @@ Misc
 - Move C++ to top level directory [#266](https://github.com/finos/perspective/pull/266)
 - Cleanup cpp api [#275](https://github.com/finos/perspective/pull/275)
 
-# [v0.2.2](https://github.com/finos/perspective/releases/tag/v0.2.2)
+# [v0.2.2](https://github.com/perspective-dev/perspective/releases/tag/v0.2.2)
 
 _8 October 2018_ ([Full changelog](https://github.com/finos/perspective/compare/v0.2.1...v0.2.2))
 
@@ -3230,7 +3251,7 @@ Misc
 - Add 'not in' filter operation [#255](https://github.com/finos/perspective/pull/255)
 - Added positive/negative color & font to Hypergrid CSS style [#254](https://github.com/finos/perspective/pull/254)
 
-# [v0.2.1](https://github.com/finos/perspective/releases/tag/v0.2.1)
+# [v0.2.1](https://github.com/perspective-dev/perspective/releases/tag/v0.2.1)
 
 _1 October 2018_ ([Full changelog](https://github.com/finos/perspective/compare/v0.2.0...v0.2.1))
 
@@ -3238,7 +3259,7 @@ Misc
 
 - IE fix [#253](https://github.com/finos/perspective/pull/253)
 
-# [v0.2.0](https://github.com/finos/perspective/releases/tag/v0.2.0)
+# [v0.2.0](https://github.com/perspective-dev/perspective/releases/tag/v0.2.0)
 
 _1 October 2018_ ([Full changelog](https://github.com/finos/perspective/compare/0.2.0-beta.3...v0.2.0))
 
@@ -3250,12 +3271,12 @@ Misc
 - Refactor examples [#249](https://github.com/finos/perspective/pull/249)
 - 1D charts generated from columnar data [#231](https://github.com/finos/perspective/pull/231)
 
-# [0.2.0-beta.3](https://github.com/finos/perspective/releases/tag/0.2.0-beta.3)
+# [0.2.0-beta.3](https://github.com/perspective-dev/perspective/releases/tag/0.2.0-beta.3)
 
 _24 September 2018_ ([Full changelog](https://github.com/finos/perspective/compare/v0.2.0-beta.3...0.2.0-beta.3))
 
 
-# [v0.2.0-beta.3](https://github.com/finos/perspective/releases/tag/v0.2.0-beta.3)
+# [v0.2.0-beta.3](https://github.com/perspective-dev/perspective/releases/tag/v0.2.0-beta.3)
 
 _24 September 2018_ ([Full changelog](https://github.com/finos/perspective/compare/v0.2.0-beta.2...v0.2.0-beta.3))
 
@@ -3267,7 +3288,7 @@ Misc
 - Clang format [#244](https://github.com/finos/perspective/pull/244)
 - Add eslint-prettier [#242](https://github.com/finos/perspective/pull/242)
 
-# [v0.2.0-beta.2](https://github.com/finos/perspective/releases/tag/v0.2.0-beta.2)
+# [v0.2.0-beta.2](https://github.com/perspective-dev/perspective/releases/tag/v0.2.0-beta.2)
 
 _17 September 2018_ ([Full changelog](https://github.com/finos/perspective/compare/v0.2.0-beta.1...v0.2.0-beta.2))
 
@@ -3275,7 +3296,7 @@ Misc
 
 - Added `y_scatter` chart type [#241](https://github.com/finos/perspective/pull/241)
 
-# [v0.2.0-beta.1](https://github.com/finos/perspective/releases/tag/v0.2.0-beta.1)
+# [v0.2.0-beta.1](https://github.com/perspective-dev/perspective/releases/tag/v0.2.0-beta.1)
 
 _17 September 2018_ ([Full changelog](https://github.com/finos/perspective/compare/v0.1.18...v0.2.0-beta.1))
 
@@ -3325,7 +3346,7 @@ Misc
 - Updated webcomponentsjs [#180](https://github.com/finos/perspective/pull/180)
 - Refactor Material Theme [#178](https://github.com/finos/perspective/pull/178)
 
-# [v0.1.18](https://github.com/finos/perspective/releases/tag/v0.1.18)
+# [v0.1.18](https://github.com/perspective-dev/perspective/releases/tag/v0.1.18)
 
 _1 August 2018_ ([Full changelog](https://github.com/finos/perspective/compare/v0.1.17...v0.1.18))
 
@@ -3348,7 +3369,7 @@ Misc
 - Release fixes [#158](https://github.com/finos/perspective/pull/158)
 - Split Build Steps into individual tasks [#156](https://github.com/finos/perspective/pull/156)
 
-# [v0.1.17](https://github.com/finos/perspective/releases/tag/v0.1.17)
+# [v0.1.17](https://github.com/perspective-dev/perspective/releases/tag/v0.1.17)
 
 _10 July 2018_ ([Full changelog](https://github.com/finos/perspective/compare/v0.1.16...v0.1.17))
 
@@ -3362,7 +3383,7 @@ Misc
 - Dropdown styling fix [#147](https://github.com/finos/perspective/pull/147)
 - Bug fixes 2 [#145](https://github.com/finos/perspective/pull/145)
 
-# [v0.1.16](https://github.com/finos/perspective/releases/tag/v0.1.16)
+# [v0.1.16](https://github.com/perspective-dev/perspective/releases/tag/v0.1.16)
 
 _2 July 2018_ ([Full changelog](https://github.com/finos/perspective/compare/v0.1.15...v0.1.16))
 
@@ -3377,7 +3398,7 @@ Misc
 - New labels [#137](https://github.com/finos/perspective/pull/137)
 - Fixed IE regressions [#134](https://github.com/finos/perspective/pull/134)
 
-# [v0.1.15](https://github.com/finos/perspective/releases/tag/v0.1.15)
+# [v0.1.15](https://github.com/perspective-dev/perspective/releases/tag/v0.1.15)
 
 _11 June 2018_ ([Full changelog](https://github.com/finos/perspective/compare/v0.1.14...v0.1.15))
 
@@ -3389,7 +3410,7 @@ Misc
 - Made y_area charts stacked by default [#130](https://github.com/finos/perspective/pull/130)
 - Added category axis support to xy_ charts [#129](https://github.com/finos/perspective/pull/129)
 
-# [v0.1.14](https://github.com/finos/perspective/releases/tag/v0.1.14)
+# [v0.1.14](https://github.com/perspective-dev/perspective/releases/tag/v0.1.14)
 
 _4 June 2018_ ([Full changelog](https://github.com/finos/perspective/compare/v0.1.13...v0.1.14))
 
@@ -3405,7 +3426,7 @@ Misc
 - Adding dark mode via theme [#121](https://github.com/finos/perspective/pull/121)
 - Grid styles [#120](https://github.com/finos/perspective/pull/120)
 
-# [v0.1.13](https://github.com/finos/perspective/releases/tag/v0.1.13)
+# [v0.1.13](https://github.com/perspective-dev/perspective/releases/tag/v0.1.13)
 
 _22 May 2018_ ([Full changelog](https://github.com/finos/perspective/compare/v0.1.12...v0.1.13))
 
@@ -3414,7 +3435,7 @@ Misc
 - UI theme support [#119](https://github.com/finos/perspective/pull/119)
 - Adding template polyfill for browsers that do not support the template tag [#118](https://github.com/finos/perspective/pull/118)
 
-# [v0.1.12](https://github.com/finos/perspective/releases/tag/v0.1.12)
+# [v0.1.12](https://github.com/perspective-dev/perspective/releases/tag/v0.1.12)
 
 _18 May 2018_ ([Full changelog](https://github.com/finos/perspective/compare/v0.1.11...v0.1.12))
 
@@ -3422,7 +3443,7 @@ Misc
 
 - Fixed hidden column regression [#117](https://github.com/finos/perspective/pull/117)
 
-# [v0.1.11](https://github.com/finos/perspective/releases/tag/v0.1.11)
+# [v0.1.11](https://github.com/perspective-dev/perspective/releases/tag/v0.1.11)
 
 _18 May 2018_ ([Full changelog](https://github.com/finos/perspective/compare/v0.1.10...v0.1.11))
 
@@ -3432,7 +3453,7 @@ Misc
 - Added tests to verify deletions cause no errors [#115](https://github.com/finos/perspective/pull/115)
 - Fixed heatmap legend direction [#113](https://github.com/finos/perspective/pull/113)
 
-# [v0.1.10](https://github.com/finos/perspective/releases/tag/v0.1.10)
+# [v0.1.10](https://github.com/perspective-dev/perspective/releases/tag/v0.1.10)
 
 _17 May 2018_ ([Full changelog](https://github.com/finos/perspective/compare/v0.1.9...v0.1.10))
 
@@ -3446,7 +3467,7 @@ Misc
 - Allow empty strings in arrow columns  (as disctinct from null values) [#103](https://github.com/finos/perspective/pull/103)
 - Bug fixes 0.1.9 [#102](https://github.com/finos/perspective/pull/102)
 
-# [v0.1.9](https://github.com/finos/perspective/releases/tag/v0.1.9)
+# [v0.1.9](https://github.com/perspective-dev/perspective/releases/tag/v0.1.9)
 
 _24 April 2018_ ([Full changelog](https://github.com/finos/perspective/compare/v0.1.8...v0.1.9))
 
@@ -3459,7 +3480,7 @@ Misc
 - comm is a promise now, upping jlab version, upping package version [#94](https://github.com/finos/perspective/pull/94)
 - Date filters [#93](https://github.com/finos/perspective/pull/93)
 
-# [v0.1.8](https://github.com/finos/perspective/releases/tag/v0.1.8)
+# [v0.1.8](https://github.com/perspective-dev/perspective/releases/tag/v0.1.8)
 
 _16 April 2018_ ([Full changelog](https://github.com/finos/perspective/compare/v0.1.7...v0.1.8))
 
@@ -3470,7 +3491,7 @@ Misc
 - Highcharts refactor [#91](https://github.com/finos/perspective/pull/91)
 - Fixed perspective-viewer load order regression, when a schema is used… [#87](https://github.com/finos/perspective/pull/87)
 
-# [v0.1.7](https://github.com/finos/perspective/releases/tag/v0.1.7)
+# [v0.1.7](https://github.com/perspective-dev/perspective/releases/tag/v0.1.7)
 
 _5 April 2018_ ([Full changelog](https://github.com/finos/perspective/compare/v0.1.6...v0.1.7))
 
@@ -3478,7 +3499,7 @@ Misc
 
 - More highcharts modes [#86](https://github.com/finos/perspective/pull/86)
 
-# [v0.1.6](https://github.com/finos/perspective/releases/tag/v0.1.6)
+# [v0.1.6](https://github.com/perspective-dev/perspective/releases/tag/v0.1.6)
 
 _3 April 2018_ ([Full changelog](https://github.com/finos/perspective/compare/v0.1.5...v0.1.6))
 
@@ -3490,7 +3511,7 @@ Misc
 - Windows 10 installation instructions [#78](https://github.com/finos/perspective/pull/78)
 - Better date formatting for plugins #67  [#82](https://github.com/finos/perspective/pull/82)
 
-# [v0.1.5](https://github.com/finos/perspective/releases/tag/v0.1.5)
+# [v0.1.5](https://github.com/perspective-dev/perspective/releases/tag/v0.1.5)
 
 _30 March 2018_ ([Full changelog](https://github.com/finos/perspective/compare/v0.1.4...v0.1.5))
 
@@ -3501,7 +3522,7 @@ Misc
 - Fixed ellipsis to show when column names extend past visible panel. [#74](https://github.com/finos/perspective/pull/74)
 - Boost mode for Highcharts scatter+heatmaps [#73](https://github.com/finos/perspective/pull/73)
 
-# [v0.1.4](https://github.com/finos/perspective/releases/tag/v0.1.4)
+# [v0.1.4](https://github.com/perspective-dev/perspective/releases/tag/v0.1.4)
 
 _12 March 2018_ ([Full changelog](https://github.com/finos/perspective/compare/v0.1.3...v0.1.4))
 
@@ -3510,7 +3531,7 @@ Misc
 - Various fixes for layout, drag-and-drop [#69](https://github.com/finos/perspective/pull/69)
 - Reset & more conservative default column selection [#68](https://github.com/finos/perspective/pull/68)
 
-# [v0.1.3](https://github.com/finos/perspective/releases/tag/v0.1.3)
+# [v0.1.3](https://github.com/perspective-dev/perspective/releases/tag/v0.1.3)
 
 _8 March 2018_ ([Full changelog](https://github.com/finos/perspective/compare/v0.1.2...v0.1.3))
 
@@ -3520,7 +3541,7 @@ Misc
 - Remove specification of index column type from API [#63](https://github.com/finos/perspective/pull/63)
 - Scatter labels to show pivot values [#60](https://github.com/finos/perspective/pull/60)
 
-# [v0.1.2](https://github.com/finos/perspective/releases/tag/v0.1.2)
+# [v0.1.2](https://github.com/perspective-dev/perspective/releases/tag/v0.1.2)
 
 _26 February 2018_ ([Full changelog](https://github.com/finos/perspective/compare/v0.1.1...v0.1.2))
 
@@ -3551,7 +3572,7 @@ Misc
 - Support binary type (for non-unicode string data) [#24](https://github.com/finos/perspective/pull/24)
 - bugfix for jupyter compat [#23](https://github.com/finos/perspective/pull/23)
 
-# [v0.1.1](https://github.com/finos/perspective/releases/tag/v0.1.1)
+# [v0.1.1](https://github.com/perspective-dev/perspective/releases/tag/v0.1.1)
 
 _5 February 2018_ ([Full changelog](https://github.com/finos/perspective/compare/v0.1.0...v0.1.1))
 
@@ -3563,7 +3584,7 @@ Misc
 - Internal cleanup of gnode/pool api [#19](https://github.com/finos/perspective/pull/19)
 - Refactor pkey/op creation for tables to work across text and arrow data [#18](https://github.com/finos/perspective/pull/18)
 
-# [v0.1.0](https://github.com/finos/perspective/releases/tag/v0.1.0)
+# [v0.1.0](https://github.com/perspective-dev/perspective/releases/tag/v0.1.0)
 
 _31 January 2018_ ([Full changelog](https://github.com/finos/perspective/compare/v0.0.2...v0.1.0))
 
@@ -3574,7 +3595,7 @@ Misc
 - Don't rely on internal embind implementation for the type of context … [#10](https://github.com/finos/perspective/pull/10)
 - A new column chooser UX which also allows column reordering. [#9](https://github.com/finos/perspective/pull/9)
 
-# [v0.0.2](https://github.com/finos/perspective/releases/tag/v0.0.2)
+# [v0.0.2](https://github.com/perspective-dev/perspective/releases/tag/v0.0.2)
 
 _8 January 2018_ ([Full changelog](https://github.com/finos/perspective/compare/v0.0.1...v0.0.2))
 
@@ -3583,7 +3604,7 @@ Misc
 - Hypergrid plugin modified to load data from perspective lazily. Significantly improves performance on large datasets. [#5](https://github.com/finos/perspective/pull/5)
 - Incremental Hypergrid loading;  viewer transform updates no longer stack. [#4](https://github.com/finos/perspective/pull/4)
 
-# [v0.0.1](https://github.com/finos/perspective/releases/tag/v0.0.1)
+# [v0.0.1](https://github.com/perspective-dev/perspective/releases/tag/v0.0.1)
 
 _31 December 2017_ ([Full changelog](null))
 

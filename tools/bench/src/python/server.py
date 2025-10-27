@@ -27,7 +27,7 @@ file_path = os.path.join(
     here, "..", "..", "node_modules", "superstore-arrow", "superstore.lz4.arrow"
 )
 
-if not perspective.__version__.startswith("3"):
+if perspective.__version__.startswith("2"):
     from perspective import PerspectiveManager, PerspectiveTornadoHandler
 
     def perspective_thread(

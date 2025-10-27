@@ -1,6 +1,6 @@
 {
     "name": "@perspective-dev/viewer-openlayers",
-    "version": "3.8.0",
+    "version": "4.0.0",
     "unpkg": "dist/cdn/perspective-viewer-openlayers.js",
     "jsdelivr": "dist/cdn/perspective-viewer-openlayers.js",
     "exports": {
