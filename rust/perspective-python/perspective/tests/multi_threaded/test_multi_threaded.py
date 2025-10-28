@@ -160,6 +160,7 @@ class TestServer(object):
         thread2.join()
 
     def test_concurrent_view_creation_with_updates_are_threadsafe(self):
+        global running
         s = Server()
         schema = {
             "a": "string",

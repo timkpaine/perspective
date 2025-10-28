@@ -18,10 +18,15 @@ export const getValueFormatterForRange = (min: number, max: number) => {
     let precision = Math.ceil(Math.abs(Math.log10(max - min))) + 1;
 
     return (d: number) => {
-        return Math.abs(d) >= SI_MIN
-            ? d3.format(".3s")(d)
-            : Number.isInteger(d)
-              ? d3.format(",.0f")(d)
-              : d3.format(`,.${precision}f`)(d);
+        try {
+            return Math.abs(d) >= SI_MIN
+                ? d3.format(".3s")(d)
+                : Number.isInteger(d)
+                  ? d3.format(",.0f")(d)
+                  : d3.format(`,.${precision}f`)(d);
+        } catch (e) {
+            console.warn(e);
+            return "<err>";
+        }
     };
 };
