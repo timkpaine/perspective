@@ -358,11 +358,6 @@ export class PerspectiveWorkspace extends SplitPanel {
                 this.onPerspectiveSelect.bind(this),
             );
 
-            widget.viewer.addEventListener(
-                "perspective-click",
-                this.onPerspectiveSelect.bind(this),
-            );
-
             // TODO remove event listener
             this.masterPanel.addWidget(widget);
         }
@@ -556,14 +551,7 @@ export class PerspectiveWorkspace extends SplitPanel {
         const config = await (
             event.target as HTMLPerspectiveViewerElement
         ).save();
-        // perspective-select is already handled for hypergrid
 
-        if (
-            event.type === "perspective-click" &&
-            (config.plugin === "Datagrid" || config.plugin === null)
-        ) {
-            return;
-        }
         const candidates = new Set([
             ...(config["group_by"] || []),
             ...(config["split_by"] || []),
@@ -596,11 +584,6 @@ export class PerspectiveWorkspace extends SplitPanel {
         widget.isHidden && widget.show();
         widget.viewer.restyleElement();
         widget.viewer.addEventListener(
-            "perspective-click",
-            this.onPerspectiveSelect.bind(this),
-        );
-
-        widget.viewer.addEventListener(
             "perspective-select",
             this.onPerspectiveSelect.bind(this),
         );
@@ -618,11 +601,6 @@ export class PerspectiveWorkspace extends SplitPanel {
         }
 
         widget.viewer.restyleElement();
-        widget.viewer.removeEventListener(
-            "perspective-click",
-            this.onPerspectiveSelect.bind(this),
-        );
-
         widget.viewer.removeEventListener(
             "perspective-select",
             this.onPerspectiveSelect.bind(this),

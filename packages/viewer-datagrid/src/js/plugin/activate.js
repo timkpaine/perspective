@@ -91,12 +91,6 @@ export async function activate(view) {
             click_listener.bind(this.model, this.regular_table),
         );
 
-        // tree collapse, expand, edit button headers
-        this.regular_table.addEventListener(
-            "mousedown",
-            mousedown_listener.bind(this.model, this.regular_table, viewer),
-        );
-
         // (Legacy) Row selection
         const selected_rows_map = new WeakMap();
         this.regular_table.addStyleListener(
@@ -136,6 +130,12 @@ export async function activate(view) {
                 this.regular_table,
                 viewer,
             ),
+        );
+
+        // tree collapse, expand, edit button headers
+        this.regular_table.addEventListener(
+            "mousedown",
+            mousedown_listener.bind(this.model, this.regular_table, viewer),
         );
 
         // Editing
