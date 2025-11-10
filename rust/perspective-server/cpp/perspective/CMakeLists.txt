@@ -5,6 +5,8 @@ include(CheckCCompilerFlag)
 set(CMAKE_BUILD_TYPE "Release")
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+set(CMAKE_IGNORE_PATH "/opt/homebrew")
+
 # CMAKE POLICIES
 # option() should use new cmake behavior wrt variable clobbering
 cmake_policy(SET CMP0077 NEW)
@@ -398,6 +400,7 @@ list(APPEND all_deps_INCLUDE_DIRS
     ${exprtk_INCLUDE_DIRS})
 
 # Protobuf setup
+set(protobuf_BUILD_TESTS OFF FORCE)
 add_subdirectory(${PSP_CMAKE_MODULE_PATH}/../cpp/protos "${CMAKE_BINARY_DIR}/protos-build")
 
 # ####################
